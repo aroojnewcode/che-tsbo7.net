@@ -4,7 +4,7 @@
 
 Production canonical origin is **`https://hackstarkov.com`** (`src/config/site.ts`, `scripts/cf-build.mjs`, sitemap finalize).
 
-1. Add **hackstarkov.com** (and `www` if used) as a **Custom Domain** on the Cloudflare Worker `hackstarkov-com` in the same account as the zone.
+1. Add **hackstarkov.com** (and `www` if used) as a **Custom Domain** on the Cloudflare Worker `h-ckstarkov-com` in the same account as the zone. Enable **Always Use HTTPS** and a **www → apex** redirect in the zone (Workers `_redirects` must use relative paths only).
 2. When the zone is available, uncomment and set `[[routes]]` in `wrangler.toml` (see file comments).
 3. In **Google Search Console**, use one **Domain** or **URL-prefix** property for `https://hackstarkov.com/` only.
 4. Submit `https://hackstarkov.com/sitemap-index.xml` (also linked from `/robots.txt` on the live host).

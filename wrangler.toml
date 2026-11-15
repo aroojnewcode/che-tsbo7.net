@@ -1,6 +1,6 @@
 # Static Astro site on Workers Assets. Cloudflare Builds runs `npx wrangler deploy`.
-# Worker name must match the CI script: hackstarkov-com.
-name = "hackstarkov-com"
+# Worker name must match Cloudflare Workers Builds project (h-ckstarkov-com).
+name = "h-ckstarkov-com"
 main = "src/worker.js"
 compatibility_date = "2026-10-26"
 workers_dev = true

@@ -19,6 +19,3 @@
 /go/rust /go/tarkov/ 301
 /go/arc-raiders/ /go/tarkov/ 301
 /go/arc-raiders /go/tarkov/ 301
-http://hackstarkov.com/* https://hackstarkov.com/:splat 301
-http://www.hackstarkov.com/* https://hackstarkov.com/:splat 301
-https://www.hackstarkov.com/* https://hackstarkov.com/:splat 301
