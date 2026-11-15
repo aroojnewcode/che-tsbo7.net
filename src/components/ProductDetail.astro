@@ -1,0 +1,153 @@
+---
+import '../styles/product-cheat-page.css';
+import type { ProductPage } from '../data/products';
+import type { BreadcrumbItem } from '../utils/schema';
+import { getRelatedBlogPostsForProduct } from '../data/blog';
+import ProductScreenshotGallery from './ProductScreenshotGallery.astro';
+import { getProductFaqs } from '../data/faq';
+import SiteFaqSection from './SiteFaqSection.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import ProductDetailHeader from './product/ProductDetailHeader.astro';
+import ProductHighlightsSection from './product/ProductHighlightsSection.astro';
+import ProductFeaturesSection from './product/ProductFeaturesSection.astro';
+import ProductDescriptionSection from './product/ProductDescriptionSection.astro';
+import ProductExperienceSection from './product/ProductExperienceSection.astro';
+import ProductRelatedGuidesSection from './product/ProductRelatedGuidesSection.astro';
+import Icon from './icons/Icon.astro';
+import { Button } from '@/components/starwind/button';
+import { checkoutForSlug } from '../config/checkout';
+import { externalLinkProps } from '../utils/externalLink';
+
+interface Props {
+  product: ProductPage;
+  breadcrumbs?: BreadcrumbItem[];
+}
+
+const { product, breadcrumbs } = Astro.props;
+const productFaqs = getProductFaqs(product.slug, product.kind);
+const relatedPosts = getRelatedBlogPostsForProduct(product.relatedBlogSlugs, 6);
+const checkout = checkoutForSlug(product.slug);
+const checkoutAttrs = externalLinkProps(checkout);
+const previewFeatures = product.features.slice(0, 6);
+const goodToKnow =
+  typeof product.goodToKnow === 'string'
+    ? product.goodToKnow
+    : Array.isArray(product.goodToKnow)
+      ? product.goodToKnow.join(' ')
+      : '';
+
+const descriptionBlocks = [
+  ...product.overview.paragraphs.map((text) => ({ type: 'p' as const, text })),
+  ...(product.about ?? []),
+  ...product.body,
+];
+
+const showDescToggle = descriptionBlocks.length > 2;
+---
+
+<div class="product-detail product-detail--storefront">
+  <section class="product-detail-hero border-b border-border py-8 md:py-10">
+    <div class="mx-auto max-w-6xl px-5">
+      {breadcrumbs && <Breadcrumbs items={breadcrumbs} class="product-detail__breadcrumbs" />}
+
+      <div class="product-detail-hero__grid mt-6">
+        <div class="product-detail-hero__media">
+          <ProductScreenshotGallery
+            images={product.images}
+            id={`gallery-${product.slug}`}
+            tierLabel={product.name}
+            badge={product.badge}
+            minimal
+          />
+        </div>
+
+        <aside class="product-detail-hero__panel">
+          <ProductDetailHeader product={product} />
+
+          <ul class="product-detail-hero__features mt-6 space-y-2.5">
+            {
+              previewFeatures.map((feature) => (
+                <li class="flex items-start gap-2.5 text-sm text-muted-foreground">
+                  <Icon name="check" size={15} class="mt-0.5 shrink-0 icon-app--primary" />
+                  <span>{feature}</span>
+                </li>
+              ))
+            }
+            {
+              product.more > 0 && (
+                <li class="text-sm font-medium text-primary">+{product.more} more in the portal</li>
+              )
+            }
+          </ul>
+
+          {
+            goodToKnow && (
+              <p class="product-detail-hero__note mt-5 text-sm leading-relaxed text-muted-foreground">{goodToKnow}</p>
+            )
+          }
+
+          <div class="product-detail-hero__cta mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button as="a" href={checkout} variant="primary" size="lg" class="rounded-xl w-full sm:w-auto" {...checkoutAttrs}>
+              Get access
+              <Icon name="arrowRight" size={17} />
+            </Button>
+            <Button type="button" data-scroll-target="product-features" variant="outline" size="lg" class="rounded-xl w-full sm:w-auto">
+              See all modules
+            </Button>
+          </div>
+          <p class="mt-3 text-xs text-muted-foreground">Secure checkout · portal download after payment</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <ProductHighlightsSection product={product} />
+
+  <ProductDescriptionSection
+    overviewTitle={product.overview.title}
+    blocks={descriptionBlocks}
+    showToggle={showDescToggle}
+  />
+
+  <ProductFeaturesSection features={product.fullFeatures} productName={product.name} />
+
+  <ProductExperienceSection
+    images={product.images}
+    acquisition={product.acquisition}
+    productName={product.name}
+  />
+
+  <ProductRelatedGuidesSection posts={relatedPosts} productName={product.name} />
+
+  <SiteFaqSection
+    id="faq"
+    items={productFaqs}
+    titleId={`catalog-faq-${product.slug}`}
+    class="border-t border-border bg-muted/20"
+  />
+</div>
+
+<script>
+  const initProductDetailUi = () => {
+    document.querySelectorAll('[data-desc-toggle]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const panel = btn.closest('[data-desc]')?.querySelector('[data-desc-panel]');
+        if (!panel) return;
+        const collapsed = panel.classList.toggle('is-collapsed');
+        btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      });
+    });
+    document.querySelectorAll('[data-scroll-target]').forEach((el) => {
+      el.addEventListener('click', (event) => {
+        const id = el.getAttribute('data-scroll-target');
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  };
+  initProductDetailUi();
+  document.addEventListener('astro:after-swap', initProductDetailUi);
+</script>

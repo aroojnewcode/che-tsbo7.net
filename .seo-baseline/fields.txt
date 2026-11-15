@@ -1,0 +1,39 @@
+=== index.html ===
+Escape from Tarkov Hacks | ESP, Aimbot &amp; Radar
+Escape from Tarkov hacks for PC: player ESP, loot ESP, aimbot, no recoil, and stream-proof overlays updated every major patch at hackstarkov.com.
+https://hackstarkov.com/
+
+=== products/tarkov-hacks/index.html ===
+Escape from Tarkov Elite Hacks &amp; Utility Products
+Elite Escape from Tarkov hacks plus HWID spoofer, UGC tools, and Skin Changer utilities for PC on hackstarkov.com.
+https://hackstarkov.com/products/tarkov-hacks/
+
+=== products/tarkov-hacks/elite/index.html ===
+Escape from Tarkov Elite Hacks | Full ESP &amp; Combat Suite
+Elite tier: player ESP, loot ESP, aimbot, no recoil, loot assist tools, and priority BattlEye patch delivery.
+https://hackstarkov.com/products/tarkov-hacks/elite/
+
+=== blog/index.html ===
+Escape from Tarkov Hacks Guides &amp; Patch Notes
+Setup guides, Lite vs Pro comparisons, BattlEye patch checklists, and PVP config tips for Escape from Tarkov hacks.
+https://hackstarkov.com/blog/
+
+=== blog/tarkov-hacks-features-guide/index.html ===
+Escape from Tarkov hacks features: ESP, aimbot, radar and more | Escape from Tarkov Hacks
+Complete guide to our Escape from Tarkov hacks—player ESP, loot ESP, aimbot, no recoil, FOV and stream proof.
+https://hackstarkov.com/blog/tarkov-cheats-features-guide/
+
+=== faq/index.html ===
+FAQ | Escape from Tarkov Hacks, Products &amp; Setup
+Answers on hack tiers, ESP, aimbot, HWID tools, checkout, and blog guides at hackstarkov.com.
+https://hackstarkov.com/faq/
+
+=== support/index.html ===
+Support | Escape from Tarkov Hacks
+Get help with loader setup, HWID, and checkout for Escape from Tarkov hack tiers and utilities.
+https://hackstarkov.com/support/
+
+=== 404.html ===
+Page not found | Escape from Tarkov Hacks
+The page you requested could not be found on hackstarkov.com.
+https://hackstarkov.com/404/

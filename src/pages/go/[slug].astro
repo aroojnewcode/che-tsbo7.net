@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import {
+  CHECKOUT_SLUGS,
+  CHECKOUT_SLUG_TO_PRODUCT,
+  checkoutExternalUrl,
+  type CheckoutProduct,
+} from '../../config/checkout';
+import { getPageSeoEntry } from '../../config/pageSeo';
+import { normalizeDocumentTitle, resolvePageSeo } from '../../config/seo';
+import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
+import { externalLinkProps } from '../../utils/externalLink';
+
+export function getStaticPaths() {
+  return Object.values(CHECKOUT_SLUGS).map((slug) => ({ params: { slug } }));
+}
+
+const slug = Astro.params.slug ?? '';
+const product = CHECKOUT_SLUG_TO_PRODUCT[slug] as CheckoutProduct | undefined;
+
+if (!product) {
+  return Astro.redirect('/404/');
+}
+
+const path = `/go/${slug}/`;
+const seoEntry = getPageSeoEntry(path);
+const seo = resolvePageSeo(path);
+const title = seoEntry?.title ? normalizeDocumentTitle(seoEntry.title) : seo.title;
+const description = seoEntry?.description ?? seo.description;
+const h1 = seoEntry?.h1 ?? 'Secure checkout';
+const destination = checkoutExternalUrl(product);
+const checkoutLink = externalLinkProps(destination);
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Products', path: '/products/tarkov-hacks/' },
+  { name: 'Checkout', path },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  jsonLd={[
+    webPageSchema({ name: h1, description, url: path }),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
+  <section class="mx-auto max-w-2xl px-5 py-16 md:py-24">
+    <Breadcrumbs items={breadcrumbs} />
+    <header class="space-y-4">
+      <h1 class="text-2xl font-bold tracking-tight md:text-3xl">{h1}</h1>
+      <p class="text-muted-foreground leading-relaxed">{description}</p>
+    </header>
+    <p class="mt-6 text-sm text-muted-foreground">
+      Checkout runs on our secure partner site. You stay on hackstarkov.com until you choose to continue.
+    </p>
+    <p class="mt-8">
+      <a
+        href={destination}
+        class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90"
+        {...checkoutLink}
+      >
+        Continue to secure checkout
+      </a>
+    </p>
+  </section>
+</BaseLayout>
