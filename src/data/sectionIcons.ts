@@ -39,7 +39,7 @@ export const blogTagIcons: Record<string, IconName> = {
   Setup: 'settings',
   Features: 'layers',
   Updates: 'refresh',
-  Troubleshooting: 'alert',
+  Tresourceshooting: 'alert',
 };
 
 export const heroStatusPills: { icon: IconName; label: string }[] = [

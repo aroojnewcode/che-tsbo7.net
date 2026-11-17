@@ -1,12 +1,12 @@
 {
-  "name": "Escape from Tarkov Hacks",
-  "short_name": "Escape from Tarkov Hacks",
-  "description": "Escape from Tarkov hacks with player ESP, loot ESP, aimbot, no recoil and stream-proof overlays for PC.",
+  "name": "Ark Survival Ascended Hacks",
+  "short_name": "cheatsark",
+  "description": "Ark Survival Ascended hacks with player ESP, dino ESP, aimbot, no recoil and stream-proof overlays for PC.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#0a0d10",
-  "theme_color": "#ce422b",
+  "theme_color": "#22d3ee",
   "lang": "en-US",
   "icons": [
     {

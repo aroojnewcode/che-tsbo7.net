@@ -5,26 +5,26 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.protocol === 'http:' && url.hostname === 'hackstarkov.com') {
+    if (url.protocol === 'http:' && url.hostname === 'cheatsark.com') {
       const target = new URL(request.url);
       target.protocol = 'https:';
-      if (target.hostname === 'www.hackstarkov.com') {
-        target.hostname = 'hackstarkov.com';
+      if (target.hostname === 'www.cheatsark.com') {
+        target.hostname = 'cheatsark.com';
       }
       return Response.redirect(target.toString(), 301);
     }
 
-    if (url.hostname === 'www.hackstarkov.com') {
+    if (url.hostname === 'www.cheatsark.com') {
       const target = new URL(request.url);
       target.protocol = 'https:';
-      target.hostname = 'hackstarkov.com';
+      target.hostname = 'cheatsark.com';
       return Response.redirect(target.toString(), 301);
     }
 
     const path = url.pathname.replace(/\/$/, '') || '/';
 
     if (path === '/robots.txt') {
-      const origin = `https://${url.host === 'www.hackstarkov.com' ? 'hackstarkov.com' : url.host}`;
+      const origin = `https://${url.host === 'www.cheatsark.com' ? 'cheatsark.com' : url.host}`;
       const body = `User-agent: *
 Allow: /
 

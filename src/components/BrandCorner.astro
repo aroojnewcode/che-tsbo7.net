@@ -1,0 +1,20 @@
+---
+import { SITE_GUN_IMAGE } from '../config/site';
+import { t } from '../i18n';
+---
+
+<a href="/" class="brand-corner" data-brand-corner aria-label={t.ui.homeAria}>
+  <img
+    src={SITE_GUN_IMAGE}
+    alt=""
+    width={44}
+    height={44}
+    class="brand-corner__mark"
+    draggable="false"
+    loading="eager"
+    decoding="async"
+  />
+  <span class="brand-corner__title font-[family-name:var(--font-heading)] text-xs font-bold uppercase tracking-wider sm:text-sm" aria-hidden="true">
+    ARK <span class="text-primary">CHEATS</span>
+  </span>
+</a>

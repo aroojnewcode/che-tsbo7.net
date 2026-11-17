@@ -29,27 +29,27 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const elite = link('Escape from Tarkov Elite', productPath('elite'));
+const elite = link('Ark: Survival Ascended Elite', productPath('elite'));
 const lite = link('Lite tier (ESP & radar)', ROUTES.products);
 const pro = link('Pro tier (aimbot & no recoil)', ROUTES.products);
-const productsHub = link('Escape from Tarkov hack products', ROUTES.products);
+const productsHub = link('Ark: Survival Ascended hack products', ROUTES.products);
 const hwid = link('HWID Spoofer', productPath('hwid-spoofer'));
 const ugc = link('UGC', productPath('ugc'));
 const skin = link('Skin Changer', productPath('unlock-all'));
 const faqPage = link('full FAQ', ROUTES.faq);
 const blog = link('blog guides', ROUTES.blog);
 
-const guideFeatures = link('Escape from Tarkov hacks features guide', blogPostPath('features'));
+const guideFeatures = link('Ark: Survival Ascended hacks features guide', blogPostPath('features'));
 const guideLiteVsPro = link('Lite vs Pro guide', blogPostPath('lite-vs-pro'));
 const guideElite = link('Elite tier guide', blogPostPath('elite'));
 const guideEsp = link('ESP and radar setup guide', blogPostPath('esp'));
 const guidePatch = link('BattlEye patch day checklist', blogPostPath('be-patch'));
-const guideBuy = link('how to buy Escape from Tarkov hacks in 2026', blogPostPath('buy-guide'));
+const guideBuy = link('how to buy Ark: Survival Ascended hacks in 2026', blogPostPath('buy-guide'));
 const guideExternal = link('external cheat guide', blogPostPath('external'));
 const guideStream = link('stream-proof setup guide', blogPostPath('stream-proof'));
 const guideAdmin = link('in-game console and debug commands guide', blogPostPath('cheat-codes'));
 const guideHwid = link('HWID spoofer vs new account guide', blogPostPath('hwid'));
-const guideBeInit = link('BattlEye failed to initialize troubleshooting guide', blogPostPath('be-error'));
+const guideBeInit = link('BattlEye failed to initialize tresourceshooting guide', blogPostPath('be-error'));
 const guideRecoil = link('aimbot and recoil scripts guide', blogPostPath('aimbot'));
 
 export const siteFaqs: SiteFaqItem[] = [
@@ -57,29 +57,29 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if Escape from Tarkov hacks are online?',
-    a: a('The live status banner is on hackstarkov.com and in the Discord #status channel. Always check it after an Escape from Tarkov update or a major anti-cheat patch, or an BattlEye update.'),
+    q: 'Where do I check if Ark: Survival Ascended hacks are online?',
+    a: a('The live status banner is on cheatsark.com and in the Discord #status channel. Always check it after an Ark: Survival Ascended update or a major anti-cheat patch, or an BattlEye update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Escape from Tarkov, and start the loader before the game so BattlEye sees a clean launch order.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Ark: Survival Ascended, and start the loader before the game so BattlEye sees a clean launch order.'),
   },
   {
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using Escape from Tarkov hacks?',
-    a: a('Yes—any third-party software carries risk. BattlEye, Battlestate Games server-side checks and admin reports all evolve, and Escape from Tarkov bans can follow your Tarkov account and hardware. Read the current status and accept the risk before use.'),
+    q: 'Can I get banned using Ark: Survival Ascended hacks?',
+    a: a('Yes—any third-party software carries risk. BattlEye, Studio Wildcard server-side checks and admin reports all evolve, and Ark: Survival Ascended bans can follow your Ark account and hardware. Read the current status and accept the risk before use.'),
   },
   {
     id: 'platforms',
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Escape from Tarkov on Steam for PC, Windows 10/11 64-bit only. Escape from Tarkov Console Edition, macOS and Linux are not supported.'),
+    a: a('Ark: Survival Ascended on Steam for PC, Windows 10/11 64-bit only. Ark: Survival Ascended Console Edition, macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -99,7 +99,7 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Escape from Tarkov ESP and what does it show?',
+    q: 'What is Ark: Survival Ascended ESP and what does it show?',
     a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Loot ESP marks containers, stashes, salvage nodes and dropped items. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}.`,
     scopes: ['lite', 'pro', 'elite'],
   },
@@ -138,8 +138,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'no-recoil',
     topic: 'scripts',
     icon: 'faqWhichTierScripts',
-    q: 'How does No Recoil work in Escape from Tarkov?',
-    a: `No Recoil / Spread compensates for weapon recoil with per-weapon profiles—AK-74N, M4A1, MP7, SVD, Mosin and more. Keep compensation below 100% so sprays still look natural, and test each weapon on a private or practice server before wiping your kit on a live one.`,
+    q: 'How does No Recoil work in Ark: Survival Ascended?',
+    a: `No Recoil / Spread compensates for weapon recoil with per-weapon profiles—Assault Rifle, Pump-Action Shotgun, Longneck, Fabricated Sniper, Tek Rifle and more. Keep compensation below 100% so sprays still look natural, and test each weapon on a private or practice server before risking gear on a live official.`,
     scopes: ['pro', 'elite'],
   },
   {
@@ -154,7 +154,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqEliteSlots',
     q: 'Why is Elite limited slots?',
-    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on Escape from Tarkov update and BattlEye patch days. Check the status banner before checkout, or read the ${guideElite}.`,
+    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on Ark: Survival Ascended update and BattlEye patch days. Check the status banner before checkout, or read the ${guideElite}.`,
     scopes: ['elite'],
   },
   {
@@ -168,7 +168,7 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'undetected',
     topic: 'safety',
     icon: 'faqUndetected',
-    q: 'Are undetected Escape from Tarkov hacks guaranteed?',
+    q: 'Are undetected Ark: Survival Ascended hacks guaranteed?',
     a: a('No. Undetected is the current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing or detected, and never play on your main account while a status is unclear.'),
   },
   {
@@ -183,7 +183,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqHwidWhen',
     q: 'When do I need the HWID Spoofer?',
-    a: `Use ${hwid} when a fresh Tarkov account gets blocked instantly on one PC but works on another—a hardware-level restriction. It is not for account-only bans; see ${ugc} for appeal workflows instead.`,
+    a: `Use ${hwid} when a fresh Ark account gets blocked instantly on one PC but works on another—a hardware-level restriction. It is not for account-only bans; see ${ugc} for appeal workflows instead.`,
     scopes: ['hwid-spoofer'],
   },
   {
@@ -191,14 +191,14 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqHwidWhen',
     q: 'Do I need a new account and a spoofer after an BattlEye ban?',
-    a: `Usually both: a new Tarkov account with Escape from Tarkov, plus ${hwid} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
+    a: `Usually both: a new Ark account with Ark: Survival Ascended, plus ${hwid} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
   },
   {
     id: 'ugc-what',
     topic: 'products',
     icon: 'faqUgcWhat',
     q: 'What is UGC?',
-    a: `${ugc} (Unban & Governance Control) is an appeal workspace for Battlestate Games and BattlEye bans and Steam restrictions—custom workflows and case tracking, not a guaranteed unban service.`,
+    a: `${ugc} (Unban & Governance Control) is an appeal workspace for Studio Wildcard and BattlEye bans and Steam restrictions—custom workflows and case tracking, not a guaranteed unban service.`,
     scopes: ['ugc'],
   },
   {
@@ -213,15 +213,15 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'external-loader',
     topic: 'products',
     icon: 'faqExternalLoader',
-    q: 'Is the loader injected into the Escape from Tarkov folder?',
-    a: `Escape from Tarkov Hacks runs external with cloud config sync—no files are written into the Escape from Tarkov install directory. BattlEye risk still applies. See the ${guideExternal} and ${productsHub}.`,
+    q: 'Is the loader injected into the Ark: Survival Ascended folder?',
+    a: `Ark: Survival Ascended Hacks runs external with cloud config sync—no files are written into the Ark: Survival Ascended install directory. BattlEye risk still applies. See the ${guideExternal} and ${productsHub}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
-    q: 'Are single-player debug commands the same as Escape from Tarkov hacks?',
-    a: `No. in-game console commands like dev-only debug toggles only work for admins on servers you own or moderate. Paid Escape from Tarkov hacks are separate products for live raids—see ${lite}, ${pro} and ${elite}, and the ${guideAdmin}.`,
+    q: 'Are single-player debug commands the same as Ark: Survival Ascended hacks?',
+    a: `No. in-game console commands like dev-only debug toggles only work for admins on servers you own or moderate. Paid Ark: Survival Ascended hacks are separate products for live sessions—see ${lite}, ${pro} and ${elite}, and the ${guideAdmin}.`,
   },
   {
     id: 'blog-setup',
@@ -250,7 +250,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `PvP players who want Aimbot, Soft Aim and No Recoil with ESP and radar included. Pro is the most popular tier at hackstarkov.com.`,
+    a: `PvP players who want Aimbot, Soft Aim and No Recoil with ESP and radar included. Pro is the most popular tier at cheatsark.com.`,
     scopes: ['pro'],
   },
   {
@@ -265,29 +265,29 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'be-update',
     topic: 'safety',
     icon: 'faqBeUpdate',
-    q: 'What should I do after a BattlEye or Escape from Tarkov update?',
-    a: a('Check hackstarkov.com status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on a quiet test session first. The BattlEye patch day checklist covers the full routine.'),
+    q: 'What should I do after a BattlEye or Ark: Survival Ascended update?',
+    a: a('Check cheatsark.com status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on a quiet test session first. The BattlEye patch day checklist covers the full routine.'),
   },
   {
     id: 'be-init',
     topic: 'setup',
     icon: 'faqBeUpdate',
     q: 'BattlEye says it failed to initialize—is that a ban?',
-    a: `Usually not. It is most often a broken BattlEye install, a service conflict or a blocked driver. Verify Escape from Tarkov files in Steam, reinstall BattlEye from the Escape from Tarkov folder and restart before assuming a ban. See the ${guideBeInit}; if it is a real ban, check ${ugc}.`,
+    a: `Usually not. It is most often a broken BattlEye install, a service conflict or a blocked driver. Verify Ark: Survival Ascended files in Steam, reinstall BattlEye from the Ark: Survival Ascended folder and restart before assuming a ban. See the ${guideBeInit}; if it is a real ban, check ${ugc}.`,
   },
   {
     id: 'discord-help',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('Open Discord after purchase with your order email, Windows version and Escape from Tarkov build number. Staff walk through loader setup live.'),
+    a: a('Open Discord after purchase with your order email, Windows version and Ark: Survival Ascended build number. Staff walk through loader setup live.'),
   },
   {
     id: 'server-types',
     topic: 'plans',
     icon: 'faqServerModes',
-    q: 'Do tiers work on Customs, Labs and PvPvE sessions?',
-    a: `Yes—${lite}, ${pro} and ${elite} include presets for Customs, Labs and PvPvE sessions in the portal. Tune ESP distance, aim FOV and smoothing before your first extraction run or POI push.`,
+    q: 'Do tiers work on The Island, Aberration and Unofficial PvP sessions?',
+    a: `Yes—${lite}, ${pro} and ${elite} include presets for The Island, Aberration and Unofficial PvP sessions in the portal. Tune ESP distance, aim FOV and smoothing before your first upload run or POI push.`,
   },
   {
     id: 'zoom-hack',
@@ -317,8 +317,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'private-cheats',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'What are private Escape from Tarkov hacks?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. Escape from Tarkov Hacks ships portal delivery for ESP, aim assist and radar tiers.'),
+    q: 'What are private Ark: Survival Ascended hacks?',
+    a: a('Private means per-user keys and maintained builds—not public zip packs. Ark: Survival Ascended Hacks ships portal delivery for ESP, aim assist and radar tiers.'),
   },
   {
     id: 'faq-more',
@@ -341,9 +341,9 @@ export function getAllFaqs(): SiteFaqItem[] {
 
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
-  eyebrow: 'Escape from Tarkov topics',
-  title: 'Browse Escape from Tarkov hack answers by category',
-  subtitle: 'Filter Escape from Tarkov plans, ESP, aimbot, products, setup and buy-guide answers.',
+  eyebrow: 'Ark: Survival Ascended topics',
+  title: 'Browse Ark: Survival Ascended hack answers by category',
+  subtitle: 'Filter Ark: Survival Ascended plans, ESP, aimbot, products, setup and buy-guide answers.',
 } as const;
 
 export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
@@ -403,8 +403,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-guide-start',
       topic: 'blog',
       icon: 'faqBlogGuideStart',
-      q: 'Should I use single-player debug commands on live extraction raids?',
-      a: a('No. Admin commands like dev-only debug toggles only work for admins on servers you own or moderate. Live-server play needs separate Escape from Tarkov hacks from hackstarkov.com tiers—and carries ban risk.'),
+      q: 'Should I use single-player debug commands on live official servers?',
+      a: a('No. Admin commands like dev-only debug toggles only work for admins on servers you own or moderate. Live-server play needs separate Ark: Survival Ascended hacks from cheatsark.com tiers—and carries ban risk.'),
     },
     {
       id: 'blog-guide-tier',
@@ -418,7 +418,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideStatus',
       q: 'Is this guide still valid after a patch?',
-      a: a('Check the article date and the live status banner. Patch-day articles note when modules change—Discord #status has the latest build notes after each Escape from Tarkov update or major patch.'),
+      a: a('Check the article date and the live status banner. Patch-day articles note when modules change—Discord #status has the latest build notes after each Ark: Survival Ascended update or major patch.'),
     },
   ],
   Setup: [
@@ -434,7 +434,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogSetupLobby',
       q: 'Should I test on a quiet test session first?',
-      a: a('Yes. Load conservative presets on a low-pop or Hideout range or an offline raid before busy Customs or Labs servers. Tune aim FOV, smoothing and ESP distance caps over several sessions.'),
+      a: a('Yes. Load conservative presets on a low-pop or Single-player range or an single-player session before busy The Island or Aberration servers. Tune aim FOV, smoothing and ESP distance caps over several sessions.'),
     },
   ],
   Features: [
@@ -455,7 +455,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       a: `Elite gets priority delivery; Lite and Pro follow once the build is verified. Do not launch until the banner is green—see the ${guidePatch}.`,
     },
   ],
-  Troubleshooting: [
+  Tresourceshooting: [
     {
       id: 'blog-trouble-be',
       topic: 'blog',
@@ -495,7 +495,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this article work next patch?',
-    a: a('Re-check status after every Escape from Tarkov update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every Ark: Survival Ascended update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 
@@ -565,7 +565,7 @@ export const compareRows = [
   { feature: 'Bone Select (head / chest / body)', icon: 'boneSelect' as const, lite: false, pro: true, elite: true },
   { feature: 'Aim FOV circle & target selector', icon: 'compareTargetSelector' as const, lite: false, pro: true, elite: true },
   { feature: 'No Recoil / Spread', icon: 'noRecoil' as const, lite: false, pro: true, elite: true },
-  { feature: 'Weapon recoil profiles (M4A1, AK-74, MP7)', icon: 'stepCrosshair' as const, lite: false, pro: true, elite: true },
+  { feature: 'Weapon recoil profiles (Assault Rifle, Pump-Action, Longneck)', icon: 'stepCrosshair' as const, lite: false, pro: true, elite: true },
   { feature: 'Trigger Bot', icon: 'triggerBot' as const, lite: false, pro: true, elite: true },
   { feature: 'Loot Route Assist', icon: 'compareAutoFarm' as const, lite: false, pro: false, elite: true },
   { feature: 'Full radar suite (UAV-style)', icon: 'uavRadar' as const, lite: false, pro: false, elite: true },

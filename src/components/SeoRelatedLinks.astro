@@ -15,16 +15,16 @@ interface Props {
 }
 
 const defaultLinks: LinkItem[] = [
-  { href: ROUTES.products, label: 'Shop Escape from Tarkov hack products' },
-  { href: '/products/tarkov-hacks/elite/', label: 'Buy Elite ESP & aimbot' },
-  { href: '/products/tarkov-hacks/utilities/', label: 'Compare utilities' },
+  { href: ROUTES.products, label: 'Shop Ark: Survival Ascended hack products' },
+  { href: '/products/ark-hacks/elite/', label: 'Buy Elite ESP & aimbot' },
+  { href: '/products/ark-hacks/utilities/', label: 'Compare utilities' },
   { href: ROUTES.blog, label: 'Buy guides & tier tips' },
   { href: ROUTES.faq, label: 'Pre-purchase FAQ' },
   { href: ROUTES.reviews, label: 'Buyer reviews' },
 ];
 
-const { title = 'Shop Escape from Tarkov hacks & guides', links = defaultLinks } = Astro.props;
-const checkout = checkoutPath('tarkov');
+const { title = 'Shop Ark: Survival Ascended hacks & guides', links = defaultLinks } = Astro.props;
+const checkout = checkoutPath('ark');
 const checkoutAttrs = externalLinkProps(checkout);
 ---
 

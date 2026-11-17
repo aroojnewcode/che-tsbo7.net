@@ -1,11 +1,11 @@
-# Search Console workflow (hackstarkov.com)
+# Search Console workflow (cheatsark.com)
 
 Use this checklist after each content or SEO deploy.
 
 ## Property & sitemap
 
-1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `hackstarkov.com` if it is not already there.
-2. Under **Sitemaps**, submit: `https://hackstarkov.com/sitemap-index.xml`
+1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `cheatsark.com` if it is not already there.
+2. Under **Sitemaps**, submit: `https://cheatsark.com/sitemap-index.xml`
 3. Confirm the sitemap reports success (no “couldn’t fetch” errors).
 
 ## After deploy
@@ -18,9 +18,9 @@ Use this checklist after each content or SEO deploy.
 
 | Intent | Primary URL |
 |--------|-------------|
-| Escape from Tarkov hacks, Escape from Tarkov hacks | `/` |
-| elite suite | `/products/tarkov-hacks/elite/` |
-| hwid, skin changer | `/products/tarkov-hacks/utilities/` |
+| Ark: Survival Ascended hacks, Ark: Survival Ascended hacks | `/` |
+| elite suite | `/products/ark-hacks/elite/` |
+| hwid, skin changer | `/products/ark-hacks/utilities/` |
 | setup / patch day | `/blog/` |
 | FAQ | `/faq/` |
 

@@ -64,14 +64,18 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['esp', 'lite-vs-pro', 'fov', 'be-patch'],
+  lite: ['asa-esp-explained', 'dino-loot-esp', 'esp', 'lite-vs-pro', 'fov', 'be-patch'],
   pro: [
+    'aimbot-limits',
     'aimbot',
     'bones',
     'lite-vs-pro',
     'stream-proof',
   ],
   elite: [
+    'compare-asa-cheats',
+    'ban-risk-official',
+    'asa-vs-ase',
     'elite',
     'features',
     'esp',
@@ -97,18 +101,18 @@ export const productRelatedBlogSlugs: Record<string, string[]> = {
   'cloud-dma': ['external', 'features', 'buy-guide'],
 };
 
-const productBase = '/products/tarkov-hacks/';
+const productBase = '/products/ark-hacks/';
 
 const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live status banner on hackstarkov.com and Discord #status before purchase—especially after an Escape from Tarkov patch day update or an BattlEye patch.',
+    desc: 'Check the live status banner on cheatsark.com and Discord #status before purchase—especially after an Ark: Survival Ascended patch day update or an BattlEye patch.',
   },
   {
     num: '02',
     title: 'Choose your access tier',
-    desc: 'Select Elite Escape from Tarkov hacks or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
+    desc: 'Select Elite Ark: Survival Ascended hacks or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
   },
   {
     num: '03',
@@ -118,7 +122,7 @@ const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '04',
     title: 'Follow guided setup',
-    desc: 'Use only the operator portal, patch loader, and setup guide. Test on a private or low-pop test session, load presets, then join Customs, Labs or Co-op sessions.',
+    desc: 'Use only the operator portal, patch loader, and setup guide. Test on a private or low-pop test session, load presets, then join The Island, Aberration or Co-op sessions.',
   },
 ];
 
@@ -130,17 +134,17 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Escape from Tarkov and anti-cheat (BattlEye) receive frequent updates, especially on monthly major patch and patch days. Confirm module availability on the live status panel at hackstarkov.com before you purchase or launch. Overlay behavior may differ between PMC, Scav, Labs and PvPvE servers after patches.';
+  'Ark: Survival Ascended and anti-cheat (BattlEye) receive frequent updates, especially on monthly major patch and patch days. Confirm module availability on the live status panel at cheatsark.com before you purchase or launch. Overlay behavior may differ between PvP, PvE, Boss caves and Unofficial PvP servers after patches.';
 
 const sharedLimitations =
-  'Third-party software in Escape from Tarkov can violate Battlestate Games Terms of Service and lead to BattlEye bans, server bans or account action. You use this software at your own risk. Compatibility and availability can change after game, BattlEye, or Windows updates without notice.';
+  'Third-party software in Ark: Survival Ascended can violate Studio Wildcard Terms of Service and lead to BattlEye bans, server bans or account action. You use this software at your own risk. Compatibility and availability can change after game, BattlEye, or Windows updates without notice.';
 
-const tarkovSystemRequirements: SystemRequirement[] = [
+const arkSystemRequirements: SystemRequirement[] = [
   { icon: 'reqWindows', text: 'Supported 64-bit edition of Windows 10 or Windows 11.' },
-  { icon: 'reqSteam', text: 'Current Escape from Tarkov client with latest patches applied.' },
+  { icon: 'reqSteam', text: 'Current Ark: Survival Ascended client with latest patches applied.' },
   { icon: 'reqSettings', text: 'Administrator access for loader installation and patch updates.' },
   { icon: 'reqWifi', text: 'Stable internet connection for portal access and patch delivery.' },
-  { icon: 'reqCpu', text: 'A system that meets Escape from Tarkov published hardware requirements.' },
+  { icon: 'reqCpu', text: 'A system that meets Ark: Survival Ascended published hardware requirements.' },
 ];
 
 function toProductSlide(slide: GallerySlideConfig): ProductSlide {
@@ -160,14 +164,14 @@ function slidesForProduct(slug: string): ProductSlide[] {
 
 function slugFromHref(href: string): string {
   const segment = href.replace(productBase, '').replace(/^\//, '').replace(/\/$/, '');
-  return segment || 'tarkov-hacks';
+  return segment || 'ark-hacks';
 }
 
 const tierAbout: Record<string, ProductPage['about']> = {
   lite: [
     {
       type: 'p',
-      text: 'Escape from Tarkov Lite is built for players who want information first. In Escape from Tarkov, knowing where enemies, downed players and loot are before you commit wins more fights than raw aim—Lite gives you that edge without aim automation.',
+      text: 'Ark: Survival Ascended Lite is built for players who want information first. In Ark: Survival Ascended, knowing where enemies, downed players and loot are before you commit wins more fights than raw aim—Lite gives you that edge without aim automation.',
     },
     { type: 'h2', text: 'Low-profile by design' },
     {
@@ -178,7 +182,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   pro: [
     {
       type: 'p',
-      text: 'Escape from Tarkov Pro is the sweet spot for players who fight often. Aimbot, recoil control and Smart Aim help you win gunfights without obvious snap patterns—when you tune smoothing and FOV using our portal presets.',
+      text: 'Ark: Survival Ascended Pro is the sweet spot for players who fight often. Aimbot, recoil control and Smart Aim help you win gunfights without obvious snap patterns—when you tune smoothing and FOV using our portal presets.',
     },
     { type: 'h2', text: 'Combat tools + awareness combined' },
     {
@@ -189,12 +193,12 @@ const tierAbout: Record<string, ProductPage['about']> = {
   elite: [
     {
       type: 'p',
-      text: 'Escape from Tarkov Elite is the private build for players who want everything—Auto Loot Assist, combat assist, Skin Changer, full ESP suite and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
+      text: 'Ark: Survival Ascended Elite is the private build for players who want everything—Auto Loot Assist, combat assist, Skin Changer, full ESP suite and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
     },
     { type: 'h2', text: 'Use Elite responsibly' },
     {
       type: 'p',
-      text: 'Elite power demands disciplined profiles. Test on a private or low-pop test session, start with portal conservative presets, and scale up over days—not minutes. Staff in Discord help Elite users tune before their first Customs or Labs session.',
+      text: 'Elite power demands disciplined profiles. Test on a private or low-pop test session, start with portal conservative presets, and scale up over days—not minutes. Staff in Discord help Elite users tune before their first The Island or Aberration session.',
     },
   ],
 };
@@ -204,7 +208,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Included modules' },
     {
       type: 'p',
-      text: 'Player ESP with distance and name tags, downed-player and stash locator, salvage and loot markers, radar, FOV changer, and stream-safe overlay hiding. Config presets for PMC, Scav, Labs and PvPvE ship in the portal—load before you queue.',
+      text: 'Player ESP with distance and name tags, downed-player and stash locator, salvage and loot markers, radar, FOV changer, and stream-safe overlay hiding. Config presets for PvP, PvE, Boss caves and Unofficial PvP ship in the portal—load before you join.',
     },
     { type: 'h2', text: 'Upgrade path' },
     {
@@ -216,19 +220,19 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Combat tools and automation' },
     {
       type: 'p',
-      text: 'Aimbot, recoil control, Smart Aim with bullet-drop prediction, target selector and weapon profiles for rifles, SMGs and sidearms. Smoothing and FOV limits keep aim natural on PMC raids and Labs runs. Start with portal presets, not max sliders.',
+      text: 'Aimbot, recoil control, Smart Aim with bullet-drop prediction, target selector and weapon profiles for rifles, SMGs and sidearms. Smoothing and FOV limits keep aim natural on official server sessions and boss cave runs. Start with portal presets, not max sliders.',
     },
     { type: 'h2', text: 'Recommended pairing' },
     {
       type: 'p',
-      text: 'Pro is the most popular tier at hackstarkov.com—enough firepower for busy raid weeks without Elite slot limits. Pair with our scripts guide in the blog before your first session.',
+      text: 'Pro is the most popular tier at cheatsark.com—enough firepower for busy session weeks without Elite slot limits. Pair with our scripts guide in the blog before your first session.',
     },
   ],
   elite: [
     { type: 'h2', text: 'Full bot and finish suite' },
     {
       type: 'p',
-      text: 'Auto Loot Assist, combat assist, Skin Changer and the full ESP suite with vehicle and POI alerts. Use Hideout range or offline testing before live raids—Elite power requires disciplined profiles, not rage settings.',
+      text: 'Auto Loot Assist, combat assist, Skin Changer and the full ESP suite with vehicle and POI alerts. Use Single-player range or offline testing before live sessions—Elite power requires disciplined profiles, not rage settings.',
     },
     { type: 'h2', text: 'Availability' },
     {
@@ -243,7 +247,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'When you need it' },
     {
       type: 'p',
-      text: 'Use when fresh Tarkov accounts fail instantly on one PC but work elsewhere—classic hardware ban enforcement after a BattlEye action. Do not use for account-only bans; see [UGC](/products/tarkov-hacks/ugc/) instead.',
+      text: 'Use when fresh Ark accounts fail instantly on one PC but work elsewhere—classic hardware ban enforcement after a BattlEye action. Do not use for account-only bans; see [UGC](/products/ark-hacks/ugc/) instead.',
     },
     { type: 'h2', text: 'Full workflow' },
     {
@@ -260,7 +264,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Realistic expectations' },
     {
       type: 'p',
-      text: 'Some BattlEye bans cannot be reversed. UGC organizes evidence and follow-ups for Battlestate Games and server-owner review. Pair with [HWID Spoofer](/products/tarkov-hacks/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
+      text: 'Some BattlEye bans cannot be reversed. UGC organizes evidence and follow-ups for Studio Wildcard and server-owner review. Pair with [HWID Spoofer](/products/ark-hacks/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
     },
   ],
   'unlock-all': [
@@ -279,7 +283,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'What Cloud DMA includes' },
     {
       type: 'p',
-      text: 'Cloud DMA is a separate hardware path from our external loader tiers. The portal walks you through provisioning, compatibility checks and first connection tests before you queue for raids.',
+      text: 'Cloud DMA is a separate hardware path from our external loader tiers. The portal walks you through provisioning, compatibility checks and first connection tests before you join for raids.',
     },
     { type: 'h2', text: 'Who it is for' },
     {
@@ -297,7 +301,7 @@ const productContent: Record<
     images: slidesForProduct('lite'),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: tarkovSystemRequirements,
+    systemRequirements: arkSystemRequirements,
     fullFeatures: [
       'Player ESP & skeleton boxes',
       'Downed-player & stash locator',
@@ -309,16 +313,16 @@ const productContent: Record<
       'Team color filter',
       'Vehicle & helicopter alerts',
       'FOV changer',
-      'Customs / Labs preset config',
-      'Co-op / PvPvE preset config',
+      'Island / cave preset config',
+      'Co-op / Unofficial PvP preset config',
       'Cloud config backup',
       'Patch auto-updater',
     ],
     overview: {
-      title: 'Built around a clear Escape from Tarkov awareness workflow',
+      title: 'Built around a clear Ark: Survival Ascended awareness workflow',
       paragraphs: [
-        'Escape from Tarkov Lite focuses on player ESP, downed-player locator, loot markers, radar and FOV changer—everything you need to track threats and map control without aim automation. Modules are grouped in the portal so you can tune distance, colors, and stream-proof mode before you queue for a raid.',
-        'Lite is the entry path for PMC, Scav, Labs and PvPvE players who want awareness with minimal report risk. No aimbot, no bots—just readable overlays maintained every patch at hackstarkov.com.',
+        'Ark: Survival Ascended Lite focuses on player ESP, downed-player locator, loot markers, radar and FOV changer—everything you need to track threats and map control without aim automation. Modules are grouped in the portal so you can tune distance, colors, and stream-proof mode before you join a server.',
+        'Lite is the entry path for PvP, PvE, Boss caves and Unofficial PvP players who want awareness with minimal report risk. No aimbot, no bots—just readable overlays maintained every patch at cheatsark.com.',
       ],
     },
   },
@@ -326,7 +330,7 @@ const productContent: Record<
     images: slidesForProduct('pro'),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: tarkovSystemRequirements,
+    systemRequirements: arkSystemRequirements,
     fullFeatures: [
       'All Lite ESP & radar modules',
       'Aimbot with smoothing',
@@ -345,10 +349,10 @@ const productContent: Record<
       'Discord operator support',
     ],
     overview: {
-      title: 'Built around a clear Escape from Tarkov combat workflow',
+      title: 'Built around a clear Ark: Survival Ascended combat workflow',
       paragraphs: [
-        'Escape from Tarkov Pro adds aimbot, recoil control, Smart Aim and weapon profiles on top of every Lite module. Per-weapon profiles, smoothing and activation keys live in one combat tab—tuned for PMC raids and Labs runs when you start with portal presets, not max sliders.',
-        'Pro is the most popular tier: enough firepower for busy raid weeks and PvPvE sessions without Elite slot limits. Target selector and recoil control keep you efficient mid-fight while settings stay human at default values.',
+        'Ark: Survival Ascended Pro adds aimbot, recoil control, Smart Aim and weapon profiles on top of every Lite module. Per-weapon profiles, smoothing and activation keys live in one combat tab—tuned for official server sessions and boss cave runs when you start with portal presets, not max sliders.',
+        'Pro is the most popular tier: enough firepower for busy session weeks and Unofficial PvP sessions without Elite slot limits. Target selector and recoil control keep you efficient mid-fight while settings stay human at default values.',
       ],
     },
   },
@@ -356,7 +360,7 @@ const productContent: Record<
     images: slidesForProduct('elite'),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: tarkovSystemRequirements,
+    systemRequirements: arkSystemRequirements,
     fullFeatures: [
       'All Lite + Pro modules',
       'Auto Loot Assist',
@@ -376,23 +380,23 @@ const productContent: Record<
       'Private slot access',
     ],
     overview: {
-      title: 'Built around a full Escape from Tarkov operator workflow',
+      title: 'Built around a full Ark: Survival Ascended operator workflow',
       paragraphs: [
         'Elite tier is the top combat package on this site—every Lite and Pro module plus Loot Route Assist, Skin Changer, priority patch delivery and the full ESP suite.',
-        'Elite slots are limited so patch cycles stay fast and builds stay maintainable. Direct dev support in Discord helps you tune conservative profiles before joining live extraction raids. Check the status banner on hackstarkov.com before purchase.',
+        'Elite slots are limited so patch cycles stay fast and builds stay maintainable. Direct dev support in Discord helps you tune conservative profiles before joining live official servers. Check the status banner on cheatsark.com before purchase.',
       ],
     },
   },
   'hwid-spoofer': {
     images: slidesForProduct('hwid-spoofer'),
     goodToKnow:
-      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Escape from Tarkov.',
+      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Ark: Survival Ascended.',
     limitations:
       'Spoofing does not help account-only bans. Never stack two spoof tools. Shared or work PCs may not be suitable. You accept all risk from driver-level changes.',
     systemRequirements: [
       { icon: 'reqWindows', text: 'Windows 10 or 11 64-bit with administrator access.' },
       { icon: 'reqRestorePoint', text: 'Ability to create a system restore point before running.' },
-      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Escape from Tarkov after spoofing.' },
+      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Ark: Survival Ascended after spoofing.' },
       { icon: 'reqWifi', text: 'Stable connection for portal verification tools.' },
     ],
     fullFeatures: [
@@ -410,8 +414,8 @@ const productContent: Record<
     overview: {
       title: 'Built around a clear hardware recovery workflow',
       paragraphs: [
-        'This Escape from Tarkov HWID spoofer helps players recover when BattlEye flags PC hardware but the Tarkov account is still clean. Disk and MAC profile tools ship with a restore-point checklist, compatibility scan, and post-spoof verification steps.',
-        'Use this path when fresh accounts fail instantly on one machine but work elsewhere—not for account-only bans. After spoofing, load a conservative cheat profile from hackstarkov.com before joining a server.',
+        'This Ark: Survival Ascended HWID spoofer helps players recover when BattlEye flags PC hardware but the Ark account is still clean. Disk and MAC profile tools ship with a restore-point checklist, compatibility scan, and post-spoof verification steps.',
+        'Use this path when fresh accounts fail instantly on one machine but work elsewhere—not for account-only bans. After spoofing, load a conservative cheat profile from cheatsark.com before joining a server.',
       ],
     },
   },
@@ -422,7 +426,7 @@ const productContent: Record<
     limitations:
       'UGC does not guarantee account restoration. Results vary by case type. Permanent BattlEye bans may require a new account path instead of appeal.',
     systemRequirements: [
-      { icon: 'reqMailOrder', text: 'Order email used at checkout on hackstarkov.com.' },
+      { icon: 'reqMailOrder', text: 'Order email used at checkout on cheatsark.com.' },
       { icon: 'reqShieldAccount', text: 'Account details and ban or restriction notification if available.' },
       { icon: 'reqWifiPortal', text: 'Internet access for Discord support and case dashboard.' },
     ],
@@ -440,7 +444,7 @@ const productContent: Record<
     overview: {
       title: 'Built around account recovery and appeal workflows',
       paragraphs: [
-        'UGC (Unban & Governance Control) is our Escape from Tarkov account recovery workspace—structured appeal workflows for platform holds, BattlEye actions and server restrictions, not instant unban guarantees.',
+        'UGC (Unban & Governance Control) is our Ark: Survival Ascended account recovery workspace—structured appeal workflows for platform holds, BattlEye actions and server restrictions, not instant unban guarantees.',
         'Build custom dispute paths, track case status and rebuild your presence with smart restriction-management tools. Support walks you through each step via Discord when you need hands-on help.',
       ],
     },
@@ -451,7 +455,7 @@ const productContent: Record<
       'Unlock All previews skins locally on your client. Other players on the server see your real inventory—not preview skins. Included with Elite tier.',
     limitations:
       'Local preview only—does not modify Steam inventory or store state. Other players cannot see previewed weapon, clothing or deployable skins.',
-    systemRequirements: tarkovSystemRequirements,
+    systemRequirements: arkSystemRequirements,
     fullFeatures: [
       'Weapon skin swap',
       'Clothing & armor skin preview',
@@ -466,7 +470,7 @@ const productContent: Record<
     overview: {
       title: 'Built around a local cosmetic preview workflow',
       paragraphs: [
-        'This Skin Changer / Unlock All utility lets you browse weapon, clothing and deployable skins locally in Escape from Tarkov—searchable catalog, favorites, and loadout export without modifying live Steam purchases.',
+        'This Skin Changer / Unlock All utility lets you browse weapon, clothing and deployable skins locally in Ark: Survival Ascended—searchable catalog, favorites, and loadout export without modifying live Steam purchases.',
         'Skins display on your client for testing and content creation. Other players see your actual inventory, not preview skins. Included free with Elite; available standalone for cosmetic preview without combat modules.',
       ],
     },
@@ -508,7 +512,7 @@ function buildTierPages(): ProductPage[] {
   return t.cheats.items.map((cheat) => {
     const slug = slugFromHref(cheat.href);
     const content = productContent[slug];
-    const displayName = cheat.name === 'Lite' ? 'Escape from Tarkov Lite' : cheat.name === 'Pro' ? 'Escape from Tarkov Pro' : 'Escape from Tarkov Elite';
+    const displayName = cheat.name === 'Lite' ? 'Ark: Survival Ascended Lite' : cheat.name === 'Pro' ? 'Ark: Survival Ascended Pro' : 'Ark: Survival Ascended Elite';
     return {
       slug,
       kind: 'tier',
@@ -595,5 +599,5 @@ export const productHub = {
   subtitle: t.products.subtitle,
   description:
     'Products hub for PC—compare Lite, Pro and Elite tiers plus HWID Spoofer, UGC and Unlock All utilities with secure checkout.',
-  buyUrl: checkoutPath('tarkov'),
+  buyUrl: checkoutPath('ark'),
 };

@@ -3,24 +3,12 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
 
-const siteOrigin = (process.env.SITE_ORIGIN || 'https://hackstarkov.com').replace(/\/$/, '');
+const siteOrigin = (process.env.SITE_ORIGIN || 'https://cheatsark.com').replace(/\/$/, '');
 
 export default defineConfig({
   site: siteOrigin,
   trailingSlash: 'always',
-  redirects: {
-    '/products/arcraider-hacks/': '/products/tarkov-hacks/',
-    '/blog/eac-patch/': '/blog/be-patch/',
-    '/blog/eac-error/': '/blog/be-error/',
-    '/forum/eac-init/': '/forum/be-init/',
-    '/go/arc-raiders/': '/go/tarkov/',
-    '/cheats/': '/products/tarkov-hacks/',
-    '/cheats/lite/': '/products/tarkov-hacks/',
-    '/cheats/pro/': '/products/tarkov-hacks/',
-    '/cheats/elite/': '/products/tarkov-hacks/elite/',
-    '/cheats/compare/': '/blog/lite-vs-pro/',
-    '/contact/': '/support/',
-  },
+  /** Legacy URLs → 301 via public/_redirects (scripts/emit-redirects.mjs + PATH_REDIRECTS). */
   compressHTML: true,
   prefetch: {
     prefetchAll: false,

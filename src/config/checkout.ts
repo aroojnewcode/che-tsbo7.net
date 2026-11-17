@@ -1,16 +1,16 @@
-import { CHECKOUT_URLS, TARKOV_CHECKOUT_URL } from './checkout-redirects.mjs';
+import { CHECKOUT_URLS, ARK_CHECKOUT_URL } from './checkout-redirects.mjs';
 
 /** Zadeyo affiliate checkout destinations. */
 export const CHECKOUT = CHECKOUT_URLS;
 
 /** All Get access / Buy CTAs use this URL. */
-export const ZADEYO_CHECKOUT_URL = TARKOV_CHECKOUT_URL;
+export const ZADEYO_CHECKOUT_URL = ARK_CHECKOUT_URL;
 
 export type CheckoutProduct = keyof typeof CHECKOUT;
 
 /** URL slug for /go/[slug]/ checkout redirect pages. */
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  tarkov: 'tarkov',
+  ark: 'ark',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -22,22 +22,22 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
 ) as Record<string, CheckoutProduct>;
 
 /** Zadeyo affiliate URL for visible “Get access” / buy CTAs (same tab — no target=_blank). */
-export function checkoutPath(product: CheckoutProduct = 'tarkov'): string {
+export function checkoutPath(product: CheckoutProduct = 'ark'): string {
   return CHECKOUT[product];
 }
 
 /** Internal /go/* path (blog links, bookmarks); 302 to Zadeyo via public/_redirects. */
-export function checkoutRedirectPath(product: CheckoutProduct = 'tarkov'): string {
+export function checkoutRedirectPath(product: CheckoutProduct = 'ark'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
 /** Alias used by /go/[slug] static redirect pages. */
-export function checkoutExternalUrl(product: CheckoutProduct = 'tarkov'): string {
+export function checkoutExternalUrl(product: CheckoutProduct = 'ark'): string {
   return CHECKOUT[product];
 }
 
 /** Default product checkout redirect (replaces legacy Discord CTAs). */
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('tarkov');
+export const PRIMARY_CHECKOUT_PATH = checkoutPath('ark');
 
 /** Map internal product slugs to checkout redirect paths. */
 export function checkoutForSlug(slug: string): string {
@@ -55,7 +55,7 @@ export function checkoutForSlug(slug: string): string {
     case 'pro':
     case 'elite':
     default:
-      return checkoutPath('tarkov');
+      return checkoutPath('ark');
   }
 }
 
@@ -91,8 +91,13 @@ export function resolveCheckoutHref(href: string): string {
   if (href.includes('%2Fproducts%2Fcloud-dma') || href.includes('/products/cloud-dma')) {
     return checkoutPath('cloudDma');
   }
-  if (href.includes('%2Fproducts%2Fescape-from-tarkov') || href.includes('/products/escape-from-tarkov')) {
-    return checkoutPath('tarkov');
+  if (
+    href.includes('%2Fproducts%2Fark-ascended') ||
+    href.includes('/products/ark-ascended') ||
+    href.includes('%2Fproducts%2Fark-survival-ascended') ||
+    href.includes('/products/ark-survival-ascended')
+  ) {
+    return checkoutPath('ark');
   }
 
   return href;

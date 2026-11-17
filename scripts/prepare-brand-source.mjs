@@ -10,8 +10,8 @@ const root = process.cwd();
 const input =
   process.argv[2] ||
   process.env.BRAND_ICON_SOURCE ||
-  path.join(root, 'public/brand/tarkov-favicon-source.png');
-const out = path.join(root, 'public/brand/tarkov-favicon-source.png');
+  path.join(root, 'public/brand/ark-favicon-source.png');
+const out = path.join(root, 'public/brand/ark-favicon-source.png');
 const forumLogo = path.join(root, 'public/images/brand/forum-logo.png');
 
 if (!existsSync(input)) {

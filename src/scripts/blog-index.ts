@@ -1,16 +1,30 @@
 /** Blog index topic filters + Starwind sort select. */
-export function initBlogIndexFilters(emptyMessage: string) {
+export function initBlogIndexFilters(emptyMessage?: string) {
   const grid = document.getElementById('blog-grid');
   const emptyEl = document.getElementById('blog-empty');
   const sortRoot = document.getElementById('blog-sort-select');
-  if (!grid) return;
+  if (!grid || grid.dataset.blogFiltersInit === 'true') return;
+  grid.dataset.blogFiltersInit = 'true';
 
-  const filters = document.querySelectorAll<HTMLButtonElement>('[data-blog-filter]');
+  const emptyText =
+    emptyMessage ?? grid.getAttribute('data-empty-filter') ?? 'No articles match this filter.';
+
+  const filters = document.querySelectorAll<HTMLElement>('[data-blog-filter]');
+  const featuredEl = document.querySelector<HTMLElement>('[data-blog-featured]');
 
   const cards = () => [...grid.querySelectorAll<HTMLElement>('[data-blog-card]')];
 
+  const setActiveFilter = (tag: string) => {
+    filters.forEach((btn) => {
+      const value = btn.getAttribute('data-blog-filter') ?? 'all';
+      const active = value === tag;
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      btn.classList.toggle('is-active', active);
+    });
+  };
+
   const activeTag = () =>
-    document.querySelector<HTMLButtonElement>('[data-blog-filter][aria-pressed="true"]')?.getAttribute(
+    document.querySelector<HTMLElement>('[data-blog-filter][aria-pressed="true"]')?.getAttribute(
       'data-blog-filter',
     ) ?? 'all';
 
@@ -41,6 +55,14 @@ export function initBlogIndexFilters(emptyMessage: string) {
     return tsB - tsA;
   };
 
+  const updateUrl = (tag: string) => {
+    const next =
+      tag === 'all'
+        ? `${window.location.pathname}`
+        : `${window.location.pathname}?topic=${encodeURIComponent(tag)}`;
+    window.history.replaceState(null, '', next);
+  };
+
   const apply = () => {
     const tag = activeTag();
     const sort = getSort();
@@ -56,16 +78,24 @@ export function initBlogIndexFilters(emptyMessage: string) {
       if (match) visibleCount += 1;
     });
 
+    if (featuredEl) {
+      const featuredTag = featuredEl.getAttribute('data-tag');
+      const showFeatured = tag === 'all' || featuredTag === tag;
+      featuredEl.classList.toggle('hidden', !showFeatured);
+    }
+
     if (emptyEl) {
       emptyEl.classList.toggle('hidden', visibleCount > 0);
-      emptyEl.textContent = emptyMessage;
+      emptyEl.textContent = emptyText;
     }
   };
 
   filters.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filters.forEach((b) => b.setAttribute('aria-pressed', 'false'));
-      btn.setAttribute('aria-pressed', 'true');
+    btn.addEventListener('click', (event) => {
+      if (btn instanceof HTMLAnchorElement) event.preventDefault();
+      const tag = btn.getAttribute('data-blog-filter') ?? 'all';
+      setActiveFilter(tag);
+      updateUrl(tag);
       apply();
     });
   });
@@ -77,7 +107,13 @@ export function initBlogIndexFilters(emptyMessage: string) {
 
   document.addEventListener('starwind:value-change', onSortChange);
 
-  // Starwind select hydrates after first paint — re-apply once ready.
+  const topicFromUrl = new URLSearchParams(window.location.search).get('topic');
+  if (topicFromUrl) {
+    const match = [...filters].find((btn) => btn.getAttribute('data-blog-filter') === topicFromUrl);
+    if (match) setActiveFilter(topicFromUrl);
+  }
+
   requestAnimationFrame(apply);
   window.setTimeout(apply, 0);
+  window.setTimeout(apply, 120);
 }

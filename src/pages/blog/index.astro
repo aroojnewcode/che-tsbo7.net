@@ -1,4 +1,5 @@
 ---
+import '../../styles/blog-pages.css';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import {
   blogPosts,
@@ -31,7 +32,7 @@ const featured = getFeaturedBlogPost();
 const gridPosts = getNonFeaturedBlogPosts();
 const tags = getBlogTags();
 const lcpSource =
-  featured?.image ?? blogPosts.find((p) => p.image)?.image ?? '/images/gameplay/tarkov-map-hack.png';
+  featured?.image ?? blogPosts.find((p) => p.image)?.image ?? '/images/gameplay/ark-map-hack.png';
 const lcpImage = webpSrc(lcpSource, CARD_IMAGE_WIDTHS[0]);
 
 const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
@@ -56,14 +57,20 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
       <Breadcrumbs items={breadcrumbs} />
       <header class="section-header mt-6 max-w-2xl">
         <p class="section-header__eyebrow">{t.blog.eyebrow}</p>
-        <h1 id="blog-latest-title" class="section-header__title">{seoEntry?.h1 ?? t.blog.latestTitle}</h1>
+        <h1 id="blog-latest-title" class="section-header__title">{seoEntry?.h1 ?? 'ARK: Survival Ascended Cheats & Hacks – Guides, Tips & Updates'}</h1>
         <p class="section-header__subtitle">{t.blog.latestSubtitle}</p>
       </header>
       <p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
         These buy guides cover tier picks, payment steps, and module explainers—read them before you compare products or
         open secure checkout.
       </p>
-      {featured && <BlogCard post={featured} index={0} eager showDate layout="featured" class="mt-8" />}
+      {
+        featured && (
+          <div data-blog-featured data-tag={featured.tag} class="mt-8">
+            <BlogCard post={featured} index={0} eager showDate layout="featured" />
+          </div>
+        )
+      }
     </div>
   </section>
 
@@ -77,8 +84,8 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
           role="toolbar"
           aria-label="Filter articles by topic"
         >
-          <button
-            type="button"
+          <a
+            href="/blog/"
             class="blog-filter inline-flex shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium shadow-xs hover:bg-muted"
             data-blog-filter="all"
             aria-pressed="true"
@@ -87,11 +94,11 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
               <Icon name="navBlog" size={15} />
             </span>
             {t.blog.filterAll}
-          </button>
+          </a>
           {
             tags.map((tag) => (
-              <button
-                type="button"
+              <a
+                href={`/blog/?topic=${encodeURIComponent(tag)}`}
                 class="blog-filter inline-flex shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium shadow-xs hover:bg-muted"
                 data-blog-filter={tag}
                 aria-pressed="false"
@@ -103,7 +110,7 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
                   <Icon name={tagIcon(tag)} size={15} />
                 </span>
                 {tag}
-              </button>
+              </a>
             ))
           }
         </div>
@@ -111,7 +118,11 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
         <BlogSortSelect />
       </div>
 
-      <div id="blog-grid" class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
+      <div
+        id="blog-grid"
+        class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-10"
+        data-empty-filter={t.blog.emptyFilter}
+      >
         {gridPosts.map((post, index) => (
           <BlogCard post={post} index={index} showDate />
         ))}
@@ -130,13 +141,14 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
     </div>
   </section>
 
-  <script define:vars={{ emptyMessage: t.blog.emptyFilter }}>
+  <script>
     import { initBlogIndexFilters } from '../../scripts/blog-index.ts';
 
+    const bootBlogFilters = () => initBlogIndexFilters();
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => initBlogIndexFilters(emptyMessage));
+      document.addEventListener('DOMContentLoaded', bootBlogFilters, { once: true });
     } else {
-      initBlogIndexFilters(emptyMessage);
+      bootBlogFilters();
     }
   </script>
 </BaseLayout>

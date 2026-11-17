@@ -10,9 +10,9 @@ import {
   DEFAULT_OG_IMAGE_HEIGHT,
   DEFAULT_OG_IMAGE_WIDTH,
   GA_MEASUREMENT_ID,
+  SITE_ORIGIN,
   absoluteAssetUrl,
 } from '../config/seo';
-import { SITE_SEO_KEYWORDS } from '../config/seoKeywords';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import JsonLd from '../components/JsonLd.astro';
@@ -44,7 +44,7 @@ const {
   jsonLd,
 } = Astro.props;
 
-const canonical = canonicalUrl(Astro.url.pathname, Astro.url.origin);
+const canonical = canonicalUrl(Astro.url.pathname, SITE_ORIGIN);
 const ogImageUrl = absoluteAssetUrl(ogImage);
 const robotsContent = noindex
   ? 'noindex, nofollow'
@@ -69,7 +69,6 @@ const robotsContent = noindex
     <style is:global set:html={responsiveDocumentCss}></style>
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content={SITE_SEO_KEYWORDS} />
     <meta name="author" content={t.site.name} />
     <meta name="robots" content={robotsContent} />
     <meta name="googlebot" content={robotsContent} />

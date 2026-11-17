@@ -19,7 +19,7 @@ interface Props {
   minimal?: boolean;
 }
 
-const { images, id = 'product-screenshots', tierLabel = 'Tarkov', badge = 'Live', minimal = false } = Astro.props;
+const { images, id = 'product-screenshots', tierLabel = 'Ark', badge = 'Live', minimal = false } = Astro.props;
 
 /** Dedupe by src so UI never shows the same file twice. */
 const slides = images.filter(

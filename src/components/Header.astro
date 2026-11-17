@@ -14,8 +14,7 @@ import { sheetTitle } from '@/components/starwind/sheet/variants';
 import Icon from './icons/Icon.astro';
 import SlideRevealButton from './SlideRevealButton.astro';
 import BurgerMorphIcon from './BurgerMorphIcon.astro';
-import BrandGun from './BrandGun.astro';
-import BrandTitlePopover from './BrandTitlePopover.astro';
+import BrandCorner from './BrandCorner.astro';
 import { SITE_GUN_IMAGE } from '../config/site';
 
 import type { IconName } from './icons/types';
@@ -29,7 +28,7 @@ const navIcons: Record<string, IconName> = {
   Support: 'navSupport',
 };
 
-const purchaseUrl = checkoutPath('tarkov');
+const purchaseUrl = checkoutPath('ark');
 const purchaseLink = externalLinkProps(purchaseUrl);
 ---
 
@@ -38,17 +37,7 @@ const purchaseLink = externalLinkProps(purchaseUrl);
     <div
       class="pointer-events-auto relative flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-2xl border border-border/40 bg-background/35 px-4 text-foreground shadow-md shadow-black/5 backdrop-blur-2xl supports-[backdrop-filter]:bg-background/25 dark:border-white/10 dark:bg-background/20 dark:shadow-black/25 sm:px-5 lg:h-[3.75rem]"
     >
-    <div class="brand-lockup relative inline-flex min-w-0 items-center gap-2.5" data-brand-lockup>
-      <BrandGun size={40} class="brand-gun--navbar" />
-      <BrandTitlePopover />
-      <a
-        href="/"
-        class="hidden rounded-lg font-[family-name:var(--font-heading)] text-sm font-bold tracking-wide focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:inline sm:text-base"
-        aria-label={t.ui.homeAria}
-      >
-        Escape from Tarkov <span class="text-primary">Hacks</span>
-      </a>
-    </div>
+    <BrandCorner />
 
     <nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex" aria-label="Primary">
       {t.nav.map((link) => (

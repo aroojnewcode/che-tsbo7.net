@@ -1,9 +1,9 @@
 /**
- * Product & hero screenshots — Tarkov cheat gallery (Supabase library).
- * Optional local fallbacks: public/images/product/*.png via npm run media:tarkov
+ * Product & hero screenshots — Ark cheat gallery (Supabase library).
+ * Optional local fallbacks: public/images/product/*.png via npm run media:ark
  */
 
-import { TARKOV_MEDIA_URLS } from './media';
+import { ARK_MEDIA_URLS } from './media';
 
 export interface GallerySlideConfig {
   id: string;
@@ -16,28 +16,28 @@ export interface GallerySlideConfig {
 
 const productImage = (name: string) => `/images/product/${name}.png`;
 
-/** Three unique Tarkov shots — never duplicate src in one gallery. */
+/** Three unique Ark shots — never duplicate src in one gallery. */
 export const PRODUCT_GALLERY_SLIDES: GallerySlideConfig[] = [
   {
     id: 'awareness',
     src: productImage('awareness'),
-    alt: 'Escape from Tarkov player ESP highlighting PMCs, Scavs and loot in a warehouse',
-    caption: 'Player & loot ESP',
-    captionDesc: 'Track PMCs, Scavs, containers and loot lines before you push a hallway or extract.',
+    alt: 'Ark Survival Ascended player ESP highlighting tribe members, wild dinos and resources',
+    caption: 'Player & resource ESP',
+    captionDesc: 'Track tribes, wild dinos, supply drops and nodes before you push a base or upload.',
   },
   {
     id: 'combat',
     src: productImage('combat'),
-    alt: 'Escape from Tarkov scoped combat overlay with aim assist in an industrial corridor',
+    alt: 'Ark Survival Ascended combat overlay with aim assist during a PvP fight',
     caption: 'Combat assist',
     captionDesc: 'Aim smoothing, FOV limits and ESP together for CQB and mid-range fights.',
   },
   {
     id: 'world',
     src: productImage('world'),
-    alt: 'Escape from Tarkov tactical warehouse sightline with map-style awareness',
-    caption: 'Map & extract awareness',
-    captionDesc: 'Orientation on raid maps—see routes, extracts and hotspots before you rotate.',
+    alt: 'Ark Survival Ascended tactical sightline with map-style awareness',
+    caption: 'Map & obelisk awareness',
+    captionDesc: 'Orientation on ASA maps—see routes, obelisks and hotspots before you rotate.',
   },
 ];
 

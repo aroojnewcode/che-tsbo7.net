@@ -1,39 +1,39 @@
 === index.html ===
-Escape from Tarkov Hacks | ESP, Aimbot &amp; Radar
-Escape from Tarkov hacks for PC: player ESP, loot ESP, aimbot, no recoil, and stream-proof overlays updated every major patch at hackstarkov.com.
-https://hackstarkov.com/
+Ark: Survival Ascended Hacks | ESP, Aimbot &amp; Radar
+Ark: Survival Ascended hacks for PC: player ESP, loot ESP, aimbot, no recoil, and stream-proof overlays updated every major patch at cheatsark.com.
+https://cheatsark.com/
 
-=== products/tarkov-hacks/index.html ===
-Escape from Tarkov Elite Hacks &amp; Utility Products
-Elite Escape from Tarkov hacks plus HWID spoofer, UGC tools, and Skin Changer utilities for PC on hackstarkov.com.
-https://hackstarkov.com/products/tarkov-hacks/
+=== products/ark-hacks/index.html ===
+Ark: Survival Ascended Elite Hacks &amp; Utility Products
+Elite Ark: Survival Ascended hacks plus HWID spoofer, UGC tools, and Skin Changer utilities for PC on cheatsark.com.
+https://cheatsark.com/products/ark-hacks/
 
-=== products/tarkov-hacks/elite/index.html ===
-Escape from Tarkov Elite Hacks | Full ESP &amp; Combat Suite
+=== products/ark-hacks/elite/index.html ===
+Ark: Survival Ascended Elite Hacks | Full ESP &amp; Combat Suite
 Elite tier: player ESP, loot ESP, aimbot, no recoil, loot assist tools, and priority BattlEye patch delivery.
-https://hackstarkov.com/products/tarkov-hacks/elite/
+https://cheatsark.com/products/ark-hacks/elite/
 
 === blog/index.html ===
-Escape from Tarkov Hacks Guides &amp; Patch Notes
-Setup guides, Lite vs Pro comparisons, BattlEye patch checklists, and PVP config tips for Escape from Tarkov hacks.
-https://hackstarkov.com/blog/
+Ark: Survival Ascended Hacks Guides &amp; Patch Notes
+Setup guides, Lite vs Pro comparisons, BattlEye patch checklists, and PVP config tips for Ark: Survival Ascended hacks.
+https://cheatsark.com/blog/
 
-=== blog/tarkov-hacks-features-guide/index.html ===
-Escape from Tarkov hacks features: ESP, aimbot, radar and more | Escape from Tarkov Hacks
-Complete guide to our Escape from Tarkov hacks—player ESP, loot ESP, aimbot, no recoil, FOV and stream proof.
-https://hackstarkov.com/blog/tarkov-cheats-features-guide/
+=== blog/ark-hacks-features-guide/index.html ===
+Ark: Survival Ascended hacks features: ESP, aimbot, radar and more | Ark: Survival Ascended Hacks
+Complete guide to our Ark: Survival Ascended hacks—player ESP, loot ESP, aimbot, no recoil, FOV and stream proof.
+https://cheatsark.com/blog/ark-cheats-features-guide/
 
 === faq/index.html ===
-FAQ | Escape from Tarkov Hacks, Products &amp; Setup
-Answers on hack tiers, ESP, aimbot, HWID tools, checkout, and blog guides at hackstarkov.com.
-https://hackstarkov.com/faq/
+FAQ | Ark: Survival Ascended Hacks, Products &amp; Setup
+Answers on hack tiers, ESP, aimbot, HWID tools, checkout, and blog guides at cheatsark.com.
+https://cheatsark.com/faq/
 
 === support/index.html ===
-Support | Escape from Tarkov Hacks
-Get help with loader setup, HWID, and checkout for Escape from Tarkov hack tiers and utilities.
-https://hackstarkov.com/support/
+Support | Ark: Survival Ascended Hacks
+Get help with loader setup, HWID, and checkout for Ark: Survival Ascended hack tiers and utilities.
+https://cheatsark.com/support/
 
 === 404.html ===
-Page not found | Escape from Tarkov Hacks
-The page you requested could not be found on hackstarkov.com.
-https://hackstarkov.com/404/
+Page not found | Ark: Survival Ascended Hacks
+The page you requested could not be found on cheatsark.com.
+https://cheatsark.com/404/

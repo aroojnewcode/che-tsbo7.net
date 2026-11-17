@@ -1,13 +1,13 @@
 ---
 import { t } from '../i18n';
-import { SITE_GUN_IMAGE } from '../config/site';
+import { SITE_LOGO } from '../config/site';
 import { Separator } from '@/components/starwind/separator';
 
 const resourceLinks = [
   { href: '/blog/', label: 'Blog archive', ariaLabel: 'Blog' },
   { href: '/reviews/', label: 'Buyer reviews', ariaLabel: 'Reviews' },
-  { href: '/products/tarkov-hacks/elite/', label: 'Elite hacks', ariaLabel: 'Elite hacks' },
-  { href: '/products/tarkov-hacks/', label: 'Products & utilities', ariaLabel: 'Products' },
+  { href: '/products/ark-hacks/elite/', label: 'Elite hacks', ariaLabel: 'Elite hacks' },
+  { href: '/products/ark-hacks/', label: 'Products & utilities', ariaLabel: 'Products' },
   { href: '/support/', label: 'Discord loader ticket desk', ariaLabel: 'Support' },
 ];
 
@@ -23,8 +23,8 @@ const legalLinks = [
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
         <a href="/" class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-bold" aria-label={t.ui.homeAria}>
-          <img src={SITE_GUN_IMAGE} alt="" width={32} height={32} class="brand-gun__image shrink-0 rounded-md" loading="lazy" decoding="async" />
-          <span aria-hidden="true">Escape from Tarkov <span class="text-primary">Cheats</span></span>
+          <img src={SITE_LOGO} alt="" width={32} height={32} class="shrink-0 rounded-md" loading="lazy" decoding="async" />
+          <span aria-hidden="true">Ark: Survival Ascended <span class="text-primary">Cheats</span></span>
         </a>
         <p class="text-sm text-muted-foreground">{t.footer.tagline}</p>
       </div>

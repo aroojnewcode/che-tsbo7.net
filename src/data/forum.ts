@@ -14,6 +14,7 @@ export interface ForumPost {
   excerpt: string;
   author: string;
   age: string;
+  /** Total visible replies (top-level comments + nested replies). Set via `attachReplyCount`. */
   commentsCount: number;
   upvotes: number;
   flair?: string;
@@ -21,6 +22,22 @@ export interface ForumPost {
   comments: ForumComment[];
   sourceTitle?: string;
   sourcePath?: string;
+}
+
+/** Count every reply rendered in the thread (including nested `replies`). */
+export function countForumReplies(comments: ForumComment[]): number {
+  let total = 0;
+  for (const comment of comments) {
+    total += 1;
+    if (comment.replies?.length) {
+      total += countForumReplies(comment.replies);
+    }
+  }
+  return total;
+}
+
+export function attachReplyCount(post: ForumPost): ForumPost {
+  return { ...post, commentsCount: countForumReplies(post.comments) };
 }
 
 export const forumCategories = [
@@ -60,7 +77,7 @@ const additionalGuidePosts: ForumPost[] = [
   guideDiscussion({
     slug: 'esp-include', title: 'What does Player ESP include before I buy?', upvotes: 73,
     excerpt: 'Player ESP breakdown: boxes, loot, salvage nodes and radar covered in the ESP buy guide before checkout.',
-    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'ESP and radar setup for Escape from Tarkov', sourcePath: '/blog/esp/',
+    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'ESP and radar setup for Ark: Survival Ascended', sourcePath: '/blog/esp/',
     answer: 'The guide covers player boxes, names, health and distance, skeleton ESP, loot and resource markers, and the radar overlay. The exact options depend on the selected product tier.',
     detail: 'It recommends starting with a restrained layout and enabling only the information you can read comfortably during a fight at a POI or on a compound wall.',
     tip: 'Keep the overlay uncluttered: begin with players and the nearest loot, then adjust the distance filters one at a time.',
@@ -68,15 +85,15 @@ const additionalGuidePosts: ForumPost[] = [
   guideDiscussion({
     slug: 'esp-setup', title: 'How should I set up ESP overlay the first time?', upvotes: 58,
     excerpt: 'First-time ESP overlay setup: enable basics, confirm on a quiet test session, then tune one setting at a time.',
-    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'ESP and radar setup for Escape from Tarkov', sourcePath: '/blog/esp/',
+    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'ESP and radar setup for Ark: Survival Ascended', sourcePath: '/blog/esp/',
     answer: 'Use the setup guide to enable the overlay, choose readable colors, and check that the indicators do not cover your hotbar, health bars or the crosshair.',
-    detail: 'Test your layout on a low-population or Hideout shooting range or an offline raid before relying on it in a busy one. A simple configuration is easier to read than turning on every option immediately.',
+    detail: 'Test your layout on a low-population or Single-player single-player test map or an single-player session before relying on it in a busy one. A simple configuration is easier to read than turning on every option immediately.',
     tip: 'If the screen feels crowded, lower the loot distance and hide low-value items before changing colors or sizes.',
   }),
   guideDiscussion({
     slug: 'fov-settings', title: 'What FOV hack settings feel comfortable in PvP?', upvotes: 44,
     excerpt: 'FOV hack tips: widen awareness without stretching the screen or making distant targets hard to track.',
-    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'FOV hack guide for Escape from Tarkov', sourcePath: '/blog/fov/',
+    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'FOV hack guide for Ark: Survival Ascended', sourcePath: '/blog/fov/',
     answer: 'There is no single ideal FOV for every player. The guide recommends adjusting gradually and checking that you can still judge distance, recoil and enemy movement at range.',
     detail: 'Keep a quick reset hotkey to the default FOV available so you can compare the wider view with familiar framing, especially for base fights.',
     tip: 'Change one step at a time and spend a short session on a quiet test session before settling on a new value.',
@@ -92,9 +109,9 @@ const additionalGuidePosts: ForumPost[] = [
   guideDiscussion({
     slug: 'recoil-drill', title: 'Best way to test No-recoil weapon profiles?', upvotes: 29,
     excerpt: 'Practice recoil profiles one weapon at a time on a quiet test session wall before live PvP.',
-    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'Aimbot bone select and recoil scripts for Escape from Tarkov', sourcePath: '/blog/bones/',
-    answer: 'Choose one weapon and one profile to test at a time. The guide walks through example profiles for the M4A1, AK-74, MP7 and DVL-10 rifle, and explains how bone selection fits with recoil compensation.',
-    detail: 'A Hideout shooting range or an offline raid lets you repeat the same spray at a wall and see which values need adjustment without risking your kit.',
+    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'Aimbot bone select and recoil scripts for Ark: Survival Ascended', sourcePath: '/blog/bones/',
+    answer: 'Choose one weapon and one profile to test at a time. The guide walks through example profiles for the Assault Rifle, Pump-Action, Longneck and Fabricated Sniper, and explains how bone selection fits with recoil compensation.',
+    detail: 'A Single-player single-player test map or an single-player session lets you repeat the same spray at a wall and see which values need adjustment without risking your kit.',
     tip: 'Learn the manual spray pattern first; that makes it much easier to spot when a profile is over-compensating.',
   }),
   guideDiscussion({
@@ -116,7 +133,7 @@ const additionalGuidePosts: ForumPost[] = [
   guideDiscussion({
     slug: 'skin-info', title: 'What should I know before buying Skin Changer?', upvotes: 38,
     excerpt: 'Skin Changer / Unlock All: local weapon and clothing previews, limits, and what other players see.',
-    category: 'General', categoryTone: 'purple', sourceTitle: 'Skin changer and Unlock All for Escape from Tarkov', sourcePath: '/blog/skins/',
+    category: 'General', categoryTone: 'purple', sourceTitle: 'Skin changer and Unlock All for Ark: Survival Ascended', sourcePath: '/blog/skins/',
     answer: 'The guide describes Skin Changer as a local cosmetic preview utility for weapon skins, clothing and workshop items. It explains setup, supported options, and how to restore your default appearance.',
     detail: 'Review the compatibility notes and follow the current setup instructions before using the utility.',
     tip: 'Cosmetic changes are local previews that other players do not see; check the guide for current limitations and setup steps.',
@@ -124,15 +141,15 @@ const additionalGuidePosts: ForumPost[] = [
   guideDiscussion({
     slug: 'be-init', title: 'BattlEye failed to initialize—what should I try first?', upvotes: 24,
     excerpt: 'BattlEye failed to initialize: verify Steam files and reinstall BattlEye before assuming a ban.',
-    category: 'Patch Talk', categoryTone: 'orange', sourceTitle: 'BattlEye failed to initialize in Escape from Tarkov', sourcePath: '/blog/be-error/',
-    answer: 'The troubleshooting guide says the message can result from game-file problems or software conflicts and does not always mean an account ban. First verify game files through Steam.',
+    category: 'Patch Talk', categoryTone: 'orange', sourceTitle: 'BattlEye failed to initialize in Ark: Survival Ascended', sourcePath: '/blog/be-error/',
+    answer: 'The tresourceshooting guide says the message can result from game-file problems or software conflicts and does not always mean an account ban. First verify game files through Steam.',
     detail: 'It also recommends fully exiting Steam, reinstalling BattlEye from the game install folder, restarting the PC, and checking for conflicting overlays or drivers before trying more disruptive steps.',
     tip: 'Test a normal Steam launch before starting other software so you can narrow down the cause.',
   }),
   guideDiscussion({
     slug: 'ext-loader', title: 'What does an External cheat loader mean?', upvotes: 46,
     excerpt: 'External cheat loader explained: separate process, overlay UI, portal updates vs risky injectors.',
-    category: 'General', categoryTone: 'purple', sourceTitle: 'Escape from Tarkov external cheat guide', sourcePath: '/blog/external/',
+    category: 'General', categoryTone: 'purple', sourceTitle: 'Ark: Survival Ascended external cheat guide', sourcePath: '/blog/external/',
     answer: 'The article uses “external” to describe software that runs separately from the game process and presents its interface as an overlay.',
     detail: 'It discusses the architecture at a high level and explains setup, patch updates, and the differences described between external and internal tools.',
     tip: 'Check compatibility and current status information whenever the game or BattlEye receives an update.',
@@ -140,7 +157,7 @@ const additionalGuidePosts: ForumPost[] = [
   guideDiscussion({
     slug: 'stream-check', title: 'How do I check Stream-proof overlay in OBS?', upvotes: 21,
     excerpt: 'Stream-proof setup: record an OBS test so ESP overlays stay off your VOD before you go live.',
-    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'Stream-proof overlay setup for Escape from Tarkov', sourcePath: '/blog/stream-proof/',
+    category: 'Guides & Builds', categoryTone: 'blue', sourceTitle: 'Stream-proof overlay setup for Ark: Survival Ascended', sourcePath: '/blog/stream-proof/',
     answer: 'Record a short local test with the exact OBS scene and capture mode you plan to use, then review the playback for any overlay elements.',
     detail: 'The guide recommends testing game capture and display capture separately, since capture methods and multi-monitor setups can behave differently.',
     tip: 'Do not rely on the preview alone; review a saved recording from the same scene you intend to stream.',
@@ -149,22 +166,22 @@ const additionalGuidePosts: ForumPost[] = [
     slug: 'hwid-check', title: 'After an BattlEye ban, what should I check on HWID?', upvotes: 33,
     excerpt: 'HWID Spoofer vs new account after a BattlEye hardware flag—checks before Discord support.',
     category: 'General', categoryTone: 'purple', sourceTitle: 'HWID spoofer vs new account after an BattlEye ban', sourcePath: '/blog/hwid/',
-    answer: 'Start by checking the account and device instructions for your product. The guide explains common HWID questions, when a new Tarkov account is enough, and when a reset request may be needed.',
+    answer: 'Start by checking the account and device instructions for your product. The guide explains common HWID questions, when a new Ark account is enough, and when a reset request may be needed.',
     detail: 'Avoid changing several system settings at once. If the product does not recognize your device, contact support with the relevant error details.',
     tip: 'Use the official support path for device resets instead of relying on unrelated third-party tools.',
   }),
   guideDiscussion({
     slug: 'pre-install', title: 'What to review before installing cheat tools?', upvotes: 18,
-    excerpt: 'Before installing cheat tools: status banner, Windows/Steam notes, and official setup on hackstarkov.com.',
-    category: 'Community', categoryTone: 'green', sourceTitle: 'Escape from Tarkov hack features: aimbot, ESP, no recoil and more', sourcePath: '/blog/features/',
+    excerpt: 'Before installing cheat tools: status banner, Windows/Steam notes, and official setup on cheatsark.com.',
+    category: 'Community', categoryTone: 'green', sourceTitle: 'Ark: Survival Ascended hack features: aimbot, ESP, no recoil and more', sourcePath: '/blog/features/',
     answer: 'Read the feature and setup information first, confirm that it matches your system, and check the current update and status notes.',
     detail: 'The site guide describes the available feature groups and links to more specific setup articles for individual modules.',
     tip: 'Use the linked product and support pages as the source of truth for current availability and compatibility.',
   }),
   guideDiscussion({
     slug: 'choose-tier', title: 'How do I choose the right hack tier to buy?', upvotes: 48,
-    excerpt: 'Pick Lite, Pro or Elite hack tools by feature set, then follow secure checkout on hackstarkov.com.',
-    category: 'Community', categoryTone: 'green', sourceTitle: 'How to buy Escape from Tarkov hacks in 2026', sourcePath: '/blog/buy-guide/',
+    excerpt: 'Pick Lite, Pro or Elite hack tools by feature set, then follow secure checkout on cheatsark.com.',
+    category: 'Community', categoryTone: 'green', sourceTitle: 'How to buy Ark: Survival Ascended hacks in 2026', sourcePath: '/blog/buy-guide/',
     answer: 'The buying guide recommends comparing included features and choosing the tier that fits your needs before continuing through the official checkout.',
     detail: 'It covers the purchase flow, account access, downloading the current build, and checking setup instructions before launching the game.',
     tip: 'If you have a payment or account question, use the site support page and avoid sharing purchase details publicly.',
@@ -181,63 +198,63 @@ const playerDiscussionThreads: ForumPost[] = [
     categoryTone: 'blue',
     title: 'ESP vs Radar – Which One Do Players Prefer?',
     excerpt:
-      "I've been looking into different Tarkov tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
+      "I've been looking into different Ark tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
     author: 'RogueHunter',
     age: '5 hours ago',
     commentsCount: 11,
     upvotes: 88,
     flair: 'Discussion',
     body: [
-      "I've been looking into different Tarkov tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
+      "I've been looking into different Ark tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
     ],
     comments: [
       { author: 'LootGoblin', age: '4 hours ago', score: 21, body: 'ESP is usually more straightforward because information appears directly on your screen. Radar is a different approach, depending on the setup.' },
-      { author: 'PMC_Zero', age: '3 hours ago', score: 16, body: "I'd say it depends on what you're looking for. Always check compatibility and security before trying any third-party software." },
+      { author: 'Tribe_Zero', age: '3 hours ago', score: 16, body: "I'd say it depends on what you're looking for. Always check compatibility and security before trying any third-party software." },
     ],
   },
   {
-    slug: 'tarkov-update-tool-compatibility',
+    slug: 'ark-update-tool-compatibility',
     category: 'Patch Talk',
     categoryTone: 'orange',
-    title: 'Does Tarkov Update Break Third-Party Tools?',
+    title: 'Does Ark Update Break Third-Party Tools?',
     excerpt:
-      'Every major update seems to change something. Do third-party tools usually need updates after a new Tarkov patch?',
+      'Every major update seems to change something. Do third-party tools usually need updates after a new Ark patch?',
     author: 'NightRaid',
     age: 'Yesterday',
     commentsCount: 14,
     upvotes: 72,
     body: [
-      'Every major update seems to change something. Do third-party tools usually need updates after a new Tarkov patch?',
+      'Every major update seems to change something. Do third-party tools usually need updates after a new Ark patch?',
     ],
     comments: [
-      { author: 'HeadEyes', age: 'Yesterday', score: 19, body: 'Definitely worth checking. Some tools stop working after game updates, so I always look for recent compatibility information first.' },
-      { author: 'ScavMain', age: 'Yesterday', score: 14, body: "Same here. I'd rather wait for a confirmed update than risk using something outdated." },
+      { author: 'TribeScout', age: 'Yesterday', score: 19, body: 'Definitely worth checking. Some tools stop working after game updates, so I always look for recent compatibility information first.' },
+      { author: 'WildMain', age: 'Yesterday', score: 14, body: "Same here. I'd rather wait for a confirmed update than risk using something outdated." },
     ],
   },
   {
-    slug: 'best-tarkov-maps-for-beginners',
+    slug: 'best-ark-maps-for-beginners',
     category: 'Community',
     categoryTone: 'green',
-    title: 'Best Maps for Beginners in Escape from Tarkov',
-    excerpt: "I'm relatively new to Tarkov and still struggle with learning maps. Which map should I focus on first?",
-    author: 'NewPMC',
+    title: 'Best Maps for Beginners in Ark: Survival Ascended',
+    excerpt: "I'm relatively new to Ark and still struggle with learning maps. Which map should I focus on first?",
+    author: 'NewTribe',
     age: 'Yesterday',
     commentsCount: 10,
     upvotes: 55,
     flair: 'New players',
     body: [
-      "I'm relatively new to Tarkov and still struggle with learning maps. Which map should I focus on first?",
+      "I'm relatively new to Ark and still struggle with learning maps. Which map should I focus on first?",
     ],
     comments: [
-      { author: 'CustomsEnjoyer', age: 'Yesterday', score: 18, body: 'Customs is a good starting point. Learn the extracts, loot locations, and common player routes.' },
-      { author: 'OldScav', age: 'Yesterday', score: 12, body: "I'd also recommend learning Woods. Take your time and don't worry about losing gear while you're learning." },
+      { author: 'The IslandEnjoyer', age: 'Yesterday', score: 18, body: 'The Island is a good starting point. Learn obelisk routes, loot locations, and common tribe paths.' },
+      { author: 'OldWild', age: 'Yesterday', score: 12, body: "I'd also recommend learning forest maps. Take your time and don't worry about losing gear while you're learning." },
     ],
   },
   {
-    slug: 'tarkov-account-security',
+    slug: 'ark-account-security',
     category: 'General',
     categoryTone: 'purple',
-    title: 'How Do You Keep Your Tarkov Account Secure?',
+    title: 'How Do You Keep Your Ark Account Secure?',
     excerpt: "I've seen people lose accounts because they downloaded suspicious files. What precautions should everyone take?",
     author: 'LootRunner',
     age: '2 days ago',
@@ -248,26 +265,26 @@ const playerDiscussionThreads: ForumPost[] = [
     ],
     comments: [
       { author: 'SafeExtract', age: '2 days ago', score: 22, body: 'Only download software from sources you trust. Avoid unknown executables and never share your account credentials.' },
-      { author: 'PMC_Zero', age: '2 days ago', score: 15, body: 'Good advice. Account security should always come before trying new tools.' },
+      { author: 'Tribe_Zero', age: '2 days ago', score: 15, body: 'Good advice. Account security should always come before trying new tools.' },
     ],
   },
   {
-    slug: 'tarkov-tool-features-discussion',
+    slug: 'ark-tool-features-discussion',
     category: 'General',
     categoryTone: 'purple',
-    title: 'What Features Matter Most When Comparing Tarkov Tools?',
+    title: 'What Features Matter Most When Comparing Ark Tools?',
     excerpt:
-      'When comparing different Tarkov tools, what do you usually check first? Compatibility, performance, features, or support?',
+      'When comparing different Ark tools, what do you usually check first? Compatibility, performance, features, or support?',
     author: 'DarkForest',
     age: '2 days ago',
     commentsCount: 13,
     upvotes: 49,
     flair: 'Discussion',
     body: [
-      'When comparing different Tarkov tools, what do you usually check first? Compatibility, performance, features, or support?',
+      'When comparing different Ark tools, what do you usually check first? Compatibility, performance, features, or support?',
     ],
     comments: [
-      { author: 'HeadEyes', age: '2 days ago', score: 17, body: "For me, stability and regular updates matter most. A long feature list doesn't mean much if the software doesn't work properly." },
+      { author: 'TribeScout', age: '2 days ago', score: 17, body: "For me, stability and regular updates matter most. A long feature list doesn't mean much if the software doesn't work properly." },
       { author: 'RaidReady', age: '2 days ago', score: 13, body: "Customer support is important too. It's better to know that someone can help if you run into problems." },
     ],
   },
@@ -275,21 +292,21 @@ const playerDiscussionThreads: ForumPost[] = [
     slug: 'favorite-map',
     category: 'General',
     categoryTone: 'purple',
-    title: 'Which Tarkov map do you enjoy playing the most?',
+    title: 'Which Ark map do you enjoy playing the most?',
     excerpt:
-      "Customs is still my go-to because I know most of the routes, but Streets has some really interesting fights. What map do you guys prefer and why?",
+      "The Island is still my go-to because I know most of the routes, but ruined cities has some really interesting fights. What map do you guys prefer and why?",
     author: 'RaidRunner',
     age: '2 hours ago',
     commentsCount: 18,
     upvotes: 94,
     flair: 'Active',
     body: [
-      "I've been playing Tarkov for a while now, and I'm curious about everyone's favorite map. Customs is still my go-to because I know most of the routes, but Streets has some really interesting fights. What map do you guys prefer and why?",
+      "I've been playing Ark for a while now, and I'm curious about everyone's favorite map. The Island is still my go-to because I know most of the routes, but ruined cities has some really interesting fights. What map do you guys prefer and why?",
     ],
     comments: [
-      { author: 'LootGoblin', age: '1 hour ago', score: 22, body: "Customs for quests, Reserve for loot. Can't go wrong with either." },
-      { author: 'HeadEyes', age: '55 min. ago', score: 15, body: 'Streets is great, but the performance can be rough sometimes.' },
-      { author: 'SoloPMC', age: '40 min. ago', score: 11, body: 'Woods all day. Sometimes I just want a peaceful raid!' },
+      { author: 'LootGoblin', age: '1 hour ago', score: 22, body: "The Island for quests, Reserve for loot. Can't go wrong with either." },
+      { author: 'TribeScout', age: '55 min. ago', score: 15, body: 'Aberration is great, but the performance can be rough sometimes on older GPUs.' },
+      { author: 'SoloTribe', age: '40 min. ago', score: 11, body: 'forest maps all day. Sometimes I just want a peaceful raid!' },
     ],
   },
   {
@@ -305,12 +322,12 @@ const playerDiscussionThreads: ForumPost[] = [
     upvotes: 67,
     flair: 'Discussion',
     body: [
-      "Not everyone wants to spend a fortune on every raid. I've been experimenting with cheaper AK builds and getting surprisingly good results. What weapons are you guys running when you want to save some roubles?",
+      "Not everyone wants to spend a fortune on every raid. I've been experimenting with cheaper AK builds and getting surprisingly good results. What weapons are you guys running when you want to save some resources?",
     ],
     comments: [
-      { author: 'BudgetHunter', age: '4 hours ago', score: 19, body: 'A basic AK-74 build works well enough for me.' },
-      { author: 'TarkovVeteran', age: '3 hours ago', score: 14, body: "Don't underestimate the PP-19 early in a wipe." },
-      { author: 'NewPMC', age: '2 hours ago', score: 8, body: 'Looking for some affordable builds. Definitely saving this thread.' },
+      { author: 'BudgetHunter', age: '4 hours ago', score: 19, body: 'A basic Assault Rifle works well enough for me until I craft Longneck.' },
+      { author: 'ArkVeteran', age: '3 hours ago', score: 14, body: "Don't underestimate the PP-19 early in a wipe." },
+      { author: 'NewTribe', age: '2 hours ago', score: 8, body: 'Looking for some affordable builds. Definitely saving this thread.' },
     ],
   },
   {
@@ -320,7 +337,7 @@ const playerDiscussionThreads: ForumPost[] = [
     title: 'What should players know about ESP and radar features?',
     excerpt:
       "I've seen a lot of discussions about ESP and radar tools lately. I'm interested in understanding the differences between these features, how they generally work, and what risks come with third-party software.",
-    author: 'CuriousPMC',
+    author: 'CuriousTribe',
     age: 'Yesterday',
     commentsCount: 9,
     upvotes: 52,
@@ -348,8 +365,8 @@ const playerDiscussionThreads: ForumPost[] = [
       "My game was running pretty smoothly before the recent update. Now I'm getting random FPS drops, especially in busy areas. I've tried lowering some settings, but it hasn't completely fixed the issue. Is anyone else experiencing this?",
     ],
     comments: [
-      { author: 'PixelPMC', age: 'Yesterday', score: 18, body: 'Try checking your background applications first.' },
-      { author: 'NightRaider', age: 'Yesterday', score: 11, body: 'Streets has always been demanding on my system.' },
+      { author: 'PixelTribe', age: 'Yesterday', score: 18, body: 'Try checking your background applications first.' },
+      { author: 'NightRaider', age: 'Yesterday', score: 11, body: 'ruined cities has always been demanding on my system.' },
       { author: 'OneTap', age: 'Yesterday', score: 10, body: 'Updating drivers helped me with similar performance issues.' },
     ],
   },
@@ -357,20 +374,20 @@ const playerDiscussionThreads: ForumPost[] = [
     slug: 'beginner-mistakes',
     category: 'Community',
     categoryTone: 'green',
-    title: 'What are the biggest mistakes new Tarkov players make?',
+    title: 'What are the biggest mistakes new Ark players make?',
     excerpt:
-      "I recently started playing and honestly, there's a lot to learn. Between quests, ammunition, maps, traders, and extraction points, it can get overwhelming.",
+      "I recently started playing and honestly, there's a lot to learn. Between quests, ammunition, maps, traders, and upload points, it can get overwhelming.",
     author: 'FirstWipe',
     age: '2 days ago',
     commentsCount: 11,
     upvotes: 61,
     flair: 'New players',
     body: [
-      "I recently started playing and honestly, there's a lot to learn. Between quests, ammunition, maps, traders, and extraction points, it can get overwhelming. What advice would you give someone starting their first wipe?",
+      "I recently started playing and honestly, there's a lot to learn. Between quests, ammunition, maps, traders, and upload points, it can get overwhelming. What advice would you give someone starting their first wipe?",
     ],
     comments: [
-      { author: 'OldScav', age: '2 days ago', score: 20, body: 'Learn one map properly before jumping between all of them.' },
-      { author: 'PMCGuide', age: '2 days ago', score: 15, body: "Don't spend all your money on expensive gear." },
+      { author: 'OldWild', age: '2 days ago', score: 20, body: 'Learn one map properly before jumping between all of them.' },
+      { author: 'TribeGuide', age: '2 days ago', score: 15, body: "Don't spend all your money on expensive gear." },
       { author: 'LootAndRun', age: '2 days ago', score: 13, body: 'Learn ammunition types. They matter more than people think.' },
     ],
   },
@@ -383,19 +400,19 @@ const communityThreads: ForumPost[] = [
     categoryTone: 'green',
     title: 'Overlay feels crowded — what do you turn off first?',
     excerpt: 'Loot distance and team colors usually fix a messy HUD faster than shrinking boxes.',
-    author: 'quiet_pmc',
+    author: 'quiet_tribe',
     age: '3 hours ago',
     commentsCount: 3,
     upvotes: 41,
     flair: 'Setup',
     body: [
       'I enabled everything on day one and could not see stamina. Halving loot distance, hiding grey-tier crates, and keeping skeletons only inside 80 meters fixed it.',
-      'I bumped text size one step and gave teammates a cooler color so scavs still read in warm tones.',
+      'I bumped text size one step and gave teammates a cooler color so wild creatures still read in warm tones.',
     ],
     comments: [
-      { author: 'loot_rat_91', age: '2 hours ago', score: 14, body: 'Two presets: “Factory” minimal and “Woods” with more loot lines. Switch before you queue.' },
-      { author: 'guide_team', age: '1 hour ago', score: 9, body: 'The ESP guide has a starter layout—change one slider per raid.' },
-      { author: 'night_owl', age: '45 min. ago', score: 6, body: 'Night raids need dimmer boxes before you touch distance filters.' },
+      { author: 'loot_rat_91', age: '2 hours ago', score: 14, body: 'Two presets: “compact arena” minimal and “forest” with more loot lines. Switch before you join.' },
+      { author: 'guide_team', age: '1 hour ago', score: 9, body: 'The ESP guide has a starter layout—change one slider per session.' },
+      { author: 'night_owl', age: '45 min. ago', score: 6, body: 'Night sessions need dimmer boxes before you touch distance filters.' },
     ],
   },
   {
@@ -424,7 +441,7 @@ const communityThreads: ForumPost[] = [
     categoryTone: 'orange',
     title: 'How long do you wait after a big patch?',
     excerpt: 'A rough rhythm when the status banner is still yellow.',
-    author: 'patient_scav',
+    author: 'patient_wild',
     age: '8 hours ago',
     commentsCount: 3,
     upvotes: 52,
@@ -459,10 +476,10 @@ const communityThreads: ForumPost[] = [
     ],
   },
   {
-    slug: 'labs-preset',
+    slug: 'cave-preset',
     category: 'Guides & Builds',
     categoryTone: 'blue',
-    title: 'Separate preset for Labs vs Woods?',
+    title: 'Separate preset for caves vs open world?',
     excerpt: 'Tighter ESP indoors; wider context outside.',
     author: 'key_runner',
     age: '14 hours ago',
@@ -470,7 +487,7 @@ const communityThreads: ForumPost[] = [
     upvotes: 33,
     flair: 'Presets',
     body: [
-      'Labs: short player distance, fewer loot pings, louder grenade cues. Woods: wider radar and more container tags.',
+      'Caves: short player distance, fewer loot pings, louder grenade cues. forest maps: wider radar and more container tags.',
       'Naming presets clearly saves panic clicks mid-raid.',
     ],
     comments: [
@@ -497,17 +514,17 @@ const communityThreads: ForumPost[] = [
     ],
   },
   {
-    slug: 'scav-radar-tip',
+    slug: 'wild-radar-tip',
     category: 'Community',
     categoryTone: 'green',
-    title: 'Radar settings for scav runs',
+    title: 'Radar settings for wild dino runs',
     excerpt: 'Smaller dots, lower refresh, trust audio too.',
-    author: 'scav_life',
+    author: 'wild_life',
     age: '1 day ago',
     commentsCount: 2,
     upvotes: 19,
     body: [
-      'For scavs I shrink the radar and lean on footsteps. PMC dots stay on; loot chirps stay off so the corner stays calm.',
+      'For wild runs I shrink the radar and lean on footsteps. Tribe dots stay on; loot chirps stay off so the corner stays calm.',
     ],
     comments: [
       { author: 'solo_main', age: '18 hours ago', score: 7, body: 'Still run an OBS test if you stream—wrong capture source leaks overlays.' },
@@ -532,7 +549,7 @@ const communityThreads: ForumPost[] = [
     comments: [
       { author: 'recoil_nerd', age: '1 day ago', score: 12, body: 'Write down each tweak. Easy to forget after a break.' },
       { author: 'guide_team', age: '1 day ago', score: 8, body: 'Aim guide has conservative defaults—start there.' },
-      { author: 'labs_duelist', age: '20 hours ago', score: 4, body: 'SMG profiles are not DMR profiles. Separate files.' },
+      { author: 'cave_hunter', age: '20 hours ago', score: 4, body: 'SMG profiles are not DMR profiles. Separate files.' },
     ],
   },
   {
@@ -559,7 +576,7 @@ const communityThreads: ForumPost[] = [
     categoryTone: 'orange',
     title: 'Back up presets before Windows updates',
     excerpt: 'Feature updates reset more than you expect.',
-    author: 'sysadmin_pmc',
+    author: 'sysadmin_tribe',
     age: '2 days ago',
     commentsCount: 2,
     upvotes: 31,
@@ -659,7 +676,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 23,
     body: [
-      'Third hour stutters. Full restart of loader + Tarkov fixes it temporarily. Disabled verbose debug logging in portal and it helped a bit.',
+      'Third hour stutters. Full restart of loader + Ark fixes it temporarily. Disabled verbose debug logging in portal and it helped a bit.',
     ],
     comments: [
       { author: 'vram_watch', age: '3 days ago', score: 8, body: 'Also lower texture settings if you run HD packs.' },
@@ -685,20 +702,20 @@ const communityThreads: ForumPost[] = [
     ],
   },
   {
-    slug: 'insurance-timing',
+    slug: 'spawn-overlay-timing',
     category: 'Community',
     categoryTone: 'green',
-    title: 'When do you pop radar after insurance return?',
-    excerpt: 'Wait until you are actually back in raid.',
-    author: 'insurance_main',
+    title: 'When do you enable radar after respawn?',
+    excerpt: 'Wait until you are actually in the world, not at the inventory screen.',
+    author: 'spawn_main',
     age: '5 days ago',
     commentsCount: 2,
     upvotes: 16,
     body: [
-      'Used to toggle everything in stash screen. Now I enable full overlay only after spawn—less visual noise while sorting kits.',
+      'Used to toggle everything in the inventory UI. Now I enable the full overlay only after I spawn—less visual noise while sorting gear.',
     ],
     comments: [
-      { author: 'stash_rat', age: '4 days ago', score: 5, body: 'Same. Stash preset is separate from raid preset.' },
+      { author: 'vault_rat', age: '4 days ago', score: 5, body: 'Same. Inventory preset is separate from world preset.' },
       { author: 'guide_team', age: '4 days ago', score: 3, body: 'Preset naming in portal helps separate those modes.' },
     ],
   },
@@ -721,11 +738,11 @@ const communityThreads: ForumPost[] = [
     ],
   },
   {
-    slug: 'factory-night-colors',
+    slug: 'cave-night-colors',
     category: 'Guides & Builds',
     categoryTone: 'blue',
-    title: 'Color palette for Factory night',
-    excerpt: 'Neon greens blow out on dark metal maps.',
+    title: 'Color palette for cave and night raids',
+    excerpt: 'Neon greens blow out on dark metal biomes.',
     author: 'cqb_eyes',
     age: '5 days ago',
     commentsCount: 2,
@@ -787,7 +804,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 22,
     body: [
-      'Portal downloads were slow but okay. In-raid micro-stutter on wireless. Cable to the router fixed latency jitter—not magic, just stable ping.',
+      'Portal downloads were slow but okay. In-session micro-stutter on wireless. Cable to the router fixed latency jitter—not magic, just stable ping.',
     ],
     comments: [
       { author: 'mesh_hater', age: '5 days ago', score: 6, body: 'Mesh extenders added lag for me too.' },
@@ -795,17 +812,17 @@ const communityThreads: ForumPost[] = [
     ],
   },
   {
-    slug: 'quest-item-clutter',
+    slug: 'mission-loot-filters',
     category: 'Guides & Builds',
     categoryTone: 'blue',
-    title: 'Hiding quest items I do not need this week',
-    excerpt: 'Filter by category instead of turning all loot off.',
-    author: 'quest_runner',
+    title: 'Filtering mission loot I do not need this week',
+    excerpt: 'Filter by category instead of turning all loot ESP off.',
+    author: 'mission_runner',
     age: '7 days ago',
     commentsCount: 2,
     upvotes: 19,
     body: [
-      'Everything glowed during collector week. I hid generic barter and kept meds plus quest tags. Radar still showed players without the candy store effect.',
+      'Everything glowed during a Genesis mission week. I hid generic junk and kept meds plus mission tags. Radar still showed players without the candy store effect.',
     ],
     comments: [
       { author: 'minimal_esp', age: '6 days ago', score: 5, body: 'Saved as “quest week” preset.' },
@@ -863,7 +880,7 @@ const communityThreads: ForumPost[] = [
       'Thick boxes blended into bloom. Outline + distance text only, sat closer to crosshair comfortably.',
     ],
     comments: [
-      { author: 'labs_rat', age: '7 days ago', score: 5, body: 'Same tweak on Streets at night.' },
+      { author: 'cave_rat', age: '7 days ago', score: 5, body: 'Same tweak on ruined cities at night.' },
       { author: 'guide_team', age: '7 days ago', score: 3, body: 'Save per-map presets when you rotate often.' },
     ],
   },
@@ -905,20 +922,20 @@ const communityThreads: ForumPost[] = [
     ],
   },
   {
-    slug: 'scav-karma-overlay',
+    slug: 'wild-karma-overlay',
     category: 'Community',
     categoryTone: 'green',
-    title: 'Scav runs — radar off, audio up?',
-    excerpt: 'Lighter overlay on quick fence trips.',
-    author: 'fence_runner',
+    title: 'Wild runs — radar off, audio up?',
+    excerpt: 'Lighter overlay on quick quick harvest trips.',
+    author: 'harvest_runner',
     age: '10 days ago',
     commentsCount: 2,
     upvotes: 18,
     body: [
-      'Full radar on scav felt like cheating myself—PMC sound cues matter. I run a “scav light” preset with player ESP only.',
+      'Full radar on wild runs felt like cheating myself—Tribe sound cues matter. I run a "wild light" preset with player ESP only.',
     ],
     comments: [
-      { author: 'rat_pack', age: '9 days ago', score: 4, body: 'Factory rat pack still uses full radar. Personal taste.' },
+      { author: 'rat_pack', age: '9 days ago', score: 4, body: 'compact arena rat pack still uses full radar. Personal taste.' },
       { author: 'guide_team', age: '9 days ago', score: 3, body: 'Named presets swap faster than toggling fifteen checkboxes.' },
     ],
   },
@@ -960,51 +977,51 @@ const communityThreads: ForumPost[] = [
     ],
   },
   {
-    slug: 'bulkhead-timing',
+    slug: 'obelisk-radar-timing',
     category: 'Community',
     categoryTone: 'green',
-    title: 'Timing extracts with radar distance ticks',
-    excerpt: 'Countdown plus player dots reduced extract camping surprises.',
-    author: 'extract_timer',
+    title: 'Timing obelisk uploads with radar distance ticks',
+    excerpt: 'Countdown plus player dots reduced gate-camp surprises.',
+    author: 'upload_timer',
     age: '11 days ago',
     commentsCount: 2,
     upvotes: 23,
     body: [
-      'Watch dots inside 150m when extract timer starts. If empty for twenty seconds, I commit. Saved me from sitting on D-2 with company.',
+      'Watch dots inside 150m when I start an obelisk upload. If empty for twenty seconds, I commit. Saved me from sitting at green with company.',
     ],
     comments: [
       { author: 'late_spawn', age: '10 days ago', score: 6, body: 'Still check corners—dots are not wall hacks.' },
-      { author: 'guide_team', age: '10 days ago', score: 3, body: 'Pair awareness tools with normal extract habits.' },
+      { author: 'guide_team', age: '10 days ago', score: 3, body: 'Pair awareness tools with normal upload habits.' },
     ],
   },
 ];
 
-export const forumPosts: ForumPost[] = [
+const forumPostsSource: ForumPost[] = [
   ...playerDiscussionThreads,
   ...communityThreads,
   {
     slug: 'admin-official', category: 'General', categoryTone: 'purple',
-    title: 'Do modules work on live raids after setup?',
+    title: 'Do modules work on live sessions after setup?',
     excerpt: 'Yes—through the external loader. There is no in-game console for live matchmaking.',
     author: 'guide_team', age: '2 hours ago', commentsCount: 3, upvotes: 128, flair: 'Guide Q&A',
-    sourceTitle: 'Escape from Tarkov hacks guide: loader setup in Hideout range or offline raids', sourcePath: '/blog/cheat-codes/',
+    sourceTitle: 'Ark: Survival Ascended hacks guide: loader setup in Single-player range or single-player sessions', sourcePath: '/blog/cheat-codes/',
     body: [
-      'Live raids use normal matchmaking—you are not hosting a private server. Tools run through the loader from your portal, not in-game codes.',
+      'Live sessions use normal matchmaking—you are not hosting a private server. Tools run through the loader from your portal, not in-game codes.',
       'Test in offline or a low-stakes run first: import a conservative preset, verify alignment, then go live when the status banner is green.',
     ],
     comments: [
-      { author: 'base_builder_42', age: '1 hour ago', score: 24, body: 'Hideout range first saved me—caught overlay scaling issues before I took loot to a live raid.' },
-      { author: 'm4_main', age: '48 min. ago', score: 11, body: 'Status banner is non-negotiable after Tarkov patches. Wait for the build note in Discord #status.' },
-      { author: 'scrap_collector', age: '35 min. ago', score: 8, body: 'Loader is the product. Random console lists from other games do not apply to Escape from Tarkov.' },
+      { author: 'base_builder_42', age: '1 hour ago', score: 24, body: 'Single-player range first saved me—caught overlay scaling issues before I took loot to a live session.' },
+      { author: 'm4_main', age: '48 min. ago', score: 11, body: 'Status banner is non-negotiable after Ark patches. Wait for the build note in Discord #status.' },
+      { author: 'scrap_collector', age: '35 min. ago', score: 8, body: 'Loader is the product. Random console lists from other games do not apply to Ark: Survival Ascended.' },
     ],
   },
   {
     slug: 'f1-console', category: 'General', categoryTone: 'purple',
     title: 'How do I install the loader after checkout?',
-    excerpt: 'Use the Hideout range first. Here is the quick setup from our walkthrough, including how to test modules before live raids.',
+    excerpt: 'Use the Single-player range first. Here is the quick setup from our walkthrough, including how to test modules before live sessions.',
     author: 'guide_team', age: '4 hours ago', commentsCount: 2, upvotes: 86, flair: 'Guide Q&A',
     sourceTitle: 'How to use your loader after checkout', sourcePath: '/blog/use-codes/',
-    body: ['Escape from Tarkov Hacks run through the external loader—not in-game console codes. On a Hideout shooting range or an offline raid, install the loader, import a conservative preset, and verify ESP before you queue for Customs or Labs runs.', 'If a module does nothing, confirm the live status banner is online, restart the loader after patches, and open a Discord ticket with your order ID.'],
+    body: ['Ark: Survival Ascended Hacks run through the external loader—not in-game console codes. On a Single-player single-player test map or an single-player session, install the loader, import a conservative preset, and verify ESP before you join for The Island or boss caves runs.', 'If a module does nothing, confirm the live status banner is online, restart the loader after patches, and open a Discord ticket with your order ID.'],
     comments: [
       { author: 'raid_runner', age: '3 hours ago', score: 17, body: 'Portal → download loader → run as admin once → load preset. That order is in the use-codes guide.' },
       { author: 'carry_curious', age: '2 hours ago', score: 9, body: 'If Windows SmartScreen blocks the loader, use the hash from the portal and allow through Discord ticket steps.' },
@@ -1013,12 +1030,12 @@ export const forumPosts: ForumPost[] = [
   {
     slug: 'spray-safe', category: 'Guides & Builds', categoryTone: 'blue',
     title: 'Safest way to Practice recoil patterns?',
-    excerpt: 'Practice spray control on a Hideout shooting range or an offline raid with a target wall before live seasons.',
+    excerpt: 'Practice spray control on a Single-player single-player test map or an single-player session with a target wall before live seasons.',
     author: 'guide_team', age: '6 hours ago', commentsCount: 2, upvotes: 64, flair: 'Guide Q&A',
-    sourceTitle: 'Escape from Tarkov aim and recoil practice tips', sourcePath: '/blog/console-tips/',
-    body: ['Practice on your own Hideout shooting range or an offline raid. Give yourself the weapon and ammo, spray at a wall from a fixed distance, and compare each burst so you can see how the pattern climbs and drifts.', 'The guide also covers tools like the training range and spectator camera, which help you inspect sight lines and compound layouts without waiting for real in-game progress.'],
+    sourceTitle: 'Ark: Survival Ascended aim and recoil practice tips', sourcePath: '/blog/console-tips/',
+    body: ['Practice on your own Single-player single-player test map or an single-player session. Give yourself the weapon and ammo, spray at a wall from a fixed distance, and compare each burst so you can see how the pattern climbs and drifts.', 'The guide also covers tools like the training range and spectator camera, which help you inspect sight lines and compound layouts without waiting for real in-game progress.'],
     comments: [
-      { author: 'stack_and_pull', age: '5 hours ago', score: 13, body: 'I mark the wall after every magazine to see the shape. It makes controlling a M4A1 spray much easier to learn.' },
+      { author: 'stack_and_pull', age: '5 hours ago', score: 13, body: 'I mark the wall after every magazine to see the shape. It makes controlling an Assault Rifle spray much easier to learn.' },
       { author: 'map_reader', age: '4 hours ago', score: 6, body: 'And the debug camera is handy when you want to check angles on your stash route before a major patch.' },
     ],
   },
@@ -1027,8 +1044,8 @@ export const forumPosts: ForumPost[] = [
     title: 'What should I check before playing after a BattlEye or game patch?',
     excerpt: 'The patch-day checklist recommends checking build status, updating, and testing on a quiet test session before a real session.',
     author: 'guide_team', age: '9 hours ago', commentsCount: 2, upvotes: 42, flair: 'Guide Q&A',
-    sourceTitle: 'BattlEye patch day checklist for Escape from Tarkov hacks', sourcePath: '/blog/be-patch/',
-    body: ['Check the current build and status notice first. After a game or BattlEye update, wait for a compatible build, update the loader, then verify the setup on a quiet or Hideout shooting range or an offline raid before returning to busy Customs raids.', 'If anything behaves unexpectedly, stop and review the status notes rather than assuming the old setup still applies. The checklist covers the patch-day routine in more detail.'],
+    sourceTitle: 'BattlEye patch day checklist for Ark: Survival Ascended hacks', sourcePath: '/blog/be-patch/',
+    body: ['Check the current build and status notice first. After a game or BattlEye update, wait for a compatible build, update the loader, then verify the setup on a quiet or Single-player single-player test map or an single-player session before returning to busy official server sessions.', 'If anything behaves unexpectedly, stop and review the status notes rather than assuming the old setup still applies. The checklist covers the patch-day routine in more detail.'],
     comments: [
       { author: 'patch_day_vet', age: '8 hours ago', score: 12, body: 'Testing after the update before a real session is the part I used to skip. Now I check the build note and run a quick private test.' },
       { author: 'roamer_main_5', age: '7 hours ago', score: 7, body: 'Agree. If the status has not caught up, wait. A checklist is better than guessing.' },
@@ -1048,10 +1065,10 @@ export const forumPosts: ForumPost[] = [
   {
     slug: 'spray-server', category: 'Guides & Builds', categoryTone: 'blue',
     title: 'Practice spray control without risking kit?',
-    excerpt: 'Create a Hideout shooting range or an offline raid, spawn a target and use offline recoil drills for M4A1 and MP7 recoil.',
+    excerpt: 'Create a single-player test map or session, spawn a target and use offline recoil drills for Assault Rifle and Pump-Action recoil.',
     author: 'guide_team', age: '1 day ago', commentsCount: 2, upvotes: 27, flair: 'Guide Q&A',
-    sourceTitle: 'Escape from Tarkov hacks guide: loader setup in Hideout range or offline raids', sourcePath: '/blog/cheat-codes/',
-    body: ['Use the Hideout shooting range or an offline raid with the same weapon and ammo each attempt. Spray at a wall from a fixed distance and compare bursts so you see climb and horizontal drift.', 'When values feel stable, copy the profile into the loader before Customs or Labs. The linked loader guide covers conservative presets and post-patch checks.'],
+    sourceTitle: 'Ark: Survival Ascended hacks guide: loader setup in Single-player range or single-player sessions', sourcePath: '/blog/cheat-codes/',
+    body: ['Use the Single-player single-player test map or an single-player session with the same weapon and ammo each attempt. Spray at a wall from a fixed distance and compare bursts so you see climb and horizontal drift.', 'When values feel stable, copy the profile into the loader before The Island or Aberration. The linked loader guide covers conservative presets and post-patch checks.'],
     comments: [
       { author: 'm4_main', age: '20 hours ago', score: 10, body: 'Start with a wall target and repeat the same spray until the pattern feels automatic.' },
       { author: 'base_builder_42', age: '18 hours ago', score: 5, body: 'Enable damage when you want to practice with normal damage and healing constraints.' },
@@ -1059,6 +1076,8 @@ export const forumPosts: ForumPost[] = [
   },
   ...additionalGuidePosts,
 ];
+
+export const forumPosts: ForumPost[] = forumPostsSource.map(attachReplyCount);
 
 export function getForumPost(slug: string): ForumPost | undefined {
   return forumPosts.find((post) => post.slug === slug);

@@ -24,11 +24,11 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Escape from Tarkov Hacks',
+    name: 'Ark: Survival Ascended Hacks',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Shop undetected Escape from Tarkov hacks for PC—player ESP, loot ESP, soft aim, no recoil and stream-proof overlays at hackstarkov.com.',
+      'Shop undetected Ark: Survival Ascended hacks for PC—player ESP, loot ESP, soft aim, no recoil and stream-proof overlays at cheatsark.com.',
   };
 }
 
@@ -38,7 +38,7 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Escape from Tarkov Hacks',
+    name: 'Ark: Survival Ascended Hacks',
     url: `${SITE_ORIGIN}/`,
     logo: absoluteAssetUrl(SITE_LOGO),
     email: SUPPORT_EMAIL,
@@ -66,7 +66,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Escape from Tarkov Hacks',
+      name: 'Ark: Survival Ascended Hacks',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -82,7 +82,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Escape from Tarkov Hacks',
+      name: 'Ark: Survival Ascended Hacks',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -131,7 +131,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'Escape from Tarkov Hacks Community Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'Ark: Survival Ascended Hacks Community Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -156,7 +156,7 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'Escape from Tarkov Hacks',
+      name: 'Ark: Survival Ascended Hacks',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     offers: {
@@ -166,7 +166,7 @@ export function productSchema(input: {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'Escape from Tarkov Hacks',
+        name: 'Ark: Survival Ascended Hacks',
       },
     },
   };
@@ -209,11 +209,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'Escape from Tarkov Hacks',
+      name: 'Ark: Survival Ascended Hacks',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Escape from Tarkov Hacks',
+      name: 'Ark: Survival Ascended Hacks',
       logo: {
         '@type': 'ImageObject',
         url: absoluteAssetUrl(SITE_LOGO),

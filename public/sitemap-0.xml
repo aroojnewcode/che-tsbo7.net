@@ -1,620 +1,626 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hackstarkov.com/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/about/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/about/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/blog/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/aimbot/</loc>
+    <loc>https://cheatsark.com/blog/aimbot-limits/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/blog/aimbot/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/be-error/</loc>
+    <loc>https://cheatsark.com/blog/asa-esp-explained/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/blog/asa-vs-ase/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/blog/ban-risk-official/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/blog/be-error/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/be-patch/</loc>
+    <loc>https://cheatsark.com/blog/be-patch/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/bones/</loc>
+    <loc>https://cheatsark.com/blog/bones/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/buy-guide/</loc>
+    <loc>https://cheatsark.com/blog/buy-guide/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/cheat-codes/</loc>
+    <loc>https://cheatsark.com/blog/cheat-codes/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/console-cmds/</loc>
+    <loc>https://cheatsark.com/blog/compare-asa-cheats/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/blog/console-cmds/</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/console-tips/</loc>
+    <loc>https://cheatsark.com/blog/console-tips/</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/elite/</loc>
+    <loc>https://cheatsark.com/blog/dino-loot-esp/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/blog/elite/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/esp/</loc>
+    <loc>https://cheatsark.com/blog/esp/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/external/</loc>
+    <loc>https://cheatsark.com/blog/external/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/features/</loc>
+    <loc>https://cheatsark.com/blog/features/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/fov/</loc>
+    <loc>https://cheatsark.com/blog/fov/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/hwid/</loc>
+    <loc>https://cheatsark.com/blog/hwid/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/lite-vs-pro/</loc>
+    <loc>https://cheatsark.com/blog/lite-vs-pro/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/skins/</loc>
+    <loc>https://cheatsark.com/blog/skins/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/stream-proof/</loc>
+    <loc>https://cheatsark.com/blog/stream-proof/</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/blog/use-codes/</loc>
+    <loc>https://cheatsark.com/blog/use-codes/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/faq/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/faq/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/admin-official/</loc>
+    <loc>https://cheatsark.com/forum/admin-official/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/after-patch/</loc>
+    <loc>https://cheatsark.com/forum/after-patch/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/aim-smooth/</loc>
+    <loc>https://cheatsark.com/forum/aim-smooth/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/aim-smoothing-start/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/aim-smoothing-start/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/audio-vs-esp/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/ark-account-security/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/backup-before-update/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/ark-tool-features-discussion/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/be-init/</loc>
+    <loc>https://cheatsark.com/forum/ark-update-tool-compatibility/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/forum/audio-vs-esp/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/forum/backup-before-update/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/forum/be-init/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/beginner-mistakes/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/beginner-mistakes/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/best-tarkov-maps-for-beginners/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/best-ark-maps-for-beginners/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/budget-weapons/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/budget-weapons/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/bulkhead-timing/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/camo-local-only/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/camo-local-only/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/cave-night-colors/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/chargeback-warning/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/cave-preset/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/choose-tier/</loc>
+    <loc>https://cheatsark.com/forum/chargeback-warning/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/forum/choose-tier/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/cloud-dma-question/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/cloud-dma-question/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/discord-ticket-speed/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/discord-ticket-speed/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/dual-monitor-overlay/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/dual-monitor-overlay/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/duo-comms-overlay/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/duo-comms-overlay/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/elite-tools/</loc>
+    <loc>https://cheatsark.com/forum/elite-tools/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/esp-include/</loc>
+    <loc>https://cheatsark.com/forum/esp-include/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/esp-radar-basics/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/esp-radar-basics/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/esp-setup/</loc>
+    <loc>https://cheatsark.com/forum/esp-setup/</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/esp-vs-radar/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/esp-vs-radar/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/ext-loader/</loc>
+    <loc>https://cheatsark.com/forum/ext-loader/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/f1-console/</loc>
+    <loc>https://cheatsark.com/forum/f1-console/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/factory-night-colors/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/favorite-map/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/favorite-map/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/forum/fov-settings/</loc>
+    <loc>https://cheatsark.com/forum/fov-settings/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/fps-drop-long-session/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/fps-drop-long-session/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/fps-drops-patch/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/fps-drops-patch/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/hwid-check/</loc>
+    <loc>https://cheatsark.com/forum/hwid-check/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/insurance-timing/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/interim-wipe-patience/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/interim-wipe-patience/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/keybind-clash/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/keybind-clash/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/forum/labs-preset/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/forum/lite-or-pro/</loc>
+    <loc>https://cheatsark.com/forum/lite-or-pro/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/lite-pro/</loc>
+    <loc>https://cheatsark.com/forum/lite-pro/</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/lite-upgrade-path/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/lite-upgrade-path/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/mac-parallels-no/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/mac-parallels-no/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/overlay-too-busy/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/mission-loot-filters/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/patch-wait-time/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/obelisk-radar-timing/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/pre-install/</loc>
+    <loc>https://cheatsark.com/forum/overlay-too-busy/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/forum/patch-wait-time/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/forum/pre-install/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/quest-item-clutter/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/forum/recoil-drill/</loc>
+    <loc>https://cheatsark.com/forum/recoil-drill/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/scav-karma-overlay/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/second-monitor-map/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/scav-radar-tip/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/share-presets/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/second-monitor-map/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/shared-family-pc/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/share-presets/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/forum/shared-family-pc/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/forum/skin-info/</loc>
+    <loc>https://cheatsark.com/forum/skin-info/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/smartscreen-loader/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/smartscreen-loader/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/spray-safe/</loc>
+    <loc>https://cheatsark.com/forum/spawn-overlay-timing/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cheatsark.com/forum/spray-safe/</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/spray-server/</loc>
+    <loc>https://cheatsark.com/forum/spray-server/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/stream-check/</loc>
+    <loc>https://cheatsark.com/forum/stream-check/</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/tarkov-account-security/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/thermal-map-colors/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/tarkov-tool-features-discussion/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/ugc-timeline/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/tarkov-update-tool-compatibility/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/vpn-portal-login/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/thermal-map-colors/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/wifi-vs-ethernet/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/ugc-timeline/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/wild-karma-overlay/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/vpn-portal-login/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/wild-radar-tip/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/wifi-vs-ethernet/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/forum/wrong-tier-refund/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/forum/wrong-tier-refund/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/go/cloud-dma/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/go/hwid-spoofer/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/go/skin-changer/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/go/tarkov/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/go/ugc/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hackstarkov.com/privacy/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/privacy/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/cloud-dma/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/cloud-dma/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/elite/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/elite/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/hwid-spoofer/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/hwid-spoofer/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/lite/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/lite/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/pro/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/pro/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/ugc/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/ugc/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/unlock-all/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/unlock-all/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/products/tarkov-hacks/utilities/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/products/ark-hacks/utilities/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/reviews/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/reviews/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/support/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/support/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hackstarkov.com/terms/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <loc>https://cheatsark.com/terms/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

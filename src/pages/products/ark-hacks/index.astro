@@ -15,16 +15,16 @@ import { Button } from '@/components/starwind/button';
 import { checkoutPath } from '../../../config/checkout';
 import { externalLinkProps } from '../../../utils/externalLink';
 
-const seo = resolvePageSeo('/products/tarkov-hacks/');
-const seoEntry = getPageSeoEntry('/products/tarkov-hacks/');
-const hubH1 = seoEntry?.h1 ?? 'Escape From Tarkov Hacks – All Available Cheats';
+const seo = resolvePageSeo('/products/ark-hacks/');
+const seoEntry = getPageSeoEntry('/products/ark-hacks/');
+const hubH1 = seoEntry?.h1 ?? 'ARK: Survival Ascended Cheats – Choose Your Lite, Pro & Elite Plan';
 
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
 ];
 
-const checkout = checkoutPath('tarkov');
+const checkout = checkoutPath('ark');
 const checkoutAttrs = externalLinkProps(checkout);
 
 function cardIcon(product: (typeof productPages)[number]) {
@@ -73,7 +73,7 @@ const utilitiesCopy = t.products;
     webPageSchema({
       name: hubH1,
       description: seo.description,
-      url: '/products/tarkov-hacks/',
+      url: '/products/ark-hacks/',
     }),
     breadcrumbSchema(breadcrumbs),
     itemListSchema(
@@ -133,7 +133,7 @@ const utilitiesCopy = t.products;
         <p class="products-hub__eyebrow">Utilities</p>
         <h2 id="hub-utilities-title" class="products-hub__subtitle">HWID, UGC, Cloud DMA &amp; Camouflage</h2>
         <p class="products-hub__lede">
-          Each utility uses its own secure checkout link. Combat tiers (Lite, Pro, Elite) still share the main Escape from Tarkov product URL.
+          Each utility uses its own secure checkout link. Combat tiers (Lite, Pro, Elite) still share the main Ark: Survival Ascended product URL.
         </p>
         <div class="products-hub__grid products-hub__grid--utilities mt-8">
           {

@@ -8,7 +8,7 @@ const dirs = [
   'public/images/gameplay',
   'public/images/product',
   'public/images/blog',
-  'public/images/tarkov',
+  'public/images/ark',
 ];
 
 async function optimizeDir(relativeDir) {

@@ -1,18 +1,23 @@
 /**
- * Remove flat / checkerboard backgrounds from navbar gun source.
- * Usage: node scripts/prepare-gun-image.mjs
+ * Remove flat / dark backgrounds from navbar logo source → ark-gun.webp
+ * Usage: node scripts/prepare-gun-image.mjs [inputPath]
  */
 import sharp from 'sharp';
 import { existsSync, renameSync, unlinkSync } from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const defaultInput = path.join(root, 'public/images/brand/tarkov-gun.png');
-const restoreInput = path.join(root, 'public/images/brand/tarkov-gun-restore.png');
-const input = existsSync(restoreInput) ? restoreInput : defaultInput;
-const outPng = path.join(root, 'public/images/brand/tarkov-gun.png');
-const outWebp = path.join(root, 'public/images/brand/tarkov-gun.webp');
-const tmpPng = path.join(root, 'public/images/brand/tarkov-gun.transparent.tmp.png');
+const defaultInput = path.join(root, 'public/images/brand/ark-gun.png');
+const restoreInput = path.join(root, 'public/images/brand/ark-gun-restore.png');
+const cliInput = process.argv[2];
+const input = cliInput
+  ? path.resolve(root, cliInput)
+  : existsSync(restoreInput)
+    ? restoreInput
+    : defaultInput;
+const outPng = path.join(root, 'public/images/brand/ark-gun.png');
+const outWebp = path.join(root, 'public/images/brand/ark-gun.webp');
+const tmpPng = path.join(root, 'public/images/brand/ark-gun.transparent.tmp.png');
 
 if (!existsSync(input)) {
   console.error('Missing input:', input);
@@ -50,6 +55,7 @@ const isBackgroundPixel = (r, g, b) => {
   if (sat < 0.14 && avg > 100 && avg < 250) return true;
   if (minCorner < 45) return true;
   if (sat < 0.08 && avg > 80) return true;
+  if (avg < 32 && sat < 0.2) return true;
   return false;
 };
 

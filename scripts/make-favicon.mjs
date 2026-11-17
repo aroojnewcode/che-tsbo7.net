@@ -1,5 +1,5 @@
 /**
- * Generate favicon + logo assets from public/brand/tarkov-favicon-source.png
+ * Generate favicon + logo assets from public/brand/ark-favicon-source.png
  * Run: npm run brand:icons
  */
 import sharp from 'sharp';
@@ -7,7 +7,7 @@ import { writeFileSync, readFileSync, mkdirSync, existsSync, unlinkSync } from '
 import path from 'node:path';
 
 const root = process.cwd();
-const defaultSrc = path.join(root, 'public/brand/tarkov-favicon-source.png');
+const defaultSrc = path.join(root, 'public/brand/ark-favicon-source.png');
 const src = process.env.BRAND_ICON_SOURCE?.trim() || defaultSrc;
 
 if (!existsSync(src)) {
@@ -18,7 +18,7 @@ if (!existsSync(src)) {
 const publicDir = path.join(root, 'public');
 mkdirSync(path.join(publicDir, 'brand'), { recursive: true });
 
-/** Single Escape from Tarkov icon set — no duplicate android-chrome / legacy game files. */
+/** Single Ark: Survival Ascended icon set — no duplicate android-chrome / legacy game files. */
 const sizes = [
   ['favicon-16.png', 16],
   ['favicon-32.png', 32],
@@ -80,7 +80,7 @@ const png128 = (
     .png()
     .toBuffer()
 ).toString('base64');
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Escape from Tarkov Hacks">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Ark: Survival Ascended Hacks">
   <image href="data:image/png;base64,${png128}" width="128" height="128"/>
 </svg>
 `;

@@ -22,7 +22,7 @@ const sourceTimestamp = (path?: string) => {
 ---
 
 <BaseLayout title={seo.title} description={seo.description} jsonLd={[
-  collectionPageSchema({ name: 'Escape from Tarkov Player Discussions', description: seo.description, url: '/forum/' }),
+  collectionPageSchema({ name: 'Ark: Survival Ascended Player Discussions', description: seo.description, url: '/forum/' }),
   breadcrumbSchema(breadcrumbs),
 ]}>
   <section class="forum-page py-8 md:py-12">
@@ -31,13 +31,13 @@ const sourceTimestamp = (path?: string) => {
       <header class="forum-hero">
         <div>
           <p class="section-header__eyebrow">Community forum</p>
-          <h1>{seoEntry?.h1 ?? 'Escape from Tarkov Player Discussions'}</h1>
+          <h1>{seoEntry?.h1 ?? 'ARK: Survival Ascended Forum – Player Discussions, Questions & Tips'}</h1>
           <p class="forum-hero__copy">
-            Welcome to the Escape from Tarkov community forum! This is a place where players can discuss their experiences, share questions, compare different tools, and talk about the latest changes in Tarkov. Whether you're a beginner or an experienced PMC, feel free to join the conversation.
+            Welcome to the Ark: Survival Ascended community forum! This is a place where players can discuss their experiences, share questions, compare different tools, and talk about the latest changes in Ark. Whether you're a beginner or an experienced Tribe, feel free to join the conversation.
           </p>
           <div class="forum-intro">
             <p>
-              <strong>Join the discussion.</strong> Have a question about Escape from Tarkov tools, updates, gameplay, or account safety? Browse threads below and share your experience with the community. Keep conversations friendly, stay respectful, and help other players make informed decisions.
+              <strong>Join the discussion.</strong> Have a question about Ark: Survival Ascended tools, updates, gameplay, or account safety? Browse threads below and share your experience with the community. Keep conversations friendly, stay respectful, and help other players make informed decisions.
             </p>
             <p class="forum-intro__tagline">Your next raid starts with the right information!</p>
           </div>
@@ -88,7 +88,7 @@ const sourceTimestamp = (path?: string) => {
                   {post.sourceTitle && <p class="forum-source">From the guide: <a href={post.sourcePath}>{post.sourceTitle}</a></p>}
                   <div class="forum-post-actions">
                     {post.flair && <span class={`forum-flair tone-${post.categoryTone}`}>{post.flair}</span>}
-                    <a href={`/forum/${post.slug}/`}><Icon name="messageCircle" size={15} /> {post.commentsCount} comments</a>
+                    <a href={`/forum/${post.slug}/`}><Icon name="messageCircle" size={15} /> {post.commentsCount} {post.commentsCount === 1 ? 'reply' : 'replies'}</a>
                     <a href={`/forum/${post.slug}/`}><Icon name="arrowRight" size={15} /> Read discussion</a>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const sourceTimestamp = (path?: string) => {
             <ol><li>Keep it friendly and constructive</li><li>Stay on topic and add context</li><li>Mark spoilers and sensitive content</li></ol>
             <a href="#community-guidelines">Read the full guidelines <Icon name="arrowRight" size={14} /></a>
           </section>
-          <p class="forum-sidebar-foot">About · Guidelines · Privacy · Terms<br />© {new Date().getFullYear()} hackstarkov.com</p>
+          <p class="forum-sidebar-foot">About · Guidelines · Privacy · Terms<br />© {new Date().getFullYear()} cheatsark.com</p>
         </aside>
       </div>
     </div>

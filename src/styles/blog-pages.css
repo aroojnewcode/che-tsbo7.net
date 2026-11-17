@@ -138,6 +138,9 @@
 
 /* Blog index filters */
 .blog-filter {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   transition:
     border-color 0.15s ease,
     background-color 0.15s ease,
@@ -156,7 +159,8 @@
   text-align: left;
 }
 
-.blog-filter[aria-pressed='true'] {
+.blog-filter[aria-pressed='true'],
+.blog-filter.is-active {
   border-color: color-mix(in oklch, var(--primary) 45%, var(--border));
   background: color-mix(in oklch, var(--primary) 12%, var(--background));
   color: var(--foreground);

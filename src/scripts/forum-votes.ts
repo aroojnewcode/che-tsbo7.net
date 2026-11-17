@@ -1,4 +1,4 @@
-const storagePrefix = 'hackstarkov-forum-vote:';
+const storagePrefix = 'cheatsark-forum-vote:';
 
 export function initForumVotes(): void {
   document.querySelectorAll<HTMLElement>('[data-forum-card], [data-forum-vote]').forEach((post) => {

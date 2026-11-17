@@ -421,7 +421,85 @@ html.dark a.nav-link[data-nav-link]:hover .icon-app {
   color: var(--primary-foreground);
 }
 
-/* Header: click gun → “Escape from Tarkov Hacks” popover in front of the icon */
+/* Navbar corner: dino, then ARK CHEATS to the right on hover — no frame/box */
+.brand-corner {
+  position: relative;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.brand-corner:focus,
+.brand-corner:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.brand-corner__mark {
+  display: block;
+  flex-shrink: 0;
+  width: auto;
+  height: 2.15rem;
+  max-width: 3.75rem;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.brand-corner__title {
+  flex-shrink: 0;
+  max-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: var(--foreground);
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    max-width 0.22s ease,
+    margin-left 0.22s ease;
+}
+
+.brand-corner:hover .brand-corner__title,
+.brand-corner:focus-visible .brand-corner__title {
+  opacity: 1;
+  max-width: min(11rem, 48vw);
+  margin-left: 0.5rem;
+  pointer-events: auto;
+}
+
+@media (hover: none) {
+  .brand-corner:active .brand-corner__title,
+  .brand-corner.brand-corner--show-title .brand-corner__title {
+    opacity: 1;
+    max-width: min(11rem, 48vw);
+    margin-left: 0.5rem;
+  }
+}
+
+/* Legacy popover lockup (mobile sheet / unused header paths) */
 .brand-lockup {
   position: relative;
   z-index: 60;
@@ -468,6 +546,11 @@ html.dark a.nav-link[data-nav-link]:hover .icon-app {
 .brand-gun--navbar[aria-expanded='true'] {
   border-color: transparent;
   box-shadow: none;
+  transform: none;
+}
+
+.brand-gun--navbar .brand-gun__image {
+  transition: opacity 0.18s ease;
 }
 
 .brand-gun__image--wide {
@@ -503,50 +586,52 @@ html.dark a.nav-link[data-nav-link]:hover .icon-app {
 
 .brand-title-popover {
   position: absolute;
-  left: calc(100% + 0.4rem);
+  left: 0;
   top: 50%;
   z-index: 70;
-  min-width: max-content;
-  max-width: min(20rem, 70vw);
-  padding: 0.55rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--card);
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
   color: var(--foreground);
   text-decoration: none;
   white-space: nowrap;
-  box-shadow:
-    0 12px 32px rgb(0 0 0 / 0.22),
-    0 0 0 1px color-mix(in oklch, var(--primary) 14%, transparent);
+  box-shadow: none;
   opacity: 0;
-  transform: translateY(-50%) translateX(-6px) scale(0.96);
+  transform: translateY(-50%);
   pointer-events: none;
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
+  transition: opacity 0.18s ease;
 }
 
 .brand-title-popover.is-open {
   opacity: 1;
-  transform: translateY(-50%) translateX(0) scale(1);
   pointer-events: auto;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .brand-lockup:hover .brand-title-popover,
-  .brand-lockup:focus-within .brand-title-popover {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0) scale(1);
-    pointer-events: auto;
-  }
+.brand-lockup:has([data-brand-gun]:hover) .brand-gun--navbar .brand-gun__image,
+.brand-lockup:has([data-brand-gun]:focus-visible) .brand-gun--navbar .brand-gun__image,
+.brand-lockup:has(.brand-title-popover.is-open) .brand-gun--navbar .brand-gun__image,
+.brand-lockup:has(.brand-title-popover:hover) .brand-gun--navbar .brand-gun__image,
+.brand-lockup:has(.brand-title-popover:focus-visible) .brand-gun--navbar .brand-gun__image {
+  opacity: 0;
+}
 
-  .brand-lockup:hover [data-brand-gun],
-  .brand-lockup:focus-within [data-brand-gun] {
-    transform: scale(1.03);
+@media (hover: hover) and (pointer: fine) {
+  .brand-lockup:has([data-brand-gun]:hover) .brand-title-popover,
+  .brand-lockup:has([data-brand-gun]:focus-visible) .brand-title-popover,
+  .brand-title-popover:hover,
+  .brand-title-popover:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
-.brand-title-popover:hover .brand-title-popover__text {
+.brand-title-popover:hover .brand-title-popover__text,
+.brand-title-popover:focus-visible .brand-title-popover__text {
   color: var(--foreground);
 }
 

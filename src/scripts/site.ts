@@ -88,60 +88,6 @@ function initFaqFilters() {
   });
 }
 
-function initBrandGunPopover() {
-  const triggers = document.querySelectorAll<HTMLButtonElement>('[data-brand-gun]');
-  const popover = document.querySelector<HTMLElement>('[data-brand-popover]');
-  const lockup = document.querySelector<HTMLElement>('.brand-lockup');
-  if (!triggers.length || !popover) return;
-
-  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-  const close = () => {
-    popover.classList.remove('is-open');
-    triggers.forEach((trigger) => trigger.setAttribute('aria-expanded', 'false'));
-  };
-
-  const open = (trigger: HTMLButtonElement) => {
-    popover.classList.add('is-open');
-    trigger.setAttribute('aria-expanded', 'true');
-  };
-
-  const toggle = (trigger: HTMLButtonElement) => {
-    const isOpen = popover.classList.contains('is-open');
-    close();
-    if (!isOpen) open(trigger);
-  };
-
-  triggers.forEach((trigger) => {
-    trigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      toggle(trigger);
-    });
-  });
-
-  if (canHover && lockup) {
-    let leaveTimer: ReturnType<typeof setTimeout> | undefined;
-    lockup.addEventListener('mouseenter', () => {
-      if (leaveTimer) clearTimeout(leaveTimer);
-      const trigger = lockup.querySelector<HTMLButtonElement>('[data-brand-gun]');
-      if (trigger) open(trigger);
-    });
-    lockup.addEventListener('mouseleave', () => {
-      leaveTimer = setTimeout(close, 120);
-    });
-  }
-
-  document.addEventListener('click', (event) => {
-    if (event.target instanceof Node && (popover.contains(event.target) || [...triggers].some((t) => t.contains(event.target)))) return;
-    close();
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') close();
-  });
-}
-
 function initThemeMetaColor() {
   const metaTheme = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
   if (!metaTheme) return;
@@ -161,8 +107,10 @@ function bootSite() {
   initNavHighlight();
   initInPageScroll();
   initSkipLink();
-  initBrandGunPopover();
   initThemeMetaColor();
+  if (document.getElementById('blog-grid')) {
+    import('./blog-index.ts').then((mod) => mod.initBlogIndexFilters()).catch(() => {});
+  }
 }
 
 if (document.readyState === 'loading') {
