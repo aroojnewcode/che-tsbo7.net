@@ -26,12 +26,20 @@ function expandSources(from) {
   return out;
 }
 
+/** Canonical path key (trailing slash) so we skip no-op / redirect-loop rules. */
+function pathKey(path) {
+  if (path === '/') return '/';
+  return path.endsWith('/') ? path : `${path}/`;
+}
+
 function buildRedirectLines() {
   const lines = new Set();
 
   for (const [from, to] of PATH_REDIRECTS) {
     const target = normalizeTarget(to);
+    const targetKey = pathKey(target);
     for (const source of expandSources(from)) {
+      if (pathKey(source) === targetKey) continue;
       lines.add(`${source} ${target} 301`);
     }
   }

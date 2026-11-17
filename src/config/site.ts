@@ -6,8 +6,8 @@ export const CANONICAL_SITE_ORIGIN = SITE_URL;
 export const SITE_LOGO = '/logo.svg';
 /** Navbar corner mark (BrandGun). Regenerate: npm run brand:gun */
 export const SITE_GUN_IMAGE = '/images/brand/ark-gun.webp';
-/** Forum sidebar community mark (Ark: Survival Ascended emblem). */
-export const FORUM_LOGO = '/images/brand/forum-logo.png';
+/** Forum sidebar mark — same as site favicon / logo.svg. */
+export const FORUM_LOGO = SITE_LOGO;
 export const PRODUCT_BASE = '/products/ark-hacks/';
 export const TITLE_PREFIX = 'Ark: Survival Ascended Hacks';
 export const SUPPORT_EMAIL = `support@${SITE_DOMAIN}`;

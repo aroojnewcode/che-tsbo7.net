@@ -150,12 +150,8 @@ export const PATH_REDIRECTS = new Map([
   ['/products/ark-hacks', '/products/ark-hacks/'],
   ['/products/ark-hacks/account-recovery', '/products/ark-hacks/ugc/'],
   ['/products/ark-hacks/account-recovery/', '/products/ark-hacks/ugc/'],
-  ['/products/ark-hacks', '/products/ark-hacks/'],
-  ['/products/ark-hacks/', '/products/ark-hacks/'],
   ['/products/ark-hacks/elite', '/products/ark-hacks/elite/'],
-  ['/products/ark-hacks/elite/', '/products/ark-hacks/elite/'],
   ['/products/ark-hacks/utilities', '/products/ark-hacks/utilities/'],
-  ['/products/ark-hacks/utilities/', '/products/ark-hacks/utilities/'],
 ]);
 
 /** Paths that should not receive a forced trailing slash. */
