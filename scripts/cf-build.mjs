@@ -8,7 +8,8 @@ const productionOrigin = 'https://cheatsbo7.net';
 process.env.SITE_ORIGIN ||= productionOrigin;
 process.env.SITEMAP_ORIGIN ||= productionOrigin;
 
-const result = spawnSync('npm', ['run', 'build'], {
+/** Lean build: skips full image re-encode + IndexNow (more reliable on Cloudflare Builders). */
+const result = spawnSync('npm', ['run', 'build:lean'], {
   stdio: 'inherit',
   shell: true,
   env: process.env,
