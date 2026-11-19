@@ -27,7 +27,7 @@ Set these in **Cloudflare Workers Builds → Variables** (or local `.env` via `n
 | `INDEXNOW_HOST` | `cheatsbo7.net` |
 | `PUBLIC_GA_MEASUREMENT_ID` | GA4 `G-XXXXXXXXXX` |
 
-`INDEXNOW_KEY` triggers `scripts/indexnow.mjs` after build. `/go/*` are full HTML gateways (`src/pages/go/[slug].astro`) with self-canonical on cheatsbo7.net — do not re-add Astro middleware or `serve.mjs` 302s to Zadeyo. HSTS is set in `src/worker.js` and `public/_headers`.
+`INDEXNOW_KEY` triggers `scripts/indexnow.mjs` after build. `/go/*` are full HTML gateways (`src/pages/go/[slug].astro`) with self-canonical on cheatsbo7.net — do not re-add Astro middleware or `serve.mjs` 302s to Zadeyo. HSTS is set in `public/_headers` (and echoed by the minimal `src/worker.js` wrapper).
 
 ## Meta & structured data
 

@@ -1,23 +1,21 @@
 # Static Astro site on Workers Assets. Cloudflare Builds runs `npx wrangler deploy`.
 # Worker name must match Cloudflare Workers Builds project (cheatsbo7-net).
 name = "cheatsbo7-net"
-main = "src/worker.js"
-compatibility_date = "2026-10-26"
+compatibility_date = "2024-09-23"
 workers_dev = true
 
-# Custom domain (uncomment when cheatsbo7.net is on this Cloudflare account):
-# [[routes]]
-# pattern = "cheatsbo7.net/*"
-# zone_name = "cheatsbo7.net"
-# [[routes]]
-# pattern = "www.cheatsbo7.net/*"
-# zone_name = "cheatsbo7.net"
+# Custom domain: attach cheatsbo7.net in the dashboard (Workers → Settings → Domains).
+# Prefer zone-level Always Use HTTPS + www→apex there instead of a custom User Worker.
 
 [build]
 command = "node scripts/cf-build.mjs"
 
 [assets]
 directory = "./dist"
-binding = "ASSETS"
 not_found_handling = "404-page"
 html_handling = "auto-trailing-slash"
+binding = "ASSETS"
+run_worker_first = true
+
+# Thin edge worker: redirects + HSTS only; static HTML/assets come from dist/.
+main = "src/worker.js"
