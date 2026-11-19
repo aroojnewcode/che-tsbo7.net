@@ -1,5 +1,5 @@
 export declare const CHECKOUT_URLS: {
-  readonly ark: string;
+  readonly bo7: string;
   readonly skinChanger: string;
   readonly hwidSpoofer: string;
   readonly ugc: string;

@@ -29,3 +29,18 @@ export function checkoutUrlWithPlan(baseUrl: string, planId: ProductPlanId): str
   const separator = baseUrl.includes('?') ? '&' : '?';
   return `${baseUrl}${separator}plan=${planId}`;
 }
+
+export function lowestPlanPriceUsd(productSlug: string): number {
+  const plans = getProductPlans(productSlug);
+  return Math.min(...plans.map((plan) => plan.priceUsd));
+}
+
+export function productPlanPriceRange(productSlug: string): { low: number; high: number; count: number } {
+  const plans = getProductPlans(productSlug);
+  const prices = plans.map((plan) => plan.priceUsd);
+  return {
+    low: Math.min(...prices),
+    high: Math.max(...prices),
+    count: plans.length,
+  };
+}

@@ -1,16 +1,16 @@
-import { CHECKOUT_URLS, ARK_CHECKOUT_URL } from './checkout-redirects.mjs';
+import { CHECKOUT_URLS, BO7_CHECKOUT_URL } from './checkout-redirects.mjs';
 
 /** Zadeyo affiliate checkout destinations. */
 export const CHECKOUT = CHECKOUT_URLS;
 
 /** All Get access / Buy CTAs use this URL. */
-export const ZADEYO_CHECKOUT_URL = ARK_CHECKOUT_URL;
+export const ZADEYO_CHECKOUT_URL = BO7_CHECKOUT_URL;
 
 export type CheckoutProduct = keyof typeof CHECKOUT;
 
 /** URL slug for /go/[slug]/ checkout redirect pages. */
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  ark: 'ark',
+  bo7: 'bo7',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -22,22 +22,22 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
 ) as Record<string, CheckoutProduct>;
 
 /** Zadeyo affiliate URL for visible “Get access” / buy CTAs (same tab — no target=_blank). */
-export function checkoutPath(product: CheckoutProduct = 'ark'): string {
+export function checkoutPath(product: CheckoutProduct = 'bo7'): string {
   return CHECKOUT[product];
 }
 
 /** Internal /go/* path (blog links, bookmarks); 302 to Zadeyo via public/_redirects. */
-export function checkoutRedirectPath(product: CheckoutProduct = 'ark'): string {
+export function checkoutRedirectPath(product: CheckoutProduct = 'bo7'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
 /** Alias used by /go/[slug] static redirect pages. */
-export function checkoutExternalUrl(product: CheckoutProduct = 'ark'): string {
+export function checkoutExternalUrl(product: CheckoutProduct = 'bo7'): string {
   return CHECKOUT[product];
 }
 
 /** Default product checkout redirect (replaces legacy Discord CTAs). */
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('ark');
+export const PRIMARY_CHECKOUT_PATH = checkoutPath('bo7');
 
 /** Map internal product slugs to checkout redirect paths. */
 export function checkoutForSlug(slug: string): string {
@@ -55,7 +55,7 @@ export function checkoutForSlug(slug: string): string {
     case 'pro':
     case 'elite':
     default:
-      return checkoutPath('ark');
+      return checkoutPath('bo7');
   }
 }
 
@@ -92,12 +92,12 @@ export function resolveCheckoutHref(href: string): string {
     return checkoutPath('cloudDma');
   }
   if (
-    href.includes('%2Fproducts%2Fark-ascended') ||
-    href.includes('/products/ark-ascended') ||
-    href.includes('%2Fproducts%2Fark-survival-ascended') ||
-    href.includes('/products/ark-survival-ascended')
+    href.includes('%2Fproducts%2Fcall-of-duty-black-ops-7') ||
+    href.includes('/products/call-of-duty-black-ops-7') ||
+    href.includes('%2Fproducts%2Fblack-ops-7') ||
+    href.includes('/products/black-ops-7')
   ) {
-    return checkoutPath('ark');
+    return checkoutPath('bo7');
   }
 
   return href;

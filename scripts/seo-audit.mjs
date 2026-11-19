@@ -57,7 +57,7 @@ for (const file of files) {
   const can = html.match(/<link rel="canonical" href="([^"]+)"/);
   if (!can) report.canonical.missing.push(page);
   else if (can[1].startsWith('http://')) report.canonical.http.push({ page, href: can[1] });
-  else if (!can[1].startsWith('https://cheatsark.com')) report.canonical.wrongHost.push({ page, href: can[1] });
+  else if (!can[1].startsWith('https://cheatsbo7.net')) report.canonical.wrongHost.push({ page, href: can[1] });
   else report.canonical.ok += 1;
 
   if (/name="robots" content="noindex/i.test(html)) report.robots.noindex.push(page);
@@ -101,7 +101,7 @@ if (fs.existsSync(sitemapPath)) {
     (u) =>
       u.includes('/arcraider') ||
       u.includes('/eac-error') ||
-      u.includes('/eac-patch') ||
+      u.includes('/ricochet-patch') ||
       u.includes('/contact/') ||
       u.includes('/go/arc-raiders'),
   );

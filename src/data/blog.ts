@@ -1,11 +1,11 @@
 export type { BlogBlock, BlogPostFull } from './blog/types';
 import { blogPosts as rawBlogPosts } from './blog/posts';
-import { arkBlogImageForSlug } from '../config/media';
+import { bo7BlogImageForSlug } from '../config/media';
 
-/** Blog cards and articles use Supabase Ark screenshots. */
+/** Blog cards and articles use Black Ops 7 screenshots. */
 export const blogPosts = rawBlogPosts.map((post) => ({
   ...post,
-  image: arkBlogImageForSlug(post.slug),
+  image: bo7BlogImageForSlug(post.slug),
 }));
 
 export function getBlogPost(slug: string) {

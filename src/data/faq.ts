@@ -29,27 +29,27 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const elite = link('Ark: Survival Ascended Elite', productPath('elite'));
+const elite = link('Call of Duty: Black Ops 7 Elite', productPath('elite'));
 const lite = link('Lite tier (ESP & radar)', ROUTES.products);
 const pro = link('Pro tier (aimbot & no recoil)', ROUTES.products);
-const productsHub = link('Ark: Survival Ascended hack products', ROUTES.products);
+const productsHub = link('Call of Duty: Black Ops 7 hack products', ROUTES.products);
 const hwid = link('HWID Spoofer', productPath('hwid-spoofer'));
 const ugc = link('UGC', productPath('ugc'));
 const skin = link('Skin Changer', productPath('unlock-all'));
 const faqPage = link('full FAQ', ROUTES.faq);
 const blog = link('blog guides', ROUTES.blog);
 
-const guideFeatures = link('Ark: Survival Ascended hacks features guide', blogPostPath('features'));
+const guideFeatures = link('Call of Duty: Black Ops 7 hacks features guide', blogPostPath('features'));
 const guideLiteVsPro = link('Lite vs Pro guide', blogPostPath('lite-vs-pro'));
 const guideElite = link('Elite tier guide', blogPostPath('elite'));
 const guideEsp = link('ESP and radar setup guide', blogPostPath('esp'));
-const guidePatch = link('BattlEye patch day checklist', blogPostPath('be-patch'));
-const guideBuy = link('how to buy Ark: Survival Ascended hacks in 2026', blogPostPath('buy-guide'));
+const guidePatch = link('Ricochet Anti-Cheat patch day checklist', blogPostPath('ricochet-patch'));
+const guideBuy = link('how to buy Call of Duty: Black Ops 7 hacks in 2026', blogPostPath('buy-guide'));
 const guideExternal = link('external cheat guide', blogPostPath('external'));
 const guideStream = link('stream-proof setup guide', blogPostPath('stream-proof'));
 const guideAdmin = link('in-game console and debug commands guide', blogPostPath('cheat-codes'));
 const guideHwid = link('HWID spoofer vs new account guide', blogPostPath('hwid'));
-const guideBeInit = link('BattlEye failed to initialize tresourceshooting guide', blogPostPath('be-error'));
+const guideBeInit = link('Ricochet Anti-Cheat failed to initialize tresourceshooting guide', blogPostPath('ricochet-error'));
 const guideRecoil = link('aimbot and recoil scripts guide', blogPostPath('aimbot'));
 
 export const siteFaqs: SiteFaqItem[] = [
@@ -57,29 +57,29 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if Ark: Survival Ascended hacks are online?',
-    a: a('The live status banner is on cheatsark.com and in the Discord #status channel. Always check it after an Ark: Survival Ascended update or a major anti-cheat patch, or an BattlEye update.'),
+    q: 'Where do I check if Call of Duty: Black Ops 7 hacks are online?',
+    a: a('The live status banner is on cheatsbo7.net and in the Discord #status channel. Always check it after an Call of Duty: Black Ops 7 update or a major anti-cheat patch, or an Ricochet Anti-Cheat update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Ark: Survival Ascended, and start the loader before the game so BattlEye sees a clean launch order.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Call of Duty: Black Ops 7, and start the loader before the game so Ricochet Anti-Cheat sees a clean launch order.'),
   },
   {
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using Ark: Survival Ascended hacks?',
-    a: a('Yes—any third-party software carries risk. BattlEye, Studio Wildcard server-side checks and admin reports all evolve, and Ark: Survival Ascended bans can follow your Ark account and hardware. Read the current status and accept the risk before use.'),
+    q: 'Can I get banned using Call of Duty: Black Ops 7 hacks?',
+    a: a('Yes—any third-party software carries risk. Ricochet Anti-Cheat, Activision server-side checks and admin reports all evolve, and Call of Duty: Black Ops 7 bans can follow your Activision account and hardware. Read the current status and accept the risk before use.'),
   },
   {
     id: 'platforms',
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Ark: Survival Ascended on Steam for PC, Windows 10/11 64-bit only. Ark: Survival Ascended Console Edition, macOS and Linux are not supported.'),
+    a: a('Call of Duty: Black Ops 7 on Steam for PC, Windows 10/11 64-bit only. Call of Duty: Black Ops 7 Console Edition, macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -99,8 +99,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Ark: Survival Ascended ESP and what does it show?',
-    a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Loot ESP marks containers, stashes, salvage nodes and dropped items. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}.`,
+    q: 'What is Call of Duty: Black Ops 7 ESP and what does it show?',
+    a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Loot ESP marks containers, stashes, armor plate spawns and dropped items. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
@@ -123,7 +123,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'scripts',
     icon: 'faqWhichTierScripts',
     q: 'Which tier includes Aimbot and No Recoil?',
-    a: `${pro} ships Aimbot, Soft Aim, Bone Select, Trigger Bot and No Recoil / Spread. ${elite} includes everything in Pro plus Loot Route Assist and Skin Changer. ${lite} has no aim assist—it is overlay only.`,
+    a: `${pro} ships Aimbot, Soft Aim, Bone Select, Trigger Bot and No Recoil / Spread. ${elite} includes everything in Pro plus Objective Route Assist and Skin Changer. ${lite} has no aim assist—it is overlay only.`,
     scopes: ['pro'],
   },
   {
@@ -138,8 +138,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'no-recoil',
     topic: 'scripts',
     icon: 'faqWhichTierScripts',
-    q: 'How does No Recoil work in Ark: Survival Ascended?',
-    a: `No Recoil / Spread compensates for weapon recoil with per-weapon profiles—Assault Rifle, Pump-Action Shotgun, Longneck, Fabricated Sniper, Tek Rifle and more. Keep compensation below 100% so sprays still look natural, and test each weapon on a private or practice server before risking gear on a live official.`,
+    q: 'How does No Recoil work in Call of Duty: Black Ops 7?',
+    a: `No Recoil / Spread compensates for weapon recoil with per-weapon profiles—assault rifle, shotgun, marksman rifle, sniper rifle, LMG and more. Keep compensation below 100% so sprays still look natural, and test each weapon in a private match or firing range before risking your account in Ranked Play.`,
     scopes: ['pro', 'elite'],
   },
   {
@@ -154,7 +154,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqEliteSlots',
     q: 'Why is Elite limited slots?',
-    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on Ark: Survival Ascended update and BattlEye patch days. Check the status banner before checkout, or read the ${guideElite}.`,
+    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on Call of Duty: Black Ops 7 update and Ricochet Anti-Cheat patch days. Check the status banner before checkout, or read the ${guideElite}.`,
     scopes: ['elite'],
   },
   {
@@ -168,7 +168,7 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'undetected',
     topic: 'safety',
     icon: 'faqUndetected',
-    q: 'Are undetected Ark: Survival Ascended hacks guaranteed?',
+    q: 'Are undetected Call of Duty: Black Ops 7 hacks guaranteed?',
     a: a('No. Undetected is the current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing or detected, and never play on your main account while a status is unclear.'),
   },
   {
@@ -176,29 +176,29 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqEspSafer',
     q: 'Is ESP-only safer than aimbot?',
-    a: a('ESP is quieter than an obvious aimbot or no-recoil pattern in a killcam, but it is still a cheat. Admins, clips and BattlEye do not ignore overlays because aim assist is off. Wallbang-free play and sensible reaction timing reduce reports.'),
+    a: a('ESP is quieter than an obvious aimbot or no-recoil pattern in a killcam, but it is still a cheat. Admins, clips and Ricochet Anti-Cheat do not ignore overlays because aim assist is off. Wallbang-free play and sensible reaction timing reduce reports.'),
   },
   {
     id: 'hwid-when',
     topic: 'products',
     icon: 'faqHwidWhen',
     q: 'When do I need the HWID Spoofer?',
-    a: `Use ${hwid} when a fresh Ark account gets blocked instantly on one PC but works on another—a hardware-level restriction. It is not for account-only bans; see ${ugc} for appeal workflows instead.`,
+    a: `Use ${hwid} when a fresh Activision account gets blocked instantly on one PC but works on another—a hardware-level restriction. It is not for account-only bans; see ${ugc} for appeal workflows instead.`,
     scopes: ['hwid-spoofer'],
   },
   {
     id: 'hwid-after-ban',
     topic: 'safety',
     icon: 'faqHwidWhen',
-    q: 'Do I need a new account and a spoofer after an BattlEye ban?',
-    a: `Usually both: a new Ark account with Ark: Survival Ascended, plus ${hwid} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
+    q: 'Do I need a new account and a spoofer after an Ricochet Anti-Cheat ban?',
+    a: `Usually both: a new Activision account with Call of Duty: Black Ops 7, plus ${hwid} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
   },
   {
     id: 'ugc-what',
     topic: 'products',
     icon: 'faqUgcWhat',
     q: 'What is UGC?',
-    a: `${ugc} (Unban & Governance Control) is an appeal workspace for Studio Wildcard and BattlEye bans and Steam restrictions—custom workflows and case tracking, not a guaranteed unban service.`,
+    a: `${ugc} (Unban & Governance Control) is an appeal workspace for Activision and Ricochet Anti-Cheat bans and Steam restrictions—custom workflows and case tracking, not a guaranteed unban service.`,
     scopes: ['ugc'],
   },
   {
@@ -206,22 +206,22 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqSkinChanger',
     q: 'Does Skin Changer modify my Steam inventory?',
-    a: `${skin} previews weapon skins, clothing and workshop items locally on your client. Other players see your real inventory. Included with ${elite}; available standalone for cosmetic preview only.`,
+    a: `${skin} previews weapon skins, clothing and operator and weapon camos locally on your client. Other players see your real inventory. Included with ${elite}; available standalone for cosmetic preview only.`,
     scopes: ['unlock-all'],
   },
   {
     id: 'external-loader',
     topic: 'products',
     icon: 'faqExternalLoader',
-    q: 'Is the loader injected into the Ark: Survival Ascended folder?',
-    a: `Ark: Survival Ascended Hacks runs external with cloud config sync—no files are written into the Ark: Survival Ascended install directory. BattlEye risk still applies. See the ${guideExternal} and ${productsHub}.`,
+    q: 'Is the loader injected into the Call of Duty: Black Ops 7 folder?',
+    a: `Call of Duty: Black Ops 7 Hacks runs external with cloud config sync—no files are written into the Call of Duty: Black Ops 7 install directory. Ricochet Anti-Cheat risk still applies. See the ${guideExternal} and ${productsHub}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
-    q: 'Are single-player debug commands the same as Ark: Survival Ascended hacks?',
-    a: `No. in-game console commands like dev-only debug toggles only work for admins on servers you own or moderate. Paid Ark: Survival Ascended hacks are separate products for live sessions—see ${lite}, ${pro} and ${elite}, and the ${guideAdmin}.`,
+    q: 'Are private match / bot lobby practice the same as Call of Duty: Black Ops 7 hacks?',
+    a: `No. in-game console commands like dev-only debug toggles only work for admins on servers you own or moderate. Paid Call of Duty: Black Ops 7 hacks are separate products for live sessions—see ${lite}, ${pro} and ${elite}, and the ${guideAdmin}.`,
   },
   {
     id: 'blog-setup',
@@ -250,7 +250,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `PvP players who want Aimbot, Soft Aim and No Recoil with ESP and radar included. Pro is the most popular tier at cheatsark.com.`,
+    a: `PvP players who want Aimbot, Soft Aim and No Recoil with ESP and radar included. Pro is the most popular tier at cheatsbo7.net.`,
     scopes: ['pro'],
   },
   {
@@ -258,43 +258,43 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoElite',
     q: 'Who should buy Elite?',
-    a: `Operators who want Loot Route Assist, Skin Changer and priority patch delivery when slots are open.`,
+    a: `Operators who want Objective Route Assist, Skin Changer and priority patch delivery when slots are open.`,
     scopes: ['elite'],
   },
   {
     id: 'be-update',
     topic: 'safety',
     icon: 'faqBeUpdate',
-    q: 'What should I do after a BattlEye or Ark: Survival Ascended update?',
-    a: a('Check cheatsark.com status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on a quiet test session first. The BattlEye patch day checklist covers the full routine.'),
+    q: 'What should I do after a Ricochet Anti-Cheat or Call of Duty: Black Ops 7 update?',
+    a: a('Check cheatsbo7.net status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on a private match or firing range first. The Ricochet Anti-Cheat patch day checklist covers the full routine.'),
   },
   {
-    id: 'be-init',
+    id: 'ricochet-init',
     topic: 'setup',
     icon: 'faqBeUpdate',
-    q: 'BattlEye says it failed to initialize—is that a ban?',
-    a: `Usually not. It is most often a broken BattlEye install, a service conflict or a blocked driver. Verify Ark: Survival Ascended files in Steam, reinstall BattlEye from the Ark: Survival Ascended folder and restart before assuming a ban. See the ${guideBeInit}; if it is a real ban, check ${ugc}.`,
+    q: 'Ricochet Anti-Cheat says it failed to initialize—is that a ban?',
+    a: `Usually not. It is most often a broken Ricochet Anti-Cheat install, a service conflict or a blocked driver. Verify Call of Duty: Black Ops 7 files in Steam, reinstall Ricochet Anti-Cheat from the Call of Duty: Black Ops 7 folder and restart before assuming a ban. See the ${guideBeInit}; if it is a real ban, check ${ugc}.`,
   },
   {
     id: 'discord-help',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('Open Discord after purchase with your order email, Windows version and Ark: Survival Ascended build number. Staff walk through loader setup live.'),
+    a: a('Open Discord after purchase with your order email, Windows version and Call of Duty: Black Ops 7 build number. Staff walk through loader setup live.'),
   },
   {
     id: 'server-types',
     topic: 'plans',
     icon: 'faqServerModes',
-    q: 'Do tiers work on The Island, Aberration and Unofficial PvP sessions?',
-    a: `Yes—${lite}, ${pro} and ${elite} include presets for The Island, Aberration and Unofficial PvP sessions in the portal. Tune ESP distance, aim FOV and smoothing before your first upload run or POI push.`,
+    q: 'Do tiers work on the map, Ranked and Custom matches?',
+    a: `Yes—${lite}, ${pro} and ${elite} include presets for the map, Ranked and Custom matches in the portal. Tune ESP distance, aim FOV and smoothing before your first ranked session or POI push.`,
   },
   {
     id: 'zoom-hack',
     topic: 'esp',
     icon: 'faqZoomHack',
     q: 'Which tier includes FOV Hack?',
-    a: `FOV Hack ships on ${lite} and carries through ${pro} and ${elite}. A wider field of view helps in base fights and open-field PvP, but keep it near the default range so the server does not flag it.`,
+    a: `FOV Hack ships on ${lite} and carries through ${pro} and ${elite}. A wider field of view helps in hardpoint fights and open-field PvP, but keep it near the default range so the server does not flag it.`,
     scopes: ['lite'],
   },
   {
@@ -302,23 +302,23 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'esp',
     icon: 'faqWhatIsEsp',
     q: 'What does Loot & Resource ESP highlight?',
-    a: `Containers, stashes, supply drops, salvage and crafting nodes, and dropped items—filtered by type and distance. All tiers include it, and the ${guideEsp} explains how to keep the screen readable.`,
+    a: `Containers, stashes, supply drops, ammo caches and armor plates, and dropped items—filtered by type and distance. All tiers include it, and the ${guideEsp} explains how to keep the screen readable.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
     id: 'auto-farm',
     topic: 'scripts',
     icon: 'faqAutoFarm',
-    q: 'Which tier includes Loot Route Assist?',
-    a: `Loot Route Assist for resource and loot routes are ${elite} only. ${pro} covers aim assist without farm automation.`,
+    q: 'Which tier includes Objective Route Assist?',
+    a: `Objective Route Assist for resource and loot routes are ${elite} only. ${pro} covers aim assist without farm automation.`,
     scopes: ['elite'],
   },
   {
     id: 'private-cheats',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'What are private Ark: Survival Ascended hacks?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. Ark: Survival Ascended Hacks ships portal delivery for ESP, aim assist and radar tiers.'),
+    q: 'What are private Call of Duty: Black Ops 7 hacks?',
+    a: a('Private means per-user keys and maintained builds—not public zip packs. Call of Duty: Black Ops 7 Hacks ships portal delivery for ESP, aim assist and radar tiers.'),
   },
   {
     id: 'faq-more',
@@ -341,9 +341,9 @@ export function getAllFaqs(): SiteFaqItem[] {
 
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
-  eyebrow: 'Ark: Survival Ascended topics',
-  title: 'Browse Ark: Survival Ascended hack answers by category',
-  subtitle: 'Filter Ark: Survival Ascended plans, ESP, aimbot, products, setup and buy-guide answers.',
+  eyebrow: 'Before you buy',
+  title: 'Straight answers before checkout.',
+  subtitle: 'Filter by plans, ESP, aimbot, products, setup, and safety.',
 } as const;
 
 export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
@@ -403,8 +403,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-guide-start',
       topic: 'blog',
       icon: 'faqBlogGuideStart',
-      q: 'Should I use single-player debug commands on live official servers?',
-      a: a('No. Admin commands like dev-only debug toggles only work for admins on servers you own or moderate. Live-server play needs separate Ark: Survival Ascended hacks from cheatsark.com tiers—and carries ban risk.'),
+      q: 'Should I use private match / bot lobby practice on live live multiplayer?',
+      a: a('No. Private-match admin tools like dev-only debug toggles only work for admins on servers you own or moderate. Live-server play needs separate Call of Duty: Black Ops 7 hacks from cheatsbo7.net tiers—and carries ban risk.'),
     },
     {
       id: 'blog-guide-tier',
@@ -418,7 +418,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideStatus',
       q: 'Is this guide still valid after a patch?',
-      a: a('Check the article date and the live status banner. Patch-day articles note when modules change—Discord #status has the latest build notes after each Ark: Survival Ascended update or major patch.'),
+      a: a('Check the article date and the live status banner. Patch-day articles note when modules change—Discord #status has the latest build notes after each Call of Duty: Black Ops 7 update or major patch.'),
     },
   ],
   Setup: [
@@ -433,8 +433,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-setup-lobby',
       topic: 'blog',
       icon: 'faqBlogSetupLobby',
-      q: 'Should I test on a quiet test session first?',
-      a: a('Yes. Load conservative presets on a low-pop or Single-player range or an single-player session before busy The Island or Aberration servers. Tune aim FOV, smoothing and ESP distance caps over several sessions.'),
+      q: 'Should I test on a private match or firing range first?',
+      a: a('Yes. Load conservative presets on a low-pop or firing range or private match before busy the map or Zombies and Ranked lobbies. Tune aim FOV, smoothing and ESP distance caps over several sessions.'),
     },
   ],
   Features: [
@@ -451,7 +451,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-updates-be',
       topic: 'blog',
       icon: 'faqBlogSecVac',
-      q: 'How fast do builds update after a BattlEye patch?',
+      q: 'How fast do builds update after a Ricochet Anti-Cheat patch?',
       a: `Elite gets priority delivery; Lite and Pro follow once the build is verified. Do not launch until the banner is green—see the ${guidePatch}.`,
     },
   ],
@@ -460,8 +460,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-trouble-be',
       topic: 'blog',
       icon: 'faqBlogSecVac',
-      q: 'Is an BattlEye error always a ban?',
-      a: a('No. Start with Steam file verification, a BattlEye reinstall and a clean restart. A ban message names the account or hardware; startup errors usually do not.'),
+      q: 'Is an Ricochet Anti-Cheat error always a ban?',
+      a: a('No. Start with Steam file verification, a Ricochet Anti-Cheat reinstall and a clean restart. A ban message names the account or hardware; startup errors usually do not.'),
     },
   ],
   Security: [
@@ -495,7 +495,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this article work next patch?',
-    a: a('Re-check status after every Ark: Survival Ascended update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every Call of Duty: Black Ops 7 update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 
@@ -527,7 +527,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'products',
       icon: 'faqBlogSlugHwid',
       q: 'Does this article replace HWID or UGC products?',
-      a: `Recovery and BattlEye guides complement ${hwid} and ${ugc}—read product pages for workflow scope and realistic outcomes.`,
+      a: `Recovery and Ricochet Anti-Cheat guides complement ${hwid} and ${ugc}—read product pages for workflow scope and realistic outcomes.`,
     });
   }
   if (slug.includes('stream')) {
@@ -565,9 +565,9 @@ export const compareRows = [
   { feature: 'Bone Select (head / chest / body)', icon: 'boneSelect' as const, lite: false, pro: true, elite: true },
   { feature: 'Aim FOV circle & target selector', icon: 'compareTargetSelector' as const, lite: false, pro: true, elite: true },
   { feature: 'No Recoil / Spread', icon: 'noRecoil' as const, lite: false, pro: true, elite: true },
-  { feature: 'Weapon recoil profiles (Assault Rifle, Pump-Action, Longneck)', icon: 'stepCrosshair' as const, lite: false, pro: true, elite: true },
+  { feature: 'Weapon recoil profiles (assault rifle, shotgun, marksman rifle)', icon: 'stepCrosshair' as const, lite: false, pro: true, elite: true },
   { feature: 'Trigger Bot', icon: 'triggerBot' as const, lite: false, pro: true, elite: true },
-  { feature: 'Loot Route Assist', icon: 'compareAutoFarm' as const, lite: false, pro: false, elite: true },
+  { feature: 'Objective Route Assist', icon: 'compareAutoFarm' as const, lite: false, pro: false, elite: true },
   { feature: 'Full radar suite (UAV-style)', icon: 'uavRadar' as const, lite: false, pro: false, elite: true },
   { feature: 'Skin Changer (Unlock All)', icon: 'compareSkinChanger' as const, lite: false, pro: false, elite: true },
   { feature: 'Priority patch queue', icon: 'comparePriorityPatch' as const, lite: false, pro: false, elite: true },

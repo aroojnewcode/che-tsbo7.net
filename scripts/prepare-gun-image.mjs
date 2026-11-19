@@ -1,5 +1,5 @@
 /**
- * Remove flat / dark backgrounds from navbar logo source → ark-gun.webp
+ * Remove flat / dark backgrounds from navbar logo source → bo7-gun.webp
  * Usage: node scripts/prepare-gun-image.mjs [inputPath]
  */
 import sharp from 'sharp';
@@ -7,17 +7,17 @@ import { existsSync, renameSync, unlinkSync } from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const defaultInput = path.join(root, 'public/images/brand/ark-gun.png');
-const restoreInput = path.join(root, 'public/images/brand/ark-gun-restore.png');
+const defaultInput = path.join(root, 'public/images/brand/bo7-gun.png');
+const restoreInput = path.join(root, 'public/images/brand/bo7-gun-restore.png');
 const cliInput = process.argv[2];
 const input = cliInput
   ? path.resolve(root, cliInput)
   : existsSync(restoreInput)
     ? restoreInput
     : defaultInput;
-const outPng = path.join(root, 'public/images/brand/ark-gun.png');
-const outWebp = path.join(root, 'public/images/brand/ark-gun.webp');
-const tmpPng = path.join(root, 'public/images/brand/ark-gun.transparent.tmp.png');
+const outPng = path.join(root, 'public/images/brand/bo7-gun.png');
+const outWebp = path.join(root, 'public/images/brand/bo7-gun.webp');
+const tmpPng = path.join(root, 'public/images/brand/bo7-gun.transparent.tmp.png');
 
 if (!existsSync(input)) {
   console.error('Missing input:', input);

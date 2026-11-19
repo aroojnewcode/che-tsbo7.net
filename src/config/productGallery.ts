@@ -1,9 +1,7 @@
 /**
- * Product & hero screenshots — Ark cheat gallery (Supabase library).
- * Optional local fallbacks: public/images/product/*.png via npm run media:ark
+ * Product & hero screenshots — Black Ops 7 cheat gallery (Supabase library).
+ * Optional local fallbacks: public/images/product/*.png via npm run media:bo7
  */
-
-import { ARK_MEDIA_URLS } from './media';
 
 export interface GallerySlideConfig {
   id: string;
@@ -16,28 +14,28 @@ export interface GallerySlideConfig {
 
 const productImage = (name: string) => `/images/product/${name}.png`;
 
-/** Three unique Ark shots — never duplicate src in one gallery. */
+/** Three unique BO7 shots — never duplicate src in one gallery. */
 export const PRODUCT_GALLERY_SLIDES: GallerySlideConfig[] = [
   {
     id: 'awareness',
     src: productImage('awareness'),
-    alt: 'Ark Survival Ascended player ESP highlighting tribe members, wild dinos and resources',
+    alt: 'Call of Duty Black Ops 7 player ESP highlighting squad members, enemy players and resources',
     caption: 'Player & resource ESP',
-    captionDesc: 'Track tribes, wild dinos, supply drops and nodes before you push a base or upload.',
+    captionDesc: 'Track squads, enemy players, streaks and lanes before you rotate or hold hardpoint.',
   },
   {
     id: 'combat',
     src: productImage('combat'),
-    alt: 'Ark Survival Ascended combat overlay with aim assist during a PvP fight',
+    alt: 'Call of Duty Black Ops 7 combat overlay with aim assist during a PvP fight',
     caption: 'Combat assist',
     captionDesc: 'Aim smoothing, FOV limits and ESP together for CQB and mid-range fights.',
   },
   {
     id: 'world',
     src: productImage('world'),
-    alt: 'Ark Survival Ascended tactical sightline with map-style awareness',
-    caption: 'Map & obelisk awareness',
-    captionDesc: 'Orientation on ASA maps—see routes, obelisks and hotspots before you rotate.',
+    alt: 'Call of Duty Black Ops 7 tactical sightline with map-style awareness',
+    caption: 'Map & objective awareness',
+    captionDesc: 'Orientation on BO7 maps—see routes, objectives and hotspots before you rotate.',
   },
 ];
 

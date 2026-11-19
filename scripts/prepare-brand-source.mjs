@@ -7,12 +7,9 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const input =
-  process.argv[2] ||
-  process.env.BRAND_ICON_SOURCE ||
-  path.join(root, 'public/brand/ark-favicon-source.png');
-const out = path.join(root, 'public/brand/ark-favicon-source.png');
-const forumLogo = path.join(root, 'public/images/brand/forum-logo.png');
+const defaultSrc = path.join(root, 'public/brand/bo7-favicon-source.png');
+const input = process.argv[2] || process.env.BRAND_ICON_SOURCE || defaultSrc;
+const out = path.join(root, 'public/brand/bo7-favicon-source.png');
 
 if (!existsSync(input)) {
   console.error('Missing input:', input);
@@ -28,10 +25,9 @@ const sample = (x, y) => {
 };
 
 const corners = [sample(0, 0), sample(width - 1, 0), sample(0, height - 1), sample(width - 1, height - 1)];
-const bg = corners.reduce(
-  (acc, [r, g, b]) => [acc[0] + r, acc[1] + g, acc[2] + b],
-  [0, 0, 0],
-).map((v) => Math.round(v / corners.length));
+const bg = corners
+  .reduce((acc, [r, g, b]) => [acc[0] + r, acc[1] + g, acc[2] + b], [0, 0, 0])
+  .map((v) => Math.round(v / corners.length));
 
 const colorDist = (r, g, b) => Math.sqrt((r - bg[0]) ** 2 + (g - bg[1]) ** 2 + (b - bg[2]) ** 2);
 
@@ -55,10 +51,4 @@ for (let y = 0; y < height; y++) {
 
 await sharp(data, { raw: { width, height, channels } }).png().toFile(out);
 
-await sharp(out)
-  .resize(256, 256, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-  .png()
-  .toFile(forumLogo);
-
 console.log('Wrote transparent brand source:', path.relative(root, out));
-console.log('Wrote forum logo:', path.relative(root, forumLogo));

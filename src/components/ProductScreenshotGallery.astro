@@ -19,7 +19,7 @@ interface Props {
   minimal?: boolean;
 }
 
-const { images, id = 'product-screenshots', tierLabel = 'Ark', badge = 'Live', minimal = false } = Astro.props;
+const { images, id = 'product-screenshots', tierLabel = 'BO7', badge = 'Live', minimal = false } = Astro.props;
 
 /** Dedupe by src so UI never shows the same file twice. */
 const slides = images.filter(
@@ -44,7 +44,7 @@ const hasPicker = slides.length > 1;
               </span>
               <span class="product-gallery-v2__tier-pill">{tierLabel} tier</span>
               <span class="product-gallery-v2__status-pill">{badge}</span>
-              <span class="product-gallery-v2__corner-tag">BattlEye build online</span>
+              <span class="product-gallery-v2__corner-tag">Ricochet Anti-Cheat build online</span>
             </div>
           )
         }

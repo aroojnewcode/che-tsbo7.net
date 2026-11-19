@@ -38,7 +38,7 @@ const toc = post.body
 
 const productLinksBySlug: Record<string, { label: string; href: string; icon: IconName }[]> = {
   aimbot: [
-    { label: 'All Ark: Survival Ascended products', href: ROUTES.products, icon: 'sidebarHub' },
+    { label: 'All Call of Duty: Black Ops 7 products', href: ROUTES.products, icon: 'sidebarHub' },
     { label: 'Pro combat tier page', href: productPath('pro'), icon: 'sidebarElite' },
     { label: 'Unlock All cosmetics', href: productPath('unlock-all'), icon: 'sidebarSkin' },
     { label: 'HWID reset utility', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -59,7 +59,7 @@ const productLinksBySlug: Record<string, { label: string; href: string; icon: Ic
     { label: 'Ban appeal UGC desk', href: productPath('ugc'), icon: 'sidebarUgc' },
   ],
   bones: [
-    { label: 'Ark: Survival Ascended tier catalog', href: ROUTES.products, icon: 'sidebarHub' },
+    { label: 'Call of Duty: Black Ops 7 tier catalog', href: ROUTES.products, icon: 'sidebarHub' },
     { label: 'Elite aim and loot suite', href: ROUTES.productsElite, icon: 'sidebarElite' },
     { label: 'Cosmetic Unlock All', href: productPath('unlock-all'), icon: 'sidebarSkin' },
     { label: 'HWID Spoofer product', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -82,7 +82,7 @@ const productLinksBySlug: Record<string, { label: string; href: string; icon: Ic
 };
 
 const defaultProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Ark: Survival Ascended products', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Call of Duty: Black Ops 7 products', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite hacks', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'Skin Changer', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID Spoofer', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -171,12 +171,12 @@ const productLinks = productLinksBySlug[post.slug] ?? defaultProductLinks;
     </ul>
     <Button
       as="a"
-      href={checkoutPath('ark')}
+      href={checkoutPath('bo7')}
       variant="primary"
       size="sm"
       class="blog-sidebar__cta mt-2.5 w-full min-w-0 justify-start"
       aria-label={t.ui.checkoutAria}
-      {...externalLinkProps(checkoutPath('ark'))}
+      {...externalLinkProps(checkoutPath('bo7'))}
     >
       <span class="truncate">{sidebarCheckoutLabel}</span>
       <Icon name="arrowRight" size={16} class="shrink-0" />

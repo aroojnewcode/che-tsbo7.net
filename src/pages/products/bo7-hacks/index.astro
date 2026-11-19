@@ -15,16 +15,16 @@ import { Button } from '@/components/starwind/button';
 import { checkoutPath } from '../../../config/checkout';
 import { externalLinkProps } from '../../../utils/externalLink';
 
-const seo = resolvePageSeo('/products/ark-hacks/');
-const seoEntry = getPageSeoEntry('/products/ark-hacks/');
-const hubH1 = seoEntry?.h1 ?? 'ARK: Survival Ascended Cheats – Choose Your Lite, Pro & Elite Plan';
+const seo = resolvePageSeo('/products/bo7-hacks/');
+const seoEntry = getPageSeoEntry('/products/bo7-hacks/');
+const hubH1 = seoEntry?.h1 ?? 'Buy Black Ops 7 Cheats – Lite, Pro & Elite BO7 Hacks';
 
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
 ];
 
-const checkout = checkoutPath('ark');
+const checkout = checkoutPath('bo7');
 const checkoutAttrs = externalLinkProps(checkout);
 
 function cardIcon(product: (typeof productPages)[number]) {
@@ -61,6 +61,7 @@ const viewLabelBySlug: Record<string, string> = {
   'cloud-dma': 'View Cloud DMA listing',
 };
 
+const tierPages = cheatPages.filter((p) => p.slug !== 'elite');
 const utilityPages = productPages.filter((p) => p.kind === 'utility');
 const cheatsCopy = t.cheats;
 const utilitiesCopy = t.products;
@@ -73,7 +74,7 @@ const utilitiesCopy = t.products;
     webPageSchema({
       name: hubH1,
       description: seo.description,
-      url: '/products/ark-hacks/',
+      url: '/products/bo7-hacks/',
     }),
     breadcrumbSchema(breadcrumbs),
     itemListSchema(
@@ -108,7 +109,7 @@ const utilitiesCopy = t.products;
         <p class="products-hub__lede">{cheatsCopy.subtitle}</p>
         <div class="products-hub__grid mt-8">
           {
-            cheatPages.map((product) => (
+            tierPages.map((product) => (
               <CatalogCard
                 class="catalog-card--carousel catalog-card--hub h-full"
                 label={cardLabel(product)}
@@ -133,7 +134,7 @@ const utilitiesCopy = t.products;
         <p class="products-hub__eyebrow">Utilities</p>
         <h2 id="hub-utilities-title" class="products-hub__subtitle">HWID, UGC, Cloud DMA &amp; Camouflage</h2>
         <p class="products-hub__lede">
-          Each utility uses its own secure checkout link. Combat tiers (Lite, Pro, Elite) still share the main Ark: Survival Ascended product URL.
+          Each utility uses its own secure checkout link. Combat tiers (Lite and Pro) share the main Call of Duty: Black Ops 7 product URL.
         </p>
         <div class="products-hub__grid products-hub__grid--utilities mt-8">
           {

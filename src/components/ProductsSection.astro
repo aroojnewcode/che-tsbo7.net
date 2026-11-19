@@ -15,6 +15,7 @@ import {
 } from '@/components/starwind/carousel';
 
 const s = t.products;
+const storefrontPages = productPages.filter((p) => p.slug !== 'elite');
 
 function cardIcon(product: (typeof productPages)[number]) {
   if (product.kind === 'tier') {
@@ -67,7 +68,7 @@ const viewLabelBySlug: Record<string, string> = {
           <div class="products-carousel__viewport">
             <CarouselContent class="products-carousel__track">
               {
-                productPages.map((product) => (
+                storefrontPages.map((product) => (
                   <CarouselItem class="products-carousel__slide">
                     <CatalogCard
                       class="catalog-card--carousel"

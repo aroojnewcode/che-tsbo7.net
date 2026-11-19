@@ -1,5 +1,5 @@
 /**
- * Generate favicon + logo assets from public/brand/ark-favicon-source.png
+ * Generate favicon + logo assets from public/brand/bo7-favicon-source.png
  * Run: npm run brand:icons
  */
 import sharp from 'sharp';
@@ -7,8 +7,21 @@ import { writeFileSync, readFileSync, mkdirSync, existsSync, unlinkSync } from '
 import path from 'node:path';
 
 const root = process.cwd();
-const defaultSrc = path.join(root, 'public/brand/ark-favicon-source.png');
+const defaultSrc = path.join(root, 'public/brand/bo7-favicon-source.png');
 const src = process.env.BRAND_ICON_SOURCE?.trim() || defaultSrc;
+
+/** Knock out near-black pixels so the mark works on any site background. */
+async function loadBrandRaster(inputPath) {
+  const { data, info } = await sharp(inputPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const px = data;
+  for (let i = 0; i < px.length; i += 4) {
+    const r = px[i];
+    const g = px[i + 1];
+    const b = px[i + 2];
+    if (r < 40 && g < 40 && b < 40) px[i + 3] = 0;
+  }
+  return sharp(px, { raw: { width: info.width, height: info.height, channels: 4 } }).png();
+}
 
 if (!existsSync(src)) {
   console.error('Missing brand source:', src);
@@ -18,7 +31,7 @@ if (!existsSync(src)) {
 const publicDir = path.join(root, 'public');
 mkdirSync(path.join(publicDir, 'brand'), { recursive: true });
 
-/** Single Ark: Survival Ascended icon set — no duplicate android-chrome / legacy game files. */
+/** Single Call of Duty: Black Ops 7 icon set — no duplicate android-chrome / legacy game files. */
 const sizes = [
   ['favicon-16.png', 16],
   ['favicon-32.png', 32],
@@ -27,8 +40,11 @@ const sizes = [
   ['favicon-512.png', 512],
 ];
 
+const brand = await loadBrandRaster(src);
+
 for (const [name, size] of sizes) {
-  await sharp(src)
+  await brand
+    .clone()
     .resize(size, size, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .png()
     .toFile(path.join(publicDir, name));
@@ -60,27 +76,15 @@ function pngToIco(pngBuffers) {
   return Buffer.concat([header, ...entries, ...pngBuffers]);
 }
 
-const p16 = await sharp(src)
-  .resize(16, 16, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-  .png()
-  .toBuffer();
-const p32 = await sharp(src)
-  .resize(32, 32, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-  .png()
-  .toBuffer();
-const p48 = await sharp(src)
-  .resize(48, 48, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-  .png()
-  .toBuffer();
+const p16 = await brand.clone().resize(16, 16, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
+const p32 = await brand.clone().resize(32, 32, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
+const p48 = await brand.clone().resize(48, 48, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
 writeFileSync(path.join(publicDir, 'favicon.ico'), pngToIco([p16, p32, p48]));
 
 const png128 = (
-  await sharp(src)
-    .resize(128, 128, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .png()
-    .toBuffer()
+  await brand.clone().resize(128, 128, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer()
 ).toString('base64');
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Ark: Survival Ascended Hacks">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="BO7 Cheats">
   <image href="data:image/png;base64,${png128}" width="128" height="128"/>
 </svg>
 `;
@@ -103,5 +107,11 @@ for (const name of legacyPublicIcons) {
     console.log('Removed legacy icon', name);
   }
 }
+
+await brand
+  .clone()
+  .resize(240, 72, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+  .png()
+  .toFile(path.join(publicDir, 'brand/bo7-wordmark.png'));
 
 console.log('Brand icons generated from', path.relative(root, src));

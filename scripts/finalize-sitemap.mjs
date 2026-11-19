@@ -4,7 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const source = path.join(dist, 'sitemap-0.xml');
-const siteOrigin = (process.env.SITEMAP_ORIGIN || 'https://cheatsark.com').replace(/\/$/, '');
+const siteOrigin = (process.env.SITEMAP_ORIGIN || 'https://cheatsbo7.net').replace(/\/$/, '');
 const siteHostname = new URL(siteOrigin).hostname;
 const URLSET_NS = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 

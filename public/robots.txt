@@ -1,4 +1,5 @@
 ﻿User-agent: *
 Allow: /
+Disallow: /go/
 
-Sitemap: https://cheatsark.com/sitemap-index.xml
+Sitemap: https://cheatsbo7.net/sitemap-index.xml

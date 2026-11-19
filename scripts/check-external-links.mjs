@@ -26,7 +26,7 @@ async function checkUrl(url, chain = []) {
       method: 'GET',
       redirect: 'manual',
       signal: controller.signal,
-      headers: { 'User-Agent': 'cheatsark-seo-link-check/1.0' },
+      headers: { 'User-Agent': 'cheatsbo7-seo-link-check/1.0' },
     });
     clearTimeout(timer);
 

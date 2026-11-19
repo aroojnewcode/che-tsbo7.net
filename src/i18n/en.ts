@@ -6,11 +6,11 @@ const productBase = PRODUCT_BASE;
 
 export const en: Translations = {
   site: {
-    name: 'Ark: Survival Ascended Hacks',
-    domain: 'cheatsark.com',
-    title: 'Ark Cheats 2026 | ASA Hacks — Undetected ESP & Aimbot',
+    name: 'Call of Duty: Black Ops 7 Hacks',
+    domain: 'cheatsbo7.net',
+    title: 'Black Ops 7 Cheats 2026 | BO7 Hacks — Undetected ESP & Aimbot',
     description:
-      'ARK Survival Ascended cheats and ark ascended hacks—ESP, wallhack, aimbot, dino and loot ESP. Compare Lite, Pro and Elite; check cheat status before checkout at cheatsark.com.',
+      'Black Ops 7 cheats, BO7 hacks and cod Black Ops 7 cheats—ESP, wallhack, aimbot, loot ESP and radar. Undetected status, Lite vs Pro, multiplayer, Zombies and Ranked setup at cheatsbo7.net.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: [
@@ -22,32 +22,32 @@ export const en: Translations = {
     { href: '/support/', label: 'Support' },
   ],
   hero: {
-    status: 'Ark: Survival Ascended — BattlEye build online',
+    status: 'Call of Duty: Black Ops 7 — Ricochet Anti-Cheat build online',
     eyebrow: '',
-    title: 'Ark: Survival Ascended Hacks & Cheats',
+    title: 'Call of Duty: Black Ops 7 Hacks & Cheats',
     subtitle:
-      'Buy ARK: Survival Ascended cheats featuring Player ESP, Dino ESP, Loot ESP, Aimbot and Radar. Choose your preferred package, explore powerful features and get access to regular game compatibility updates and dedicated customer support.',
+      'Buy Black Ops 7 cheats and BO7 hacks with player ESP, loot ESP, wallhack-style overlays, aimbot and 2D radar. Compare Lite vs Pro, check undetected cheat status, and get loader setup help for Steam, Battle.net and Game Pass on Windows 11.',
     ctaPrimary: 'Get access',
     ctaPrimaryHref: PRIMARY_CHECKOUT_PATH,
     ctaDiscord: 'Shop products',
-    modesLabel: 'Ark: Survival Ascended session types',
-    modes: ['PvP', 'PvE', 'Official', 'Unofficial'],
+    modesLabel: 'Black Ops 7 game modes',
+    modes: ['Multiplayer', 'Zombies', 'Ranked', 'Custom'],
     metrics: [
       { label: 'Stream-safe', strong: 'Yes' },
       { label: 'Patch speed', strong: '<24h' },
-      { label: 'Tiers', strong: 'Lite · Pro · Elite' },
+      { label: 'Tiers', strong: 'Lite · Pro' },
       { label: 'Discord support', strong: '24/7' },
     ],
   },
   features: {
     eyebrow: 'Features',
-    title: "What's Included in Our ARK: Survival Ascended Cheats Package",
+    title: "What's Included in Our Call of Duty: Black Ops 7 Cheats Package",
     subtitle: 'ESP, aimbot, no recoil and utilities—priced by tier, delivered after checkout, updated every major patch.',
     items: [
       {
         title: 'Aimbot / Soft Aim',
         subtitle: 'Win Fights. Look Human.',
-        desc: 'Aimbot and Soft Aim with bone select, smoothing and FOV limits—tuned for rifles, SMGs and sidearms on official server sessions and boss cave runs.',
+        desc: 'Aimbot and Soft Aim with bone select, smoothing and FOV limits—tuned for rifles, SMGs and sidearms on live multiplayer matches and live multiplayer matches.',
         bullets: [
           'Aimbot with smoothing and FOV circle limits',
           'Soft Aim that pulls the crosshair without hard snaps',
@@ -55,31 +55,31 @@ export const en: Translations = {
           'Weapon profiles for assault rifles, SMGs and sidearms',
           'Humanized delay sliders and visibility checks',
         ],
-        tags: ['ark aimbot', 'asa aimbot', 'silent aim ark', 'soft aim', 'triggerbot ark'],
+        tags: ['bo7 aimbot', 'bo7 aimbot', 'silent aim bo7', 'soft aim', 'triggerbot bo7'],
         bento: 'sm:col-span-2 lg:col-span-8 lg:col-start-1 lg:row-start-1',
       },
       {
         title: 'Player ESP',
         subtitle: 'See Every Threat.',
-        desc: 'Readable player ESP that stays clean in tribe raids, POI fights and hot drop zones.',
+        desc: 'Readable player ESP that stays clean in squad fights, POI fights and hot drop zones.',
         bullets: [
           'Boxes, skeletons, names and distance',
           'Health, weapon and downed-player indicators',
           'Team and clan color filters',
         ],
-        tags: ['ark esp', 'asa esp', 'tribe esp', 'wild dino esp', 'alpha boss esp', 'ark wallhack'],
+        tags: ['bo7 esp', 'bo7 esp', 'squad esp', 'enemy player esp', 'scorestreak esp', 'bo7 wallhack'],
         bento: 'sm:col-span-2 lg:col-span-4 lg:col-start-9 lg:row-start-1',
       },
       {
         title: 'Loot & Resource ESP',
         subtitle: 'Find It Before They Do.',
-        desc: 'Highlight containers, salvage nodes, vaults, high-tier loot and supply drops so you spend less time searching and more time farming.',
+        desc: 'Highlight containers, armor plate spawns, vaults, high-tier loot and supply drops so you spend less time searching and more time farming.',
         bullets: [
           'Crates, barrels, military and elite loot',
-          'Crafting and salvage node markers',
+          'Ammo and plate pickup markers',
           'Stash, vehicle and supply drop alerts',
         ],
-        tags: ['resource esp ark', 'container esp', 'price filter loot esp', 'obelisk esp ark'],
+        tags: ['resource esp bo7', 'container esp', 'price filter loot esp', 'objective esp bo7'],
         bento: 'sm:col-span-2 lg:col-span-6 lg:col-start-1 lg:row-start-2',
       },
       {
@@ -87,7 +87,7 @@ export const en: Translations = {
         subtitle: 'Hold the Spray.',
         desc: 'Recoil and spread control with per-weapon profiles—start conservative and tighten as you get comfortable.',
         bullets: ['Per-weapon recoil compensation', 'Spread reduction sliders', 'Attachment-aware profiles in the portal'],
-        tags: ['no recoil', 'rcs ark', 'no sway', 'no spread'],
+        tags: ['no recoil', 'rcs bo7', 'no sway', 'no spread'],
         bento: 'sm:col-span-2 lg:col-span-6 lg:col-start-7 lg:row-start-2',
       },
       {
@@ -100,11 +100,11 @@ export const en: Translations = {
           'Trigger Bot: Fire when the crosshair lands on a target',
           'Stream Proof: Hide overlays from OBS capture',
         ],
-        tags: ['ark radar', '2d radar ark', 'radar cheat asa', 'skin changer', 'trigger bot'],
+        tags: ['bo7 radar', '2d radar bo7', 'radar cheat bo7', 'skin changer', 'trigger bot'],
         bento: 'sm:col-span-2 lg:col-span-8 lg:row-span-2 lg:col-start-1 lg:row-start-3',
       },
       {
-        title: 'Loot Route Assist',
+        title: 'Objective Route Assist',
         subtitle: 'Efficient Farm. Zero Grind.',
         desc: 'Speed up resource runs with helpers that stay humanized—so you farm faster without obvious bot patterns.',
         bullets: [
@@ -135,7 +135,7 @@ export const en: Translations = {
       {
         title: 'Cloud Config & Updates',
         subtitle: 'Patch Day Ready.',
-        desc: 'Same presets on every PC—portal updates track season patchs, major patches and BattlEye patch days.',
+        desc: 'Same presets on every PC—portal updates track season patchs, major patches and Ricochet Anti-Cheat patch days.',
         bullets: ['Cloud backup for slider profiles', 'Loader push within hours of patches', 'Discord #status for build notes'],
         tags: ['cloud sync', 'auto update', 'presets'],
         bento: 'sm:col-span-2 lg:col-span-4 lg:col-start-9 lg:row-start-5',
@@ -144,15 +144,15 @@ export const en: Translations = {
   },
   whyUs: {
     eyebrow: 'Why us',
-    title: 'Why Choose Our ARK: Survival Ascended Cheats? Regular Updates & Reliable Support',
+    title: 'Why Choose Our Call of Duty: Black Ops 7 Cheats? Regular Updates & Reliable Support',
     subtitle:
-      'Most Ark: Survival Ascended hack shops ship stale loaders, obvious aimbots, and ticket bots. We built cheatsark.com around patch-day delivery, humanized aim assist, and real Discord support.',
-    usLabel: 'Ark: Survival Ascended Hacks',
+      'Most Call of Duty: Black Ops 7 hack shops ship stale loaders, obvious aimbots, and ticket bots. We built cheatsbo7.net around patch-day delivery, humanized aim assist, and real Discord support.',
+    usLabel: 'Call of Duty: Black Ops 7 Hacks',
     otherLabel: 'Typical provider',
     rows: [
       {
         title: 'Patch-day loader updates',
-        desc: 'BattlEye-aware builds pushed within hours of Ark: Survival Ascended updates—check Discord #status before you queue for a raid.',
+        desc: 'Ricochet Anti-Cheat-aware builds pushed within hours of Call of Duty: Black Ops 7 updates—check Discord #status before you queue for a match.',
       },
       {
         title: 'Humanized aim & delays',
@@ -164,7 +164,7 @@ export const en: Translations = {
       },
       {
         title: 'External loader + stream proof',
-        desc: 'Overlay suite with OBS-safe modes—no risky DLL injection into the Ark: Survival Ascended process like legacy providers still sell.',
+        desc: 'Overlay suite with OBS-safe modes—no risky DLL injection into the Call of Duty: Black Ops 7 process like legacy providers still sell.',
       },
       {
         title: 'Cloud preset sync',
@@ -179,7 +179,7 @@ export const en: Translations = {
       {
         value: '<24h',
         title: 'Patch turnaround',
-        desc: 'Average time to ship a loader build after major Ark: Survival Ascended or anti-cheat changes.',
+        desc: 'Average time to ship a loader build after major Call of Duty: Black Ops 7 or anti-cheat changes.',
       },
       {
         value: '24/7',
@@ -189,16 +189,16 @@ export const en: Translations = {
       {
         value: '300+',
         title: 'Active users',
-        desc: 'Ark: Survival Ascended PC players running ESP, aim assist and utilities from cheatsark.com.',
+        desc: 'Call of Duty: Black Ops 7 PC players running ESP, aim assist and utilities from cheatsbo7.net.',
       },
     ],
   },
   setup: {
     eyebrow: 'Setup guide',
-    titleLead: 'From checkout to your first upload run in just',
+    titleLead: 'From checkout to your first ranked session in just',
     titleHighlight: 'three simple steps',
     intro:
-      'Buy a tier, unlock the portal, download the loader, load presets, and play Ark: Survival Ascended on PC—with Discord support if anything blocks you.',
+      'Buy a tier, unlock the portal, download the loader, load presets, and play Call of Duty: Black Ops 7 on PC—with Discord support if anything blocks you.',
     ctaPrimary: 'Get access',
     ctaSecondary: 'Pre-purchase FAQ',
     ctaPrimaryHref: PRIMARY_CHECKOUT_PATH,
@@ -216,21 +216,21 @@ export const en: Translations = {
       },
       {
         step: 'Step 3',
-        title: 'Verify status & play Ark: Survival Ascended',
-        desc: 'Check the live status banner, launch Ark: Survival Ascended, and play with cloud-backed profiles saved in the portal.',
+        title: 'Verify status & play Call of Duty: Black Ops 7',
+        desc: 'Check the live status banner, launch Call of Duty: Black Ops 7, and play with cloud-backed profiles saved in the portal.',
       },
     ],
   },
   compatibility: {
     eyebrow: 'Platform support',
     title: 'Runs on your rig.',
-    subtitle: 'Check the live status banner before launching Ark: Survival Ascended after updates.',
-    items: ['Windows 10 & 11', 'Steam & Epic ASA', 'BattlEye ready', 'Undetected status', 'Auto updater', 'Instant delivery', 'Discord support', 'HWID spoofer', 'External cheat loader'],
+    subtitle: 'Check the live status banner before launching Call of Duty: Black Ops 7 after updates.',
+    items: ['Windows 10 & 11', 'Steam & Battle.net', 'Ricochet Anti-Cheat ready', 'Undetected status', 'Auto updater', 'Instant delivery', 'Discord support', 'HWID spoofer', 'External cheat loader'],
   },
   cheats: {
     eyebrow: 'Combat tiers',
-    title: 'Ark Cheats: Lite, Pro & Elite ASA Hacks',
-    subtitle: 'Compare undetected Lite ESP & 2D radar, Pro aimbot & triggerbot, and Elite loot assist—Ark: Survival Ascended cheats with wipe-ready updates.',
+    title: 'Black Ops 7 Cheats: Lite, Pro & Elite BO7 Hacks',
+    subtitle: 'Compare undetected Lite ESP & 2D radar, Pro aimbot & triggerbot, and Elite loot assist—Call of Duty: Black Ops 7 cheats with patch-ready updates.',
     viewAll: 'Shop all tiers',
     explore: 'Get access',
     items: [
@@ -238,7 +238,7 @@ export const en: Translations = {
         badge: 'Available',
         tier: 'Starter',
         name: 'Lite',
-        title: 'Ark: Survival Ascended Lite Hacks — ESP, Radar & FOV for PC',
+        title: 'Call of Duty: Black Ops 7 Lite Hacks — ESP, Radar & FOV for PC',
         desc: 'Lite tier focuses on player ESP, loot ESP, radar and FOV hack—map awareness without aim automation for natural gameplay on PC.',
         features: ['Player & loot ESP', 'Radar overlay', 'FOV hack', 'Stream-proof mode'],
         more: 18,
@@ -249,8 +249,8 @@ export const en: Translations = {
         badge: 'Popular',
         tier: 'Combat',
         name: 'Pro',
-        title: 'Ark: Survival Ascended Pro Hacks — ESP, Aimbot & No Recoil',
-        desc: 'Pro adds aimbot, Soft Aim, bone select and no recoil on top of every Lite module—the most popular combat tier for busy raid weeks.',
+        title: 'Call of Duty: Black Ops 7 Pro Hacks — ESP, Aimbot & No Recoil',
+        desc: 'Pro adds aimbot, Soft Aim, bone select and no recoil on top of every Lite module—the most popular combat tier for busy ranked weeks.',
         features: ['All Lite modules', 'Aimbot & Soft Aim', 'No recoil profiles', 'Bone select'],
         more: 28,
         href: `${productBase}pro/`,
@@ -260,9 +260,9 @@ export const en: Translations = {
         badge: 'Limited slots',
         tier: 'Private',
         name: 'Elite',
-        title: 'Ark: Survival Ascended Elite Hacks — Full ESP, Aimbot & Utility Suite',
-        desc: 'Elite tier is the full private suite—aimbot, no recoil, player ESP, loot ESP, loot route assist, Skin Changer and priority BattlEye patch delivery for PC.',
-        features: ['Aimbot / Soft Aim', 'No Recoil / Spread', 'Player & Loot ESP', 'Loot Route Assist', 'Skin Changer', 'Priority patch queue'],
+        title: 'Call of Duty: Black Ops 7 Elite Hacks — Full ESP, Aimbot & Utility Suite',
+        desc: 'Elite tier is the full private suite—aimbot, no recoil, player ESP, loot ESP, loot route assist, Skin Changer and priority Ricochet Anti-Cheat patch delivery for PC.',
+        features: ['Aimbot / Soft Aim', 'No Recoil / Spread', 'Player & Loot ESP', 'Objective Route Assist', 'Skin Changer', 'Priority patch queue'],
         more: 42,
         href: `${productBase}elite/`,
         variant: 'limited',
@@ -271,7 +271,7 @@ export const en: Translations = {
   },
   products: {
     eyebrow: 'Products',
-    title: 'All Ark: Survival Ascended Hack Products & Utilities',
+    title: 'All Call of Duty: Black Ops 7 Hack Products & Utilities',
     subtitle:
       'Products hub for PC—browse Lite, Pro and Elite tiers plus HWID Spoofer, UGC, Cloud DMA and camouflage utilities with module lists and secure checkout.',
     viewAll: 'Shop all products',
@@ -281,9 +281,9 @@ export const en: Translations = {
       {
         badge: 'Available',
         category: 'System utility',
-        title: 'Ark: Survival Ascended HWID Spoofer — Reset Hardware After BattlEye Ban',
-        subtitle: 'HWID spoofer for PC after a BattlEye hardware flag',
-        desc: 'This HWID spoofer rotates disk serials, MAC addresses and GPU IDs after BattlEye flags your machine—portal setup included before you relaunch on Steam.',
+        title: 'Call of Duty: Black Ops 7 HWID Spoofer — Reset Hardware After Ricochet Anti-Cheat Ban',
+        subtitle: 'HWID spoofer for PC after a Ricochet Anti-Cheat hardware flag',
+        desc: 'This HWID spoofer rotates disk serials, MAC addresses and GPU IDs after Ricochet Anti-Cheat flags your machine—portal setup included before you relaunch on Steam.',
         features: [
           'Spoofer & cleanup tools',
           'Serial profile rotation',
@@ -297,9 +297,9 @@ export const en: Translations = {
       {
         badge: 'Available',
         category: 'Account recovery',
-        title: 'Ark: Survival Ascended UGC — Steam & BattlEye Account Recovery',
-        subtitle: 'Appeals for banned Ark: Survival Ascended accounts',
-        desc: 'Buy Ark: Survival Ascended UGC recovery tools for platform holds, BattlEye bans, and platform or anti-cheat restrictions—custom appeal workflows, case docs and status tracking.',
+        title: 'Call of Duty: Black Ops 7 UGC — Steam & Ricochet Anti-Cheat Account Recovery',
+        subtitle: 'Appeals for banned Call of Duty: Black Ops 7 accounts',
+        desc: 'Buy Call of Duty: Black Ops 7 UGC recovery tools for platform holds, Ricochet Anti-Cheat bans, and platform or anti-cheat restrictions—custom appeal workflows, case docs and status tracking.',
         features: [
           'Custom appeal workflows',
           'Dispute automation',
@@ -315,7 +315,7 @@ export const en: Translations = {
         category: 'Cosmetic',
         title: 'Camouflage & Unlock All — Local Skin Changer',
         subtitle: 'Camouflage previews and Skin Changer on PC',
-        desc: 'Unlock All with Skin Changer previews weapon skins, clothing and rare variants locally—client-side cosmetics without Steam market purchases.',
+        desc: 'Unlock All with Skin Changer previews weapon skins, clothing and rare variants locally—client-side cosmetics without in-game store purchases.',
         features: [
           'Weapon skin swap',
           'Clothing & item customizer',
@@ -346,7 +346,7 @@ export const en: Translations = {
   },
   blog: {
     eyebrow: 'Blog',
-    title: 'Ark: Survival Ascended Hack Buy Guides',
+    title: 'Call of Duty: Black Ops 7 Hack Buy Guides',
     subtitle: 'Tier comparison guides, ESP and aimbot module explainers, and checkout walkthroughs—pick a plan with confidence.',
     latestTitle: 'Buy Guides & Checkout Tips for PC',
     latestSubtitle: 'Transactional guides to help you choose a tier and complete secure checkout for ESP, aimbot and utilities.',
@@ -362,16 +362,16 @@ export const en: Translations = {
     items: [
       {
         tag: 'Guides',
-        title: 'Ark: Survival Ascended console codes vs live-server loaders',
+        title: 'Call of Duty: Black Ops 7 console codes vs live-match loaders',
         slug: 'cheat-codes',
         image: '/images/blog/cheat-codes.png',
-        desc: 'Admin console codes only work where you are admin. See what works on live upload raids and when a private loader with ESP and aimbot is the right buy.',
+        desc: 'Private-match debug codes only work where you are admin. See what works on live live multiplayer and when a private loader with ESP and aimbot is the right buy.',
         date: 'Aug 20, 2026',
         readTime: '10 min read',
       },
       {
         tag: 'Guides',
-        title: 'From practice commands to live Ark: Survival Ascended ESP & aimbot',
+        title: 'From practice commands to live Call of Duty: Black Ops 7 ESP & aimbot',
         slug: 'console-tips',
         image: '/images/blog/console-tips.png',
         desc: 'Outgrown private-server practice? Compare undetected ESP and aimbot tiers for live PvP—Lite, Pro and Elite with secure checkout.',
@@ -380,10 +380,10 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'How to get Ark: Survival Ascended hacks working after checkout',
+        title: 'How to get Call of Duty: Black Ops 7 hacks working after checkout',
         slug: 'use-codes',
         image: '/images/blog/use-codes.png',
-        desc: 'Bought Ark: Survival Ascended hacks? Portal login, loader download, conservative presets and first-launch checks so your ESP and aimbot run on official server sessions and boss cave runs.',
+        desc: 'Bought Call of Duty: Black Ops 7 hacks? Portal login, loader download, conservative presets and first-launch checks so your ESP and aimbot run on live multiplayer matches and live multiplayer matches.',
         date: 'Aug 18, 2026',
         readTime: '7 min read',
       },
@@ -398,82 +398,82 @@ export const en: Translations = {
       },
       {
         tag: 'Guides',
-        title: 'Private loader vs debug commands on live ASA servers',
+        title: 'Private loader vs debug commands on live BO7 servers',
         slug: 'console-cmds',
         image: '/images/blog/console-cmds.png',
-        desc: 'Admin commands do not work on servers you do not own. Why buyers choose a private loader with ESP and aimbot—tiers, checkout and portal access.',
+        desc: 'Private-match admin tools do not work on servers you do not own. Why buyers choose a private loader with ESP and aimbot—tiers, checkout and portal access.',
         date: 'Aug 17, 2026',
         readTime: '8 min read',
       },
       {
         tag: 'Guides',
-        title: 'Buy Ark: Survival Ascended Lite vs Pro: which hack tier to purchase',
+        title: 'Buy Call of Duty: Black Ops 7 Lite vs Pro: which hack tier to purchase',
         slug: 'lite-vs-pro',
         image: '/images/blog/lite-vs-pro.png',
-        desc: 'Lite for ESP and radar, Pro for aimbot and no recoil. Compare tiers side by side and buy the Ark: Survival Ascended hack tier that fits your server and playstyle.',
+        desc: 'Lite for ESP and radar, Pro for aimbot and no recoil. Compare tiers side by side and buy the Call of Duty: Black Ops 7 hack tier that fits your server and playstyle.',
         date: 'Aug 16, 2026',
         readTime: '5 min read',
       },
       {
         tag: 'Guides',
-        title: 'Buy Ark: Survival Ascended Elite hacks: full suite pricing & who should upgrade',
+        title: 'Buy Call of Duty: Black Ops 7 Elite hacks: full suite pricing & who should upgrade',
         slug: 'elite',
         image: '/images/blog/elite.png',
-        desc: 'Elite is the full Ark: Survival Ascended hacks suite: aimbot, ESP, Loot Route Assist, Skin Changer and priority patches. See who should buy Elite and how to check out.',
+        desc: 'Elite is the full Call of Duty: Black Ops 7 hacks suite: aimbot, ESP, Objective Route Assist, Skin Changer and priority patches. See who should buy Elite and how to check out.',
         date: 'Aug 16, 2026',
         readTime: '7 min read',
       },
       {
         tag: 'Setup',
-        title: 'Buy Ark: Survival Ascended aimbot & no recoil: Pro tier combat tools',
+        title: 'Buy Call of Duty: Black Ops 7 aimbot & no recoil: Pro tier combat tools',
         slug: 'aimbot',
         image: '/images/blog/aimbot.png',
-        desc: 'Buy Ark: Survival Ascended aimbot and no recoil with Pro tier. See what Aimbot, Soft Aim, Bone Select and No Recoil do, then compare tiers and get access.',
+        desc: 'Buy Call of Duty: Black Ops 7 aimbot and no recoil with Pro tier. See what Aimbot, Soft Aim, Bone Select and No Recoil do, then compare tiers and get access.',
         date: 'Aug 15, 2026',
         readTime: '6 min read',
       },
       {
         tag: 'Setup',
-        title: 'Buy Ark: Survival Ascended ESP & radar: Lite setup after purchase',
+        title: 'Buy Call of Duty: Black Ops 7 ESP & radar: Lite setup after purchase',
         slug: 'esp',
         image: '/images/blog/esp.png',
-        desc: 'Buy undetected Ark: Survival Ascended ESP and radar with Lite. See what you get, how fast setup is after checkout and when to upgrade to Pro or Elite.',
+        desc: 'Buy undetected Call of Duty: Black Ops 7 ESP and radar with Lite. See what you get, how fast setup is after checkout and when to upgrade to Pro or Elite.',
         date: 'Aug 15, 2026',
         readTime: '5 min read',
       },
       {
         tag: 'Setup',
-        title: 'Buy Ark: Survival Ascended FOV hack with ESP awareness (Lite+)',
+        title: 'Buy Call of Duty: Black Ops 7 FOV hack with ESP awareness (Lite+)',
         slug: 'fov',
         image: '/images/blog/fov.png',
-        desc: 'FOV hack ships on Lite and carries through Pro and Elite. Buy a wider view with ESP for base fights and open-field PvP—compare tiers and get access.',
+        desc: 'FOV hack ships on Lite and carries through Pro and Elite. Buy a wider view with ESP for hardpoint fights and open-field PvP—compare tiers and get access.',
         date: 'Aug 14, 2026',
         readTime: '5 min read',
       },
       {
         tag: 'Guides',
-        title: 'Buy Ark: Survival Ascended Skin Changer / Unlock All utility',
+        title: 'Buy Call of Duty: Black Ops 7 Skin Changer / Unlock All utility',
         slug: 'skins',
         image: '/images/blog/skins.png',
-        desc: 'Buy Ark: Survival Ascended Skin Changer standalone or bundled with Elite. Preview weapon skins and clothing locally—see what you get and where to check out.',
+        desc: 'Buy Call of Duty: Black Ops 7 Skin Changer standalone or bundled with Elite. Preview weapon skins and clothing locally—see what you get and where to check out.',
         date: 'Aug 14, 2026',
         readTime: '6 min read',
       },
       {
         tag: 'Guides',
-        title: 'BattlEye patch day checklist before checkout',
-        slug: 'be-patch',
-        image: '/images/blog/be-patch.png',
-        desc: 'Ark: Survival Ascended or anti-cheat patch just dropped? Check live status, pick the right tier and buy safely—patch-day checklist for checkout and first launch.',
+        title: 'Ricochet Anti-Cheat patch day checklist before checkout',
+        slug: 'ricochet-patch',
+        image: '/images/blog/ricochet-patch.png',
+        desc: 'Call of Duty: Black Ops 7 or anti-cheat patch just dropped? Check live status, pick the right tier and buy safely—patch-day checklist for checkout and first launch.',
         date: 'Aug 13, 2026',
         readTime: '5 min read',
       },
       {
         tag: 'Guides',
-        title: 'Buy Ark: Survival Ascended HWID Spoofer after a ban',
+        title: 'Buy Call of Duty: Black Ops 7 HWID Spoofer after a ban',
         slug: 'hwid',
         image: '/images/blog/hwid.png',
-        desc: 'Hardware flagged after an BattlEye ban? Buy Ark: Survival Ascended HWID Spoofer, compare it to a new account, and see when UGC appeal help fits. Checkout at cheatsark.com.',
+        desc: 'Hardware flagged after an Ricochet Anti-Cheat ban? Buy Call of Duty: Black Ops 7 HWID Spoofer, compare it to a new account, and see when UGC appeal help fits. Checkout at cheatsbo7.net.',
         date: 'Aug 13, 2026',
         readTime: '7 min read',
       },
@@ -491,34 +491,34 @@ export const en: Translations = {
         title: 'Buy Pro aimbot bone select & weapon profiles',
         slug: 'bones',
         image: '/images/blog/bones.png',
-        desc: 'Buy Pro for aimbot bone select and per-weapon recoil profiles on Assault Rifle, Pump-Action, Longneck and Fabricated Sniper. See example profiles and get access.',
+        desc: 'Buy Pro for aimbot bone select and per-weapon recoil profiles on assault rifle, shotgun, marksman rifle and sniper rifle. See example profiles and get access.',
         date: 'Aug 12, 2026',
         readTime: '6 min read',
       },
       {
         tag: 'Guides',
-        title: 'BattlEye errors vs buying UGC recovery / HWID help',
-        slug: 'be-error',
-        image: '/images/blog/be-error.png',
-        desc: 'BattlEye failed to initialize is usually not a ban. Quick checks first, then when to buy UGC appeal workflows or HWID Spoofer. Then get access to Ark: Survival Ascended hacks.',
+        title: 'Ricochet Anti-Cheat errors vs buying UGC recovery / HWID help',
+        slug: 'ricochet-error',
+        image: '/images/blog/ricochet-error.png',
+        desc: 'Ricochet Anti-Cheat failed to initialize is usually not a ban. Quick checks first, then when to buy UGC appeal workflows or HWID Spoofer. Then get access to Call of Duty: Black Ops 7 hacks.',
         date: 'Aug 11, 2026',
         readTime: '6 min read',
       },
       {
         tag: 'Guides',
-        title: 'Buy external Ark: Survival Ascended hacks: safer loader delivery',
+        title: 'Buy external Call of Duty: Black Ops 7 hacks: safer loader delivery',
         slug: 'external',
         image: '/images/blog/external.png',
-        desc: 'Why buyers choose external Ark: Survival Ascended hacks: private loader, portal updates and cloud configs. Compare tiers and get access instead of risky free downloads.',
+        desc: 'Why buyers choose external Call of Duty: Black Ops 7 hacks: private loader, portal updates and cloud configs. Compare tiers and get access instead of risky free downloads.',
         date: 'Aug 11, 2026',
         readTime: '7 min read',
       },
       {
         tag: 'Setup',
-        title: 'Buy stream-proof Ark: Survival Ascended hacks for creators',
+        title: 'Buy stream-proof Call of Duty: Black Ops 7 hacks for creators',
         slug: 'stream-proof',
         image: '/images/blog/stream-proof.png',
-        desc: 'Stream Proof hides your ESP and aimbot overlay from OBS and Game Bar. Included on every tier—compare Ark: Survival Ascended hacks for creators and get access.',
+        desc: 'Stream Proof hides your ESP and aimbot overlay from OBS and Game Bar. Included on every tier—compare Call of Duty: Black Ops 7 hacks for creators and get access.',
         date: 'Aug 10, 2026',
         readTime: '5 min read',
       },
@@ -532,9 +532,9 @@ export const en: Translations = {
       { num: '01', label: 'Combat', title: 'Aim assist that adapts to your weapon', desc: 'Aimbot, Soft Aim, Bone Select and smoothing in one combat tab.' },
       { num: '02', label: 'Vision', title: 'ESP that stays readable', desc: 'Filter by distance, team color, loot type and resource node.' },
       { num: '03', label: 'Radar', title: 'Awareness on a compact overlay', desc: 'Radar with players, loot and airdrop hints on a compact overlay.' },
-      { num: '04', label: 'Weapons', title: 'Per-weapon recoil profiles', desc: 'Save Assault Rifle, Pump-Action, Longneck and sidearm profiles and swap with hotkeys.' },
-      { num: '05', label: 'Movement', title: 'Farm & movement helpers', desc: 'Loot Route Assist, FOV hack and utility tools for efficient resource runs.' },
-      { num: '06', label: 'Profiles', title: 'Configs for every server type', desc: 'Separate The Island, Aberration and offline raids presets with cloud backup.' },
+      { num: '04', label: 'Weapons', title: 'Per-weapon recoil profiles', desc: 'Save assault rifle, shotgun, marksman rifle and sidearm profiles and swap with hotkeys.' },
+      { num: '05', label: 'Movement', title: 'Farm & movement helpers', desc: 'Objective Route Assist, FOV hack and utility tools for efficient resource runs.' },
+      { num: '06', label: 'Profiles', title: 'Configs for every server type', desc: 'Separate the map, Ranked, Custom and private match presets with cloud backup.' },
     ],
   },
   workflow: {
@@ -542,7 +542,7 @@ export const en: Translations = {
     badge: '4 easy steps',
     titleBefore: 'From status check to',
     titleHighlight: 'saved profile.',
-    subtitle: 'A straight path from purchase to an Ark: Survival Ascended profile you can reuse every session.',
+    subtitle: 'A straight path from purchase to an Call of Duty: Black Ops 7 profile you can reuse every session.',
     ctaLabel: 'Get access',
     ctaHref: PRIMARY_CHECKOUT_PATH,
     ctaSecondary: 'Pre-purchase FAQ',
@@ -551,8 +551,8 @@ export const en: Translations = {
       {
         num: '01',
         phase: 'Before purchase',
-        title: 'Check BattlEye status',
-        desc: 'Read the live banner on cheatsark.com before you buy or launch.',
+        title: 'Check Ricochet Anti-Cheat status',
+        desc: 'Read the live banner on cheatsbo7.net before you buy or launch.',
       },
       {
         num: '02',
@@ -576,17 +576,17 @@ export const en: Translations = {
   },
   fieldNotes: {
     eyebrow: 'Field notes',
-    title: 'Built for how Ark: Survival Ascended plays.',
+    title: 'Built for how Call of Duty: Black Ops 7 plays.',
     items: [
-      { num: '01', title: 'Patch-day ready', desc: 'Patch notes hit Discord and the portal before the official blog—check before you queue for a raid.' },
+      { num: '01', title: 'Patch-day ready', desc: 'Patch notes hit Discord and the portal before the official blog—check before you queue for a session.' },
       { num: '02', title: 'Conservative defaults', desc: 'Start with safe smoothing and ESP ranges, then tune up—not the other way around.' },
       { num: '03', title: 'Real Discord support', desc: 'Stuck on the loader or weapon configs? Discord staff walk you through it—not copy-paste FAQs.' },
     ],
   },
   support: {
     eyebrow: 'Support',
-    title: 'Ark: Survival Ascended Hacks Discord Support',
-    subtitle: 'Open a Discord ticket for Ark: Survival Ascended loader errors, HWID Spoofer setup and checkout help.',
+    title: 'Call of Duty: Black Ops 7 Hacks Discord Support',
+    subtitle: 'Open a Discord ticket for Call of Duty: Black Ops 7 loader errors, HWID Spoofer setup and checkout help.',
     channels: [
       {
         icon: 'messageCircle',
@@ -605,28 +605,28 @@ export const en: Translations = {
   },
   faq: {
     eyebrow: 'FAQ',
-    title: 'Meet cheatsark — Buying FAQ — Tiers, Checkout & BattlEye risk',
-    subtitle: 'Clear answers on Ark: Survival Ascended hack tiers, BattlEye risk, Windows support and how checkout delivery works.',
+    title: 'Meet CheatsBO7 — Buying FAQ — Tiers, Checkout & Ricochet Anti-Cheat risk',
+    subtitle: 'Clear answers on Call of Duty: Black Ops 7 hack tiers, Ricochet Anti-Cheat risk, Windows support and how checkout delivery works.',
     items: [
       {
         num: '01',
-        q: 'Where do I check if Ark: Survival Ascended hacks are online?',
-        a: 'The live status banner is on cheatsark.com and in the Discord #status channel. Always check after a season patch, patch or BattlEye update.',
+        q: 'Where do I check if Call of Duty: Black Ops 7 hacks are online?',
+        a: 'The live status banner is on cheatsbo7.net and in the Discord #status channel. Always check after a season patch, patch or Ricochet Anti-Cheat update.',
       },
       {
         num: '02',
         q: 'What happens after I buy?',
-        a: 'Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Ark: Survival Ascended.',
+        a: 'Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Call of Duty: Black Ops 7.',
       },
       {
         num: '03',
-        q: 'Can I get banned using third-party Ark: Survival Ascended hacks?',
-        a: 'Yes—any modification carries risk. BattlEye, Studio Wildcard and server admins keep evolving detection and reports. Read current status and accept the risk before use.',
+        q: 'Can I get banned using third-party Call of Duty: Black Ops 7 hacks?',
+        a: 'Yes—any modification carries risk. Ricochet Anti-Cheat, Activision and server admins keep evolving detection and reports. Read current status and accept the risk before use.',
       },
       {
         num: '04',
         q: 'Which platforms are supported?',
-        a: 'Ark: Survival Ascended via Steam on Windows 10/11 64-bit only. macOS, Linux and consoles are not supported.',
+        a: 'Call of Duty: Black Ops 7 via Steam on Windows 10/11 64-bit only. macOS, Linux and consoles are not supported.',
       },
       {
         num: '05',
@@ -636,17 +636,17 @@ export const en: Translations = {
       {
         num: '06',
         q: 'Where are products and utilities listed?',
-        a: 'Hack tiers, HWID Spoofer, UGC and Skin Changer live at cheatsark.com/products/ark-hacks with feature lists and checkout via our partner.',
+        a: 'Hack tiers, HWID Spoofer, UGC and Skin Changer live at cheatsbo7.net/products/bo7-hacks with feature lists and checkout via our partner.',
       },
     ],
   },
   footer: {
-    tagline: 'Buy undetected Ark: Survival Ascended hacks — ESP, aimbot & utilities for PC. Secure checkout at cheatsark.com',
+    tagline: 'Buy undetected Call of Duty: Black Ops 7 hacks — ESP, aimbot & utilities for PC. Secure checkout at cheatsbo7.net',
     explore: 'Shop',
     exploreLinks: [
       { href: '/', label: 'What you can buy', ariaLabel: 'Features', scrollTarget: 'features' },
-      { href: '/products/ark-hacks/elite/', label: 'Buy Elite Ark: Survival Ascended hacks', ariaLabel: 'Elite hacks' },
-      { href: '/products/ark-hacks/', label: 'Shop all products', ariaLabel: 'Products' },
+      { href: '/products/bo7-hacks/elite/', label: 'Buy Elite Call of Duty: Black Ops 7 hacks', ariaLabel: 'Elite hacks' },
+      { href: '/products/bo7-hacks/', label: 'Shop all products', ariaLabel: 'Products' },
       { href: '/reviews/', label: 'Buyer reviews', ariaLabel: 'Reviews' },
       { href: '/blog/', label: 'Buy guides & tier tips', ariaLabel: 'Blog' },
       { href: '/faq/', label: 'Pre-purchase FAQ', ariaLabel: 'FAQ' },
@@ -661,13 +661,13 @@ export const en: Translations = {
     about: {
       title: 'About Our Cheats Store',
       description:
-        'Meet the team behind cheatsark.com—the Ark: Survival Ascended hacks store for undetected ESP, aimbot and PC utilities, with patch-day updates and Discord help after checkout.',
+        'Meet the team behind cheatsbo7.net—the Call of Duty: Black Ops 7 hacks store for undetected ESP, aimbot and PC utilities, with patch-day updates and Discord help after checkout.',
       sections: [
         {
           heading: 'Who we are',
           paragraphs: [
-            'Ark: Survival Ascended Hacks (cheatsark.com) is a buyer-focused storefront for undetected Ark: Survival Ascended tools on PC. We publish tier comparisons, setup guides, and honest risk notes so you know what you are purchasing before checkout—not vague marketing copy.',
-            'We are not Studio Wildcard and we are not affiliated with BattlEye. Ark: Survival Ascended is a trademark of Studio Wildcard. Product names on this site describe software categories (ESP, aimbot, utilities), not official game features.',
+            'Call of Duty: Black Ops 7 Hacks (cheatsbo7.net) is a buyer-focused storefront for undetected Call of Duty: Black Ops 7 tools on PC. We publish tier comparisons, setup guides, and honest risk notes so you know what you are purchasing before checkout—not vague marketing copy.',
+            'We are not Activision and we are not affiliated with Ricochet Anti-Cheat. Call of Duty: Black Ops 7 is a trademark of Activision. Product names on this site describe software categories (ESP, aimbot, utilities), not official game features.',
           ],
         },
         {
@@ -682,15 +682,15 @@ export const en: Translations = {
           heading: 'How buying works',
           paragraphs: [
             'Use Get access on the homepage or product page to open checkout. You will complete payment on our partner checkout, then receive portal access for downloads. Keep your order confirmation email—support tickets ask for that order ID.',
-            'Not sure which tier to pick? Start with the Lite vs Pro guide on the blog, the features guide for every module, or the pre-purchase FAQ. Buyer reviews on /reviews/ describe real setups on official server sessions and boss cave runs (ESP tuning, stream-proof overlays, spoofer workflows).',
+            'Not sure which tier to pick? Start with the Lite vs Pro guide on the blog, the features guide for every module, or the pre-purchase FAQ. Buyer reviews on /reviews/ describe real setups on live multiplayer matches and live multiplayer matches (ESP tuning, stream-proof overlays, spoofer workflows).',
             'We do not sell loader files through Discord DMs or random download links. Only use files from your portal after checkout.',
           ],
         },
         {
-          heading: 'How we update after Ark: Survival Ascended patches',
+          heading: 'How we update after Call of Duty: Black Ops 7 patches',
           paragraphs: [
-            'season patch days and BattlEye updates can disable modules until a new build ships. We post status on the homepage banner and in Discord #status when builds are online, testing, or offline.',
-            'Elite buyers get priority in the patch queue when slots are available. If the banner shows offline, do not launch modules—wait for the updated loader and read the BattlEye patch day checklist on the blog before rejoining servers.',
+            'season patch days and Ricochet Anti-Cheat updates can disable modules until a new build ships. We post status on the homepage banner and in Discord #status when builds are online, testing, or offline.',
+            'Elite buyers get priority in the patch queue when slots are available. If the banner shows offline, do not launch modules—wait for the updated loader and read the Ricochet Anti-Cheat patch day checklist on the blog before rejoining servers.',
             'Blog posts cover post-patch workflows: checking status, downloading the latest loader, loading conservative presets, and when HWID Spoofer or UGC help applies after a ban.',
           ],
         },
@@ -704,7 +704,7 @@ export const en: Translations = {
         {
           heading: 'Support',
           paragraphs: [
-            'Loader errors, HWID Spoofer setup, and checkout questions go through Discord tickets (linked on the Support page). Include your order ID, Windows build, Ark: Survival Ascended session type, and a screenshot of any error text.',
+            'Loader errors, HWID Spoofer setup, and checkout questions go through Discord tickets (linked on the Support page). Include your order ID, Windows build, Call of Duty: Black Ops 7 session type, and a screenshot of any error text.',
             'For billing or refund policy questions, read the Terms of Sale first—then open a ticket if your case matches the supported refund criteria (fault on our side on a supported setup with the status banner online).',
           ],
         },
@@ -713,12 +713,12 @@ export const en: Translations = {
     privacy: {
       title: 'Privacy Policy — Data, Cookies & Checkout',
       description:
-        'Privacy policy for cheatsark.com: how we handle cookies, analytics, Discord tickets, checkout partners, data retention and your rights as a shopper.',
+        'Privacy policy for cheatsbo7.net: how we handle cookies, analytics, Discord tickets, checkout partners, data retention and your rights as a shopper.',
       sections: [
         {
           heading: 'Scope',
           paragraphs: [
-            'This privacy policy covers cheatsark.com—the marketing site, guides, and product pages. It does not govern third-party checkout, payment processing, or your operator portal; those services have their own policies when you leave our domain.',
+            'This privacy policy covers cheatsbo7.net—the marketing site, guides, and product pages. It does not govern third-party checkout, payment processing, or your operator portal; those services have their own policies when you leave our domain.',
             'Last updated: October 2026. We may revise this page when our analytics or support tools change; material updates will be reflected in the date above.',
           ],
         },
@@ -727,7 +727,7 @@ export const en: Translations = {
           paragraphs: [
             'When Google Analytics is enabled, we may receive aggregated metrics such as pages viewed, referral source, device category, browser, and approximate geography. We use this to see which buy guides and product pages help shoppers—not to build individual advertising profiles on this site.',
             'If you open a Discord support ticket, we see what you send there: Discord username, message text, attachments you choose to upload, and any order ID or email you provide for billing lookup.',
-            'We do not ask for your Ark: Survival Ascended account password on cheatsark.com. We do not store payment card numbers, CVV codes, or full billing addresses on this domain.',
+            'We do not ask for your Call of Duty: Black Ops 7 account password on cheatsbo7.net. We do not store payment card numbers, CVV codes, or full billing addresses on this domain.',
           ],
         },
         {
@@ -748,7 +748,7 @@ export const en: Translations = {
           paragraphs: [
             'Analytics cookies (when enabled) measure traffic volume. You can block or delete cookies in your browser; the site remains readable without them.',
             'We store theme preference (light or dark) in local storage so your choice persists between visits. That value stays on your device unless you clear site data.',
-            'We do not use advertising cookies on cheatsark.com for retargeting across unrelated websites.',
+            'We do not use advertising cookies on cheatsbo7.net for retargeting across unrelated websites.',
           ],
         },
         {
@@ -761,7 +761,7 @@ export const en: Translations = {
         {
           heading: 'Security',
           paragraphs: [
-            'cheatsark.com is served over HTTPS. Do not send payment details or portal passwords through Discord tickets; use the official checkout and portal only.',
+            'cheatsbo7.net is served over HTTPS. Do not send payment details or portal passwords through Discord tickets; use the official checkout and portal only.',
           ],
         },
         {
@@ -775,40 +775,40 @@ export const en: Translations = {
           heading: 'Your choices and rights',
           paragraphs: [
             'You can opt out of analytics cookies via browser settings or extensions. For portal or billing data held by the checkout provider, contact that provider using the links in your order email.',
-            'For privacy questions about cheatsark.com or Discord tickets, open a ticket from the Support page. For purchase disputes, see the Terms of Sale.',
+            'For privacy questions about cheatsbo7.net or Discord tickets, open a ticket from the Support page. For purchase disputes, see the Terms of Sale.',
           ],
         },
         {
           heading: 'Children',
           paragraphs: [
-            'cheatsark.com is not directed at children under 13, and we do not knowingly collect personal information from children. Ark: Survival Ascended is rated for mature audiences; purchasers must comply with Ark account and local age rules.',
+            'cheatsbo7.net is not directed at children under 13, and we do not knowingly collect personal information from children. Call of Duty: Black Ops 7 is rated for mature audiences; purchasers must comply with Activision account and local age rules.',
           ],
         },
       ],
     },
     terms: {
-      title: 'Ark: Survival Ascended Hacks Terms of Sale',
+      title: 'Call of Duty: Black Ops 7 Hacks Terms of Sale',
       description:
-        'Rules for purchasing Ark: Survival Ascended hack licenses on cheatsark.com—delivery, personal use, refunds, BattlEye risk and acceptable product use.',
+        'Rules for purchasing Call of Duty: Black Ops 7 hack licenses on cheatsbo7.net—delivery, personal use, refunds, Ricochet Anti-Cheat risk and acceptable product use.',
       sections: [
         {
           heading: 'Agreement',
           paragraphs: [
-            'Last updated: September 2026. By using cheatsark.com or completing checkout for any product listed here, you agree to these Terms & Conditions and our Privacy Policy.',
+            'Last updated: September 2026. By using cheatsbo7.net or completing checkout for any product listed here, you agree to these Terms & Conditions and our Privacy Policy.',
           ],
         },
         {
           heading: 'What you purchase',
           paragraphs: [
-            'We sell access to Ark: Survival Ascended hack tiers (Lite, Pro, Elite) and utility tools (HWID Spoofer, UGC, Skin Changer / Unlock All) delivered through a portal and loader for Steam on Windows.',
-            'Feature lists on each product page describe what is included at the time of purchase. Modules can change when Ark: Survival Ascended or BattlEye updates.',
+            'We sell access to Call of Duty: Black Ops 7 hack tiers (Lite, Pro, Elite) and utility tools (HWID Spoofer, UGC, Skin Changer / Unlock All) delivered through a portal and loader for Steam on Windows.',
+            'Feature lists on each product page describe what is included at the time of purchase. Modules can change when Call of Duty: Black Ops 7 or Ricochet Anti-Cheat updates.',
           ],
         },
         {
           heading: 'Checkout and delivery',
           paragraphs: [
-            'Payment and license delivery run on external checkout pages. cheatsark.com does not process or store payment card numbers.',
-            'After purchase, use the portal linked from your order flow to download the current loader and setup guide before launching Ark: Survival Ascended.',
+            'Payment and license delivery run on external checkout pages. cheatsbo7.net does not process or store payment card numbers.',
+            'After purchase, use the portal linked from your order flow to download the current loader and setup guide before launching Call of Duty: Black Ops 7.',
           ],
         },
         {
@@ -820,15 +820,15 @@ export const en: Translations = {
         {
           heading: 'Refunds and purchases',
           paragraphs: [
-            'All sales are final once checkout completes. We do not refund change-of-mind purchases, account bans, BattlEye or server bans, or issues caused by ignoring setup guides or running modules while the status banner shows offline.',
-            'If the product does not work as described on a supported setup—Ark: Survival Ascended on Windows 10/11, current loader from the portal, and the live status banner showing online when you started—open a ticket on our Discord. Include your order ID, Windows version, Ark: Survival Ascended build, and screenshots or exact error text from the loader.',
+            'All sales are final once checkout completes. We do not refund change-of-mind purchases, account bans, Ricochet Anti-Cheat or server bans, or issues caused by ignoring setup guides or running modules while the status banner shows offline.',
+            'If the product does not work as described on a supported setup—Call of Duty: Black Ops 7 on Windows 10/11, current loader from the portal, and the live status banner showing online when you started—open a ticket on our Discord. Include your order ID, Windows version, Call of Duty: Black Ops 7 build, and screenshots or exact error text from the loader.',
             'We may, at our discretion, offer a fix, replacement access, or partial/full refund when we confirm a fault on our side. We are not obligated to approve every request.',
           ],
         },
         {
           heading: 'Availability and risk',
           paragraphs: [
-            'Third-party tools for Ark: Survival Ascended can conflict with game updates and BattlEye. Studio Wildcard and server admins may take action against accounts. You use this software at your own risk, including possible bans.',
+            'Third-party tools for Call of Duty: Black Ops 7 can conflict with game updates and Ricochet Anti-Cheat. Activision and server admins may take action against accounts. You use this software at your own risk, including possible bans.',
             'Check the homepage status banner before every session. Do not join servers while modules are offline or misaligned after a patch.',
           ],
         },
@@ -847,31 +847,31 @@ export const en: Translations = {
       ],
     },
     support: {
-      title: 'Ark: Survival Ascended Hacks Discord Support',
+      title: 'Call of Duty: Black Ops 7 Hacks Discord Support',
       description:
-        'Get Discord support for Ark: Survival Ascended loader errors, HWID Spoofer setup and checkout questions at cheatsark.com.',
+        'Get Discord support for Call of Duty: Black Ops 7 loader errors, HWID Spoofer setup and checkout questions at cheatsbo7.net.',
       sections: [
         {
           heading: 'Before you open a ticket',
           paragraphs: [
-            'Check the live status banner on the homepage and in Discord #status—especially after an Ark: Survival Ascended update or BattlEye patch. If status is offline, wait for the new build instead of forcing an old loader.',
+            'Check the live status banner on the homepage and in Discord #status—especially after an Call of Duty: Black Ops 7 update or Ricochet Anti-Cheat patch. If status is offline, wait for the new build instead of forcing an old loader.',
             'Download the loader only from your operator portal (linked in your order email). Do not run files from DMs, YouTube links, or forum attachments.',
-            'Have your checkout order ID, Windows version (10 or 11), Ark: Survival Ascended build, and a screenshot of the exact error ready. Redact unrelated personal info from screenshots when possible.',
+            'Have your checkout order ID, Windows version (10 or 11), Call of Duty: Black Ops 7 build, and a screenshot of the exact error ready. Redact unrelated personal info from screenshots when possible.',
           ],
         },
         {
           heading: 'Loader and in-game issues',
           paragraphs: [
-            'Start the loader before Ark: Survival Ascended, use the setup guide tier for your purchase, and test on a private or low-pop server with conservative ESP ranges and aim smoothing.',
-            'If BattlEye shows “failed to initialize,” read the BattlEye errors guide on the blog first—many cases are driver or overlay conflicts, not a ban. Include whether the issue started right after a patch.',
-            'For aimbot or ESP tuning, say which weapon and server type (The Island, Aberration, PvPvE) you use. Staff can suggest portal presets; they cannot guarantee ban immunity.',
+            'Start the loader before Call of Duty: Black Ops 7, use the setup guide tier for your purchase, and test on a private or low-pop server with conservative ESP ranges and aim smoothing.',
+            'If Ricochet Anti-Cheat shows “failed to initialize,” read the Ricochet Anti-Cheat errors guide on the blog first—many cases are driver or overlay conflicts, not a ban. Include whether the issue started right after a patch.',
+            'For aimbot or ESP tuning, say which weapon and server type (multiplayer, Zombies and Ranked, multiplayer) you use. Staff can suggest portal presets; they cannot guarantee ban immunity.',
           ],
         },
         {
           heading: 'HWID Spoofer and utilities',
           paragraphs: [
-            'HWID tickets: note whether you are on a fresh Ark account, if BattlEye flagged hardware, and whether you ran the compatibility scan from the spoofer guide. Follow cleanup steps before relaunching Ark: Survival Ascended.',
-            'UGC tickets: describe ban type (Steam, BattlEye, server admin) and what appeal steps you already tried. UGC tools organize cases—they do not automatically remove bans.',
+            'HWID tickets: note whether you are on a fresh Activision account, if Ricochet Anti-Cheat flagged hardware, and whether you ran the compatibility scan from the spoofer guide. Follow cleanup steps before relaunching Call of Duty: Black Ops 7.',
+            'UGC tickets: describe ban type (Steam, Ricochet Anti-Cheat, server admin) and what appeal steps you already tried. UGC tools organize cases—they do not automatically remove bans.',
             'Skin Changer tickets: confirm you purchased the utility or Elite tier that includes it, and whether the issue is preview-only (client-side) versus a loader error.',
           ],
         },
@@ -894,7 +894,7 @@ export const en: Translations = {
           heading: 'What to expect from support',
           paragraphs: [
             'Tickets are answered in Discord when staff are online—peak times follow EU and US evenings. One ticket per issue keeps threads clear; bump only after 24 hours with new logs if nothing changed.',
-            'We do not provide ban guarantees, server unbans, or instructions to evade Studio Wildcard rules. We help with loader delivery, setup, and product behavior described on cheatsark.com.',
+            'We do not provide ban guarantees, server unbans, or instructions to evade Activision rules. We help with loader delivery, setup, and product behavior described on cheatsbo7.net.',
           ],
         },
       ],
@@ -904,9 +904,9 @@ export const en: Translations = {
     skipLink: 'Skip to main content',
     browseCheats: 'Get access',
     browseCheatsMobile: 'Get access',
-    homeAria: 'Ark: Survival Ascended Hacks home',
-    checkoutAria: 'Get access to Ark: Survival Ascended Hacks',
-    discordAria: 'Join Ark: Survival Ascended Hacks on Discord',
+    homeAria: 'Call of Duty: Black Ops 7 Hacks home',
+    checkoutAria: 'Get access to Call of Duty: Black Ops 7 Hacks',
+    discordAria: 'Join Call of Duty: Black Ops 7 Hacks on Discord',
     menuOpen: 'Open menu',
     menuClose: 'Close menu',
     themeLight: 'Switch to light mode',

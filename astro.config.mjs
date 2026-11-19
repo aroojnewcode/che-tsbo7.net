@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
 
-const siteOrigin = (process.env.SITE_ORIGIN || 'https://cheatsark.com').replace(/\/$/, '');
+const siteOrigin = (process.env.SITE_ORIGIN || 'https://cheatsbo7.net').replace(/\/$/, '');
 
 export default defineConfig({
   site: siteOrigin,

@@ -1,39 +1,39 @@
 === index.html ===
-Ark: Survival Ascended Hacks | ESP, Aimbot &amp; Radar
-Ark: Survival Ascended hacks for PC: player ESP, loot ESP, aimbot, no recoil, and stream-proof overlays updated every major patch at cheatsark.com.
-https://cheatsark.com/
+Call of Duty: Black Ops 7 Hacks | ESP, Aimbot &amp; Radar
+Call of Duty: Black Ops 7 hacks for PC: player ESP, loot ESP, aimbot, no recoil, and stream-proof overlays updated every major patch at cheatsbo7.net.
+https://cheatsbo7.net/
 
-=== products/ark-hacks/index.html ===
-Ark: Survival Ascended Elite Hacks &amp; Utility Products
-Elite Ark: Survival Ascended hacks plus HWID spoofer, UGC tools, and Skin Changer utilities for PC on cheatsark.com.
-https://cheatsark.com/products/ark-hacks/
+=== products/bo7-hacks/index.html ===
+Call of Duty: Black Ops 7 Elite Hacks &amp; Utility Products
+Elite Call of Duty: Black Ops 7 hacks plus HWID spoofer, UGC tools, and Skin Changer utilities for PC on cheatsbo7.net.
+https://cheatsbo7.net/products/bo7-hacks/
 
-=== products/ark-hacks/elite/index.html ===
-Ark: Survival Ascended Elite Hacks | Full ESP &amp; Combat Suite
-Elite tier: player ESP, loot ESP, aimbot, no recoil, loot assist tools, and priority BattlEye patch delivery.
-https://cheatsark.com/products/ark-hacks/elite/
+=== products/bo7-hacks/elite/index.html ===
+Call of Duty: Black Ops 7 Elite Hacks | Full ESP &amp; Combat Suite
+Elite tier: player ESP, loot ESP, aimbot, no recoil, loot assist tools, and priority Ricochet Anti-Cheat patch delivery.
+https://cheatsbo7.net/products/bo7-hacks/elite/
 
 === blog/index.html ===
-Ark: Survival Ascended Hacks Guides &amp; Patch Notes
-Setup guides, Lite vs Pro comparisons, BattlEye patch checklists, and PVP config tips for Ark: Survival Ascended hacks.
-https://cheatsark.com/blog/
+Call of Duty: Black Ops 7 Hacks Guides &amp; Patch Notes
+Setup guides, Lite vs Pro comparisons, Ricochet Anti-Cheat patch checklists, and PVP config tips for Call of Duty: Black Ops 7 hacks.
+https://cheatsbo7.net/blog/
 
-=== blog/ark-hacks-features-guide/index.html ===
-Ark: Survival Ascended hacks features: ESP, aimbot, radar and more | Ark: Survival Ascended Hacks
-Complete guide to our Ark: Survival Ascended hacks—player ESP, loot ESP, aimbot, no recoil, FOV and stream proof.
-https://cheatsark.com/blog/ark-cheats-features-guide/
+=== blog/bo7-hacks-features-guide/index.html ===
+Call of Duty: Black Ops 7 hacks features: ESP, aimbot, radar and more | Call of Duty: Black Ops 7 Hacks
+Complete guide to our Call of Duty: Black Ops 7 hacks—player ESP, loot ESP, aimbot, no recoil, FOV and stream proof.
+https://cheatsbo7.net/blog/bo7-cheats-features-guide/
 
 === faq/index.html ===
-FAQ | Ark: Survival Ascended Hacks, Products &amp; Setup
-Answers on hack tiers, ESP, aimbot, HWID tools, checkout, and blog guides at cheatsark.com.
-https://cheatsark.com/faq/
+FAQ | Call of Duty: Black Ops 7 Hacks, Products &amp; Setup
+Answers on hack tiers, ESP, aimbot, HWID tools, checkout, and blog guides at cheatsbo7.net.
+https://cheatsbo7.net/faq/
 
 === support/index.html ===
-Support | Ark: Survival Ascended Hacks
-Get help with loader setup, HWID, and checkout for Ark: Survival Ascended hack tiers and utilities.
-https://cheatsark.com/support/
+Support | Call of Duty: Black Ops 7 Hacks
+Get help with loader setup, HWID, and checkout for Call of Duty: Black Ops 7 hack tiers and utilities.
+https://cheatsbo7.net/support/
 
 === 404.html ===
-Page not found | Ark: Survival Ascended Hacks
-The page you requested could not be found on cheatsark.com.
-https://cheatsark.com/404/
+Page not found | Call of Duty: Black Ops 7 Hacks
+The page you requested could not be found on cheatsbo7.net.
+https://cheatsbo7.net/404/

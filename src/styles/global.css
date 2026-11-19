@@ -421,7 +421,7 @@ html.dark a.nav-link[data-nav-link]:hover .icon-app {
   color: var(--primary-foreground);
 }
 
-/* Navbar corner: dino, then ARK CHEATS to the right on hover — no frame/box */
+/* Navbar corner: weapon mark, then BO7 CHEATS on hover — no frame/box */
 .brand-corner {
   position: relative;
   z-index: 60;
@@ -454,13 +454,19 @@ html.dark a.nav-link[data-nav-link]:hover .icon-app {
   flex-shrink: 0;
   width: auto;
   height: 2.15rem;
-  max-width: 3.75rem;
+  max-width: 4.75rem;
   object-fit: contain;
   border: none;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
   outline: none;
+  /* Medium purple — aligned with --primary (#7f3dee) */
+  filter: brightness(1.06) saturate(1.45) hue-rotate(6deg) contrast(1.02);
+}
+
+.brand-mark-tint {
+  filter: brightness(1.06) saturate(1.45) hue-rotate(6deg) contrast(1.02);
 }
 
 .brand-corner__title {

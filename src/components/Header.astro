@@ -28,7 +28,7 @@ const navIcons: Record<string, IconName> = {
   Support: 'navSupport',
 };
 
-const purchaseUrl = checkoutPath('ark');
+const purchaseUrl = checkoutPath('bo7');
 const purchaseLink = externalLinkProps(purchaseUrl);
 ---
 
@@ -74,7 +74,7 @@ const purchaseLink = externalLinkProps(purchaseUrl);
         <SheetContent side="right" class="flex w-[min(100vw-2rem,20rem)] flex-col gap-4">
           <SheetHeader>
             <p class:list={[sheetTitle(), 'flex items-center gap-2']}>
-              <img src={SITE_GUN_IMAGE} alt="" width={56} height={28} class="brand-gun__image brand-gun__image--wide shrink-0" />
+              <img src={SITE_GUN_IMAGE} alt="" width={56} height={28} class="brand-gun__image brand-gun__image--wide brand-mark-tint shrink-0" />
               {t.site.name}
             </p>
           </SheetHeader>

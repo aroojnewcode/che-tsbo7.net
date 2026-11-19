@@ -1,6 +1,7 @@
 import type { FaqItem } from '../i18n/types';
 import { SITE_LOGO, SITE_URL, SUPPORT_EMAIL } from '../config/site';
 import { SITE_ORIGIN, absoluteAssetUrl, canonicalUrl, getOrganizationSameAs } from '../config/seo';
+import { productPlanPriceRange } from '../data/productPricing';
 
 export interface BreadcrumbItem {
   name: string;
@@ -24,11 +25,13 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Ark: Survival Ascended Hacks',
+    '@id': `${SITE_ORIGIN}/#website`,
+    name: 'Call of Duty: Black Ops 7 Hacks',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Shop undetected Ark: Survival Ascended hacks for PC—player ESP, loot ESP, soft aim, no recoil and stream-proof overlays at cheatsark.com.',
+      'Shop undetected Call of Duty: Black Ops 7 hacks for PC—player ESP, loot ESP, soft aim, no recoil and stream-proof overlays at cheatsbo7.net.',
+    publisher: { '@id': `${SITE_ORIGIN}/#organization` },
   };
 }
 
@@ -38,7 +41,8 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Ark: Survival Ascended Hacks',
+    '@id': `${SITE_ORIGIN}/#organization`,
+    name: 'Call of Duty: Black Ops 7 Hacks',
     url: `${SITE_ORIGIN}/`,
     logo: absoluteAssetUrl(SITE_LOGO),
     email: SUPPORT_EMAIL,
@@ -66,7 +70,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Ark: Survival Ascended Hacks',
+      name: 'Call of Duty: Black Ops 7 Hacks',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -82,7 +86,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Ark: Survival Ascended Hacks',
+      name: 'Call of Duty: Black Ops 7 Hacks',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -131,7 +135,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'Ark: Survival Ascended Hacks Community Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'Call of Duty: Black Ops 7 Hacks Community Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -140,11 +144,44 @@ function offerUrl(path: string): string {
   return canonicalUrl(path);
 }
 
+const productOfferSeller = {
+  '@type': 'Organization' as const,
+  name: 'Call of Duty: Black Ops 7 Hacks',
+};
+
+function productOffersBlock(productSlug: string, checkoutUrl: string) {
+  const resolvedUrl = offerUrl(checkoutUrl);
+  const { low, high, count } = productPlanPriceRange(productSlug);
+  const common = {
+    url: resolvedUrl,
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    seller: productOfferSeller,
+  };
+
+  if (count === 1) {
+    return {
+      '@type': 'Offer',
+      ...common,
+      price: String(low),
+    };
+  }
+
+  return {
+    '@type': 'AggregateOffer',
+    ...common,
+    lowPrice: String(low),
+    highPrice: String(high),
+    offerCount: count,
+  };
+}
+
 export function productSchema(input: {
   name: string;
   description: string;
   url: string;
   offerUrl: string;
+  productSlug: string;
   image?: string;
   sku?: string;
 }) {
@@ -153,22 +190,14 @@ export function productSchema(input: {
     '@type': 'Product',
     name: input.name,
     description: input.description,
+    url: canonicalUrl(input.url),
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'Ark: Survival Ascended Hacks',
+      name: 'Call of Duty: Black Ops 7 Hacks',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
-    offers: {
-      '@type': 'Offer',
-      url: offerUrl(input.offerUrl),
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'Ark: Survival Ascended Hacks',
-      },
-    },
+    offers: productOffersBlock(input.productSlug, input.offerUrl),
   };
 }
 
@@ -179,12 +208,15 @@ export function softwareApplicationSchema(input: {
   url: string;
   image?: string;
   offerUrl?: string;
+  productSlug?: string;
 }) {
+  const slugMatch = input.url.replace(/\/$/, '').match(/\/([^/]+)$/);
   return productSchema({
     name: input.name,
     description: input.description,
     url: input.url,
     offerUrl: input.offerUrl ?? input.url,
+    productSlug: input.productSlug ?? slugMatch?.[1] ?? 'lite',
     image: input.image,
   });
 }
@@ -209,11 +241,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'Ark: Survival Ascended Hacks',
+      name: 'Call of Duty: Black Ops 7 Hacks',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Ark: Survival Ascended Hacks',
+      name: 'Call of Duty: Black Ops 7 Hacks',
       logo: {
         '@type': 'ImageObject',
         url: absoluteAssetUrl(SITE_LOGO),
@@ -230,4 +262,10 @@ export function parseBlogDate(date: string): string {
   const parsed = Date.parse(date);
   if (Number.isNaN(parsed)) return new Date().toISOString().slice(0, 10);
   return new Date(parsed).toISOString().slice(0, 10);
+}
+
+/** Plain text for FAQ JSON-LD (strip HTML from linked answers). */
+export function faqAnswerPlainText(htmlOrText: string, htmlOverride?: string): string {
+  const raw = htmlOverride?.trim() ? htmlOverride : htmlOrText;
+  return raw.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }

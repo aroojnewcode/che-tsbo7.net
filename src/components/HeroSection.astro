@@ -16,6 +16,7 @@ const { heroTitle } = Astro.props;
 const h = t.hero;
 const heroHeading = heroTitle ?? h.title;
 
+const heroMetrics = h.metrics.map((m, i) => ({ metric: m, icon: heroStatIcons[i] ?? 'check' }));
 
 const heroMarqueePills = [
   ...heroStatusPills,
@@ -62,14 +63,14 @@ const heroMarqueePills = [
 
       <div class="mx-auto flex w-full max-w-xl flex-col items-center gap-5 lg:mx-0 lg:max-w-none lg:items-end">
         <ImageSlider id="home-hero" variant="hero" images={HERO_CAROUSEL_SLIDES} />
-        <div class="grid w-full grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-4 lg:grid-cols-2">
-          {h.metrics.map((m, i) => (
+        <div class="grid w-full grid-cols-2 gap-2.5 sm:gap-3">
+          {heroMetrics.map(({ metric: m, icon }) => (
             <div class="flex min-w-0 items-center gap-3 rounded-xl border border-border/80 bg-card/70 px-3 py-3 shadow-sm shadow-black/10 transition-colors hover:border-primary/40">
               <span
                 class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 ring-1 ring-inset ring-primary/25"
                 aria-hidden="true"
               >
-                <Icon name={heroStatIcons[i] ?? 'check'} size={18} />
+                <Icon name={icon} size={18} />
               </span>
               <div class="min-w-0">
                 <p class="font-[family-name:var(--font-heading)] text-base font-bold leading-none tracking-tight text-foreground">{m.strong}</p>

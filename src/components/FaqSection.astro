@@ -22,6 +22,7 @@ interface Props {
   contentAlign?: 'left' | 'center';
   id?: string;
   class?: string;
+  hideSectionHeader?: boolean;
 }
 
 const {
@@ -36,7 +37,10 @@ const {
   contentAlign = 'center',
   id: sectionId,
   class: className,
+  hideSectionHeader = false,
 } = Astro.props;
+
+const showSectionHeader = !hideSectionHeader && Boolean(eyebrow || title || subtitle);
 
 const topicLabels: Record<FaqTopic, string> = {
   all: 'All',
@@ -60,14 +64,18 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
 >
   <div class="mx-auto max-w-6xl px-5">
     <div class:list={[contentAlign === 'center' && 'mx-auto max-w-3xl', contentAlign === 'left' && 'product-detail__narrow max-w-3xl']}>
-    <SectionHeader
-      eyebrow={eyebrow}
-      title={title}
-      desc={subtitle}
-      titleId={titleId}
-      headingLevel="h2"
-      centered={centered}
-    />
+    {
+      showSectionHeader ? (
+        <SectionHeader
+          eyebrow={eyebrow}
+          title={title}
+          desc={subtitle}
+          titleId={titleId}
+          headingLevel="h2"
+          centered={centered}
+        />
+      ) : null
+    }
 
     {
       showFilters && (

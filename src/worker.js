@@ -5,28 +5,29 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.protocol === 'http:' && url.hostname === 'cheatsark.com') {
+    if (url.protocol === 'http:' && url.hostname === 'cheatsbo7.net') {
       const target = new URL(request.url);
       target.protocol = 'https:';
-      if (target.hostname === 'www.cheatsark.com') {
-        target.hostname = 'cheatsark.com';
+      if (target.hostname === 'www.cheatsbo7.net') {
+        target.hostname = 'cheatsbo7.net';
       }
       return Response.redirect(target.toString(), 301);
     }
 
-    if (url.hostname === 'www.cheatsark.com') {
+    if (url.hostname === 'www.cheatsbo7.net') {
       const target = new URL(request.url);
       target.protocol = 'https:';
-      target.hostname = 'cheatsark.com';
+      target.hostname = 'cheatsbo7.net';
       return Response.redirect(target.toString(), 301);
     }
 
     const path = url.pathname.replace(/\/$/, '') || '/';
 
     if (path === '/robots.txt') {
-      const origin = `https://${url.host === 'www.cheatsark.com' ? 'cheatsark.com' : url.host}`;
+      const origin = `https://${url.host === 'www.cheatsbo7.net' ? 'cheatsbo7.net' : url.host}`;
       const body = `User-agent: *
 Allow: /
+Disallow: /go/
 
 Sitemap: ${origin}/sitemap-index.xml
 `;

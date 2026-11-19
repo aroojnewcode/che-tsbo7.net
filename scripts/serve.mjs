@@ -4,7 +4,7 @@ import path from 'node:path';
 import zlib from 'node:zlib';
 import { resolvePathRedirect } from './redirects.mjs';
 
-const CANONICAL_HOST = 'cheatsark.com';
+const CANONICAL_HOST = 'cheatsbo7.net';
 const distDir = path.resolve('dist');
 const port = Number(process.env.PORT) || 3000;
 

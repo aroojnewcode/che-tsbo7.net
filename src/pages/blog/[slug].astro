@@ -54,7 +54,7 @@ const breadcrumbs = [
 const related = getRelatedBlogPosts(post.slug, 3);
 const checkoutNavLabel = getBlogCheckoutLabel(post.slug);
 const productsNavLabel =
-  post.slug === 'console-tips' ? 'Open live-server tier picker' : 'Browse Ark: Survival Ascended hack tiers';
+  post.slug === 'console-tips' ? 'Open live-server tier picker' : 'Browse Call of Duty: Black Ops 7 hack tiers';
 const blogIndexNavLabel =
   post.slug === 'console-tips' ? 'More practice-to-live articles' : 'More checkout walkthrough articles';
 
@@ -69,8 +69,8 @@ function linkify(text: string): string {
       const rel = isExternal ? ' rel="noopener noreferrer sponsored"' : '';
       return `<a href="${outHref}"${rel}>${label}</a>`;
     })
-    .replace(/(https:\/\/(?:cheatsark\.com|www\.cheatsark\.com)[^\s.,;)]*)/g, (_match, url: string) => {
-      const path = url.replace(/^https:\/\/(?:www\.)?cheatsark\.com/, '');
+    .replace(/(https:\/\/(?:cheatsbo7\.net|www\.cheatsbo7\.net|cheatsbo7\.com|www\.cheatsbo7\.com)[^\s.,;)]*)/g, (_match, url: string) => {
+      const path = url.replace(/^https:\/\/(?:www\.)?cheatsbo7\.(?:net|com)/, '');
       const normalized = normalizeInternalPath(path);
       const href = normalized.startsWith('http') ? normalized : `${SITE_ORIGIN}${normalized}`;
       return `<a href="${href}">${url}</a>`;
@@ -118,7 +118,7 @@ const published = parseBlogDate(post.date);
               <figure class="blog-article__hero">
                 <ResponsiveImage
                   src={post.image}
-                  alt={`${post.title} — Ark: Survival Ascended hacks guide cover`}
+                  alt={`${post.title} — Call of Duty: Black Ops 7 hacks guide cover`}
                   width={960}
                   height={540}
                   loading="eager"
@@ -127,7 +127,7 @@ const published = parseBlogDate(post.date);
                   class="w-full object-cover"
                 />
                 <figcaption class="sr-only">
-                  Ark: Survival Ascended hacks guide cover for {post.title}. Shop Lite, Pro or Elite at cheatsark.com.
+                  Call of Duty: Black Ops 7 hacks guide cover for {post.title}. Shop Lite, Pro or Elite at cheatsbo7.net.
                 </figcaption>
               </figure>
             ) : null
@@ -205,10 +205,10 @@ const published = parseBlogDate(post.date);
           <nav class="blog-article__actions" aria-label="Continue reading">
             <Button
               as="a"
-              href={checkoutPath('ark')}
+              href={checkoutPath('bo7')}
               variant="primary"
               aria-label={t.ui.checkoutAria}
-              {...externalLinkProps(checkoutPath('ark'))}
+              {...externalLinkProps(checkoutPath('bo7'))}
             >
               {checkoutNavLabel}
               <Icon name="arrowRight" size={17} />

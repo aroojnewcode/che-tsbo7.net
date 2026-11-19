@@ -8,7 +8,7 @@ import { forumCategories, forumPosts } from '../../data/forum';
 import { blogPosts, getBlogPostTimestamp } from '../../data/blog';
 import { resolvePageSeo } from '../../config/seo';
 import { getPageSeoEntry } from '../../config/pageSeo';
-import { breadcrumbSchema, collectionPageSchema } from '../../utils/schema';
+import { breadcrumbSchema, collectionPageSchema, organizationSchema } from '../../utils/schema';
 
 const seo = resolvePageSeo('/forum/');
 const seoEntry = getPageSeoEntry('/forum/');
@@ -22,7 +22,8 @@ const sourceTimestamp = (path?: string) => {
 ---
 
 <BaseLayout title={seo.title} description={seo.description} jsonLd={[
-  collectionPageSchema({ name: 'Ark: Survival Ascended Player Discussions', description: seo.description, url: '/forum/' }),
+  organizationSchema(),
+  collectionPageSchema({ name: 'Call of Duty: Black Ops 7 Player Discussions', description: seo.description, url: '/forum/' }),
   breadcrumbSchema(breadcrumbs),
 ]}>
   <section class="forum-page py-8 md:py-12">
@@ -31,15 +32,15 @@ const sourceTimestamp = (path?: string) => {
       <header class="forum-hero">
         <div>
           <p class="section-header__eyebrow">Community forum</p>
-          <h1>{seoEntry?.h1 ?? 'ARK: Survival Ascended Forum – Player Discussions, Questions & Tips'}</h1>
+          <h1>{seoEntry?.h1 ?? 'Call of Duty: Black Ops 7 Forum – Player Discussions, Questions & Tips'}</h1>
           <p class="forum-hero__copy">
-            Welcome to the Ark: Survival Ascended community forum! This is a place where players can discuss their experiences, share questions, compare different tools, and talk about the latest changes in Ark. Whether you're a beginner or an experienced Tribe, feel free to join the conversation.
+            Welcome to the Call of Duty: Black Ops 7 community forum! This is a place where players can discuss their experiences, share questions, compare different tools, and talk about the latest Black Ops 7 updates. Whether you're a beginner or an experienced player, feel free to join the conversation.
           </p>
           <div class="forum-intro">
             <p>
-              <strong>Join the discussion.</strong> Have a question about Ark: Survival Ascended tools, updates, gameplay, or account safety? Browse threads below and share your experience with the community. Keep conversations friendly, stay respectful, and help other players make informed decisions.
+              <strong>Join the discussion.</strong> Have a question about Call of Duty: Black Ops 7 tools, updates, gameplay, or account safety? Browse threads below and share your experience with the community. Keep conversations friendly, stay respectful, and help other players make informed decisions.
             </p>
-            <p class="forum-intro__tagline">Your next raid starts with the right information!</p>
+            <p class="forum-intro__tagline">Your next match starts with the right information!</p>
           </div>
         </div>
         <a class="forum-create" href="/blog/"><Icon name="messageCircle" size={17} /> Explore the guides</a>
@@ -108,7 +109,12 @@ const sourceTimestamp = (path?: string) => {
           <section class="forum-side-card forum-about" id="community-guidelines">
             <div class="forum-side-card__banner"></div>
             <div class="forum-about__content">
-              <div class="forum-about__title"><span class="forum-community-avatar forum-community-avatar--brand"><img src={FORUM_LOGO} alt="" width={34} height={34} class="forum-brand-logo" loading="lazy" decoding="async" /></span><h2>Player discussions</h2></div>
+              <div class="forum-about__title">
+                <div class="forum-brand-block forum-brand-block--discussions" aria-hidden="true">
+                  <img src={FORUM_LOGO} alt="" width={120} height={36} class="forum-brand-logo forum-brand-logo--sidebar" loading="lazy" decoding="async" />
+                </div>
+                <h2>Player discussions</h2>
+              </div>
               <p>Maps, loadouts, ESP vs radar, patches, and account safety—plus setup Q&amp;A linked from the guides.</p>
               <div class="forum-stats"><span><b>{forumPosts.length}</b> discussions</span><span><b>{forumCategories.length}</b> topics</span></div>
               <a class="forum-join" href="/blog/">Explore all guides</a>
@@ -128,7 +134,7 @@ const sourceTimestamp = (path?: string) => {
             <ol><li>Keep it friendly and constructive</li><li>Stay on topic and add context</li><li>Mark spoilers and sensitive content</li></ol>
             <a href="#community-guidelines">Read the full guidelines <Icon name="arrowRight" size={14} /></a>
           </section>
-          <p class="forum-sidebar-foot">About · Guidelines · Privacy · Terms<br />© {new Date().getFullYear()} cheatsark.com</p>
+          <p class="forum-sidebar-foot">About · Guidelines · Privacy · Terms<br />© {new Date().getFullYear()} cheatsbo7.net</p>
         </aside>
       </div>
     </div>

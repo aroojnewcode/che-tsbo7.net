@@ -1,14 +1,16 @@
-/** Canonical Ark: Survival Ascended assets (Supabase SEO library). */
-export const ARK_MEDIA_URLS = [
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/225f6a30-6122-4c29-9cf0-e9e2b7459c9b/1794852570326-tbem7u-ark-img1.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/225f6a30-6122-4c29-9cf0-e9e2b7459c9b/1794852559334-gep7dc-ark-img-4.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/225f6a30-6122-4c29-9cf0-e9e2b7459c9b/1794852546453-nlklqv-ark-img-3.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1793736837817-eseqbq-arkascendedwalls-thumb-webp-87d2c3faf249975aae2e59773b657d25.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1793736831740-u4az35-moonlit-dinosaur-base-hud.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1793736795808-prsvti-humanoid-runner-in-annotated-island-jungle.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1793736759165-qwadin-tropical-dino-tracked-forest-cove.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/ark-ascended/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1793736751614-e7yjp6-images-1.webp',
+/** Canonical Black Ops 7 hero & blog imagery (Supabase seo-media-library). */
+export const BO7_SUPABASE_IMAGES = [
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/black-ops/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794749070764-3pn03s-warehouse-garage-assault-hud.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/black-ops/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794749015068-1kdjdw-images-1.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/black-ops/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794748372966-jnxv0h-8a2255c48ae94bde7726e9e51389f472.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/black-ops/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794748359408-mv6ahn-futuristic-plaza-iron-sight-showdown.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/black-ops/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794748354840-e7krg3-tactical-garage-entrance-enemy-scan.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/black-ops/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794748322549-50ayrv-futuristic-diagnostics-lobby-under-fire.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/black-ops/7a5973f7-2cf8-4de3-90ea-2060bf036d16/1794600929135-81p7zm-7-2.webp',
 ] as const;
+
+/** Pool for blog cards, article heroes, and OG fallbacks — hash-stable per slug. */
+export const BO7_MEDIA_URLS: readonly string[] = [...BO7_SUPABASE_IMAGES];
 
 export interface HeroCarouselSlide {
   src: string;
@@ -17,79 +19,73 @@ export interface HeroCarouselSlide {
   captionDesc: string;
 }
 
-/** Homepage hero carousel — Ark Ascended Supabase shots. */
+/** Homepage hero carousel — Black Ops 7 Supabase shots. */
 export const HERO_CAROUSEL_SLIDES: HeroCarouselSlide[] = [
   {
-    src: ARK_MEDIA_URLS[0],
-    alt: 'Ark Survival Ascended cheats overlay on jungle combat with tribe ESP',
-    caption: 'Tribe awareness',
-    captionDesc: 'Player ESP and threat readouts on The Island.',
+    src: BO7_SUPABASE_IMAGES[0]!,
+    alt: 'Call of Duty Black Ops 7 warehouse garage assault with ESP HUD overlay',
+    caption: 'Garage assault HUD',
+    captionDesc: 'Player ESP and combat readouts during a warehouse push.',
   },
   {
-    src: ARK_MEDIA_URLS[1],
-    alt: 'Ark Survival Ascended ESP highlighting players and dinosaurs in PvP',
-    caption: 'Combat ESP',
-    captionDesc: 'See tribes and threats before you engage.',
+    src: BO7_SUPABASE_IMAGES[1]!,
+    alt: 'Call of Duty Black Ops 7 multiplayer combat with cheat awareness overlay',
+    caption: 'Multiplayer combat',
+    captionDesc: 'Threat markers and lanes on a live BO7 firefight.',
   },
   {
-    src: ARK_MEDIA_URLS[2],
-    alt: 'Ark Survival Ascended resource and dino tracking overlay in the wild',
-    caption: 'Wild tracking',
-    captionDesc: 'Dino and resource awareness for ASA farms.',
+    src: BO7_SUPABASE_IMAGES[2]!,
+    alt: 'Call of Duty Black Ops 7 ranked match with squad and enemy ESP',
+    caption: 'Squad awareness',
+    captionDesc: 'Enemy and squad tags before you commit to a fight.',
   },
   {
-    src: ARK_MEDIA_URLS[3],
-    alt: 'Ark Survival Ascended wallhack-style overlay on base structures',
-    caption: 'Base awareness',
-    captionDesc: 'Structure and player awareness for raids.',
+    src: BO7_SUPABASE_IMAGES[3]!,
+    alt: 'Call of Duty Black Ops 7 futuristic plaza iron-sight showdown with overlay',
+    caption: 'Plaza showdown',
+    captionDesc: 'Iron-sight range fights with readable ESP framing.',
   },
   {
-    src: ARK_MEDIA_URLS[4],
-    alt: 'Moonlit Ark Survival Ascended base with cheat HUD elements',
-    caption: 'Night raids',
-    captionDesc: 'Readable overlays after dark.',
+    src: BO7_SUPABASE_IMAGES[4]!,
+    alt: 'Call of Duty Black Ops 7 tactical garage entrance with enemy scan ESP',
+    caption: 'Entrance scan',
+    captionDesc: 'Pre-rotate intel at garage chokepoints.',
   },
   {
-    src: ARK_MEDIA_URLS[5],
-    alt: 'Ark Survival Ascended runner in annotated island jungle with ESP',
-    caption: 'Island jungle',
-    captionDesc: 'Map context with ESP labels.',
+    src: BO7_SUPABASE_IMAGES[5]!,
+    alt: 'Call of Duty Black Ops 7 diagnostics lobby under fire with BO7 cheat HUD',
+    caption: 'Lobby under fire',
+    captionDesc: 'Objective pressure with full awareness stack.',
   },
   {
-    src: ARK_MEDIA_URLS[6],
-    alt: 'Tropical forest cove in Ark Survival Ascended with dino tracking ESP',
-    caption: 'Forest cove',
-    captionDesc: 'Track wild dinos along the shoreline.',
-  },
-  {
-    src: ARK_MEDIA_URLS[7],
-    alt: 'Ark Survival Ascended gameplay screenshot with cheat overlay',
-    caption: 'ASA overview',
-    captionDesc: 'Undetected ESP and radar for official servers.',
+    src: BO7_SUPABASE_IMAGES[6]!,
+    alt: 'Call of Duty Black Ops 7 gameplay screenshot with undetected ESP overlay',
+    caption: 'BO7 overview',
+    captionDesc: 'ESP and radar tuned for Ranked and 6v6 playlists.',
   },
 ];
 
-/** Local optimized PNG bases (optional — npm run media:ark). */
-export const ARK_LOCAL_IMAGES = [
-  '/images/ark/ark-screenshot-1.png',
-  '/images/ark/ark-screenshot-2.png',
-  '/images/ark/ark-screenshot-3.png',
+/** Optional local fallbacks when running `npm run media:bo7`. */
+export const BO7_LOCAL_IMAGES = [
+  '/images/bo7/bo7-screenshot-1.png',
+  '/images/bo7/bo7-screenshot-2.png',
+  '/images/bo7/bo7-screenshot-3.png',
 ] as const;
 
 /** Default social / JSON-LD preview. */
-export const PRIMARY_HERO_IMAGE = ARK_MEDIA_URLS[0];
+export const PRIMARY_HERO_IMAGE = BO7_SUPABASE_IMAGES[0]!;
 
-/** Stable Supabase cover per blog slug. */
-export function arkBlogImageForSlug(slug: string): string {
+/** Stable cover per blog slug (cycles Supabase library). */
+export function bo7BlogImageForSlug(slug: string): string {
   let hash = 0;
   for (let i = 0; i < slug.length; i++) {
     hash = (hash * 31 + slug.charCodeAt(i)) >>> 0;
   }
-  const index = hash % ARK_MEDIA_URLS.length;
-  return ARK_MEDIA_URLS[index]!;
+  const index = hash % BO7_MEDIA_URLS.length;
+  return BO7_MEDIA_URLS[index]!;
 }
 
-/** @deprecated Use arkBlogImageForSlug */
-export function arkCoverForSlug(slug: string): string {
-  return arkBlogImageForSlug(slug);
+/** @deprecated Use bo7BlogImageForSlug */
+export function bo7CoverForSlug(slug: string): string {
+  return bo7BlogImageForSlug(slug);
 }

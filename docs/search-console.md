@@ -1,11 +1,11 @@
-# Search Console workflow (cheatsark.com)
+# Search Console workflow (cheatsbo7.net)
 
 Use this checklist after each content or SEO deploy.
 
 ## Property & sitemap
 
-1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `cheatsark.com` if it is not already there.
-2. Under **Sitemaps**, submit: `https://cheatsark.com/sitemap-index.xml`
+1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `cheatsbo7.net` if it is not already there.
+2. Under **Sitemaps**, submit: `https://cheatsbo7.net/sitemap-index.xml`
 3. Confirm the sitemap reports success (no “couldn’t fetch” errors).
 
 ## After deploy
@@ -18,9 +18,9 @@ Use this checklist after each content or SEO deploy.
 
 | Intent | Primary URL |
 |--------|-------------|
-| Ark: Survival Ascended hacks, Ark: Survival Ascended hacks | `/` |
-| elite suite | `/products/ark-hacks/elite/` |
-| hwid, skin changer | `/products/ark-hacks/utilities/` |
+| Call of Duty: Black Ops 7 hacks, Call of Duty: Black Ops 7 hacks | `/` |
+| elite suite | `/products/bo7-hacks/elite/` |
+| hwid, skin changer | `/products/bo7-hacks/utilities/` |
 | setup / patch day | `/blog/` |
 | FAQ | `/faq/` |
 

@@ -16,6 +16,8 @@ interface Props {
   /** Full /faq/ experience — all topics chip bar */
   variant?: 'full' | 'contextual';
   filterTopics?: FaqTopic[];
+  /** On /faq/ — only one page H1; keep filter chips without a second section title. */
+  hideSectionHeader?: boolean;
 }
 
 const {
@@ -25,6 +27,7 @@ const {
   class: className,
   variant = 'contextual',
   filterTopics: filterTopicsProp,
+  hideSectionHeader = false,
 } = Astro.props;
 
 const copy = variant === 'full' ? SITE_FAQ_SECTION_COPY : CONTEXTUAL_FAQ_SECTION_COPY;
@@ -36,11 +39,12 @@ const showFilters = filterTopics.length > 1;
 <FaqSection
   id={id}
   items={items}
-  eyebrow={copy.eyebrow}
-  title={copy.title}
-  subtitle={copy.subtitle}
+  eyebrow={hideSectionHeader ? '' : copy.eyebrow}
+  title={hideSectionHeader ? '' : copy.title}
+  subtitle={hideSectionHeader ? '' : copy.subtitle}
   titleId={titleId}
   showFilters={showFilters}
   filterTopics={filterTopics}
+  hideSectionHeader={hideSectionHeader}
   class={className}
 />

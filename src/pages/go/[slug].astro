@@ -33,7 +33,7 @@ const destination = checkoutExternalUrl(product);
 const checkoutLink = externalLinkProps(destination);
 const breadcrumbs = [
   { name: 'Home', path: '/' },
-  { name: 'Products', path: '/products/ark-hacks/' },
+  { name: 'Products', path: '/products/bo7-hacks/' },
   { name: 'Checkout', path },
 ];
 ---
@@ -41,6 +41,7 @@ const breadcrumbs = [
 <BaseLayout
   title={title}
   description={description}
+  noindex={true}
   jsonLd={[
     webPageSchema({ name: h1, description, url: path }),
     breadcrumbSchema(breadcrumbs),
@@ -53,7 +54,7 @@ const breadcrumbs = [
       <p class="text-muted-foreground leading-relaxed">{description}</p>
     </header>
     <p class="mt-6 text-sm text-muted-foreground">
-      Checkout runs on our secure partner site. You stay on cheatsark.com until you choose to continue.
+      Checkout runs on our secure partner site. You stay on cheatsbo7.net until you choose to continue.
     </p>
     <p class="mt-8">
       <a

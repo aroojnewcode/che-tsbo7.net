@@ -6,7 +6,7 @@ export const featureIcons: Record<string, IconName> = {
   'Loot & Resource ESP': 'featureRadar',
   'No Recoil / Spread': 'stepCrosshair',
   'Utility Suite': 'featureUtilitySuite',
-  'Loot Route Assist': 'compareAutoFarm',
+  'Objective Route Assist': 'compareAutoFarm',
   'Stream Proof': 'streamProof',
   'FOV Hack': 'compareZoomHack',
   'Cloud Config & Updates': 'compareCloudBackup',

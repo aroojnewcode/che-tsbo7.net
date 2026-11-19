@@ -13,6 +13,7 @@ import {
   SITE_ORIGIN,
   absoluteAssetUrl,
 } from '../config/seo';
+import { getMetaKeywordsForPath } from '../config/seoKeywords';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import JsonLd from '../components/JsonLd.astro';
@@ -45,6 +46,7 @@ const {
 } = Astro.props;
 
 const canonical = canonicalUrl(Astro.url.pathname, SITE_ORIGIN);
+const metaKeywords = getMetaKeywordsForPath(Astro.url.pathname);
 const ogImageUrl = absoluteAssetUrl(ogImage);
 const robotsContent = noindex
   ? 'noindex, nofollow'
@@ -69,6 +71,7 @@ const robotsContent = noindex
     <style is:global set:html={responsiveDocumentCss}></style>
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={metaKeywords} />
     <meta name="author" content={t.site.name} />
     <meta name="robots" content={robotsContent} />
     <meta name="googlebot" content={robotsContent} />

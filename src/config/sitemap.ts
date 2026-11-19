@@ -80,12 +80,6 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
     return item;
   }
 
-  if (path.startsWith('/go/')) {
-    item.priority = 0.75;
-    item.changefreq = 'monthly';
-    return item;
-  }
-
   if (
     path === '/about/' ||
     path === '/support/' ||

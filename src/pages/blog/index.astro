@@ -10,7 +10,7 @@ import {
 import { t } from '../../i18n';
 import { resolvePageSeo } from '../../config/seo';
 import { getPageSeoEntry } from '../../config/pageSeo';
-import { breadcrumbSchema, collectionPageSchema } from '../../utils/schema';
+import { breadcrumbSchema, collectionPageSchema, organizationSchema } from '../../utils/schema';
 import { CARD_IMAGE_WIDTHS, webpSrc } from '../../utils/responsiveImage';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import BlogCard from '../../components/BlogCard.astro';
@@ -32,7 +32,7 @@ const featured = getFeaturedBlogPost();
 const gridPosts = getNonFeaturedBlogPosts();
 const tags = getBlogTags();
 const lcpSource =
-  featured?.image ?? blogPosts.find((p) => p.image)?.image ?? '/images/gameplay/ark-map-hack.png';
+  featured?.image ?? blogPosts.find((p) => p.image)?.image ?? '/images/gameplay/bo7-map-hack.png';
 const lcpImage = webpSrc(lcpSource, CARD_IMAGE_WIDTHS[0]);
 
 const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
@@ -42,6 +42,7 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
   title={seo.title}
   description={seo.description}
   jsonLd={[
+    organizationSchema(),
     collectionPageSchema({
       name: t.blog.title,
       description: t.blog.subtitle,
@@ -57,7 +58,7 @@ const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
       <Breadcrumbs items={breadcrumbs} />
       <header class="section-header mt-6 max-w-2xl">
         <p class="section-header__eyebrow">{t.blog.eyebrow}</p>
-        <h1 id="blog-latest-title" class="section-header__title">{seoEntry?.h1 ?? 'ARK: Survival Ascended Cheats & Hacks – Guides, Tips & Updates'}</h1>
+        <h1 id="blog-latest-title" class="section-header__title">{seoEntry?.h1 ?? 'Call of Duty: Black Ops 7 Cheats & Hacks – Guides, Tips & Updates'}</h1>
         <p class="section-header__subtitle">{t.blog.latestSubtitle}</p>
       </header>
       <p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
